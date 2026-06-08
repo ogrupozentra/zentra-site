@@ -1,0 +1,36 @@
+# Grupo Zentra
+
+> Ecossistema de educação, tecnologia e desenvolvimento organizacional baseado em Londrina, PR, Brasil.
+
+## O que é o Grupo Zentra
+
+A Zentra é um ecossistema completo que ajuda empresas e profissionais a evoluírem por meio da ciência do comportamento, tecnologia e automação inteligente. Atuamos em cinco frentes de negócio complementares.
+
+## Frentes de Negócio
+
+### ZPay
+Meio de pagamento focado em vendas high ticket, integrado nativamente ao WhatsApp. Já processou mais de R$300 mil em transações. Ideal para consultores, infoprodutores e serviços premium.
+
+### Zentra Automação
+Especialistas em automação de backoffice, atendimento ao cliente e pós-venda. Mais de 50 empresas automatizadas, com destaque para mais de 30 clínicas médicas atendidas.
+
+### Zentra Lançamentos
+Operação completa para infoprodutores: criação de produto, gestão de tráfego pago, operação de lançamento e gestão financeira.
+
+### CEBEC — Centro de Educação de Bem-estar Corporativo
+Frente educacional desenvolvida em parceria com Angela Pelizer. Mais de 200 alunos ativos, 6 cursos lançados sobre liderança, bem-estar corporativo e ciência do comportamento.
+
+### Mindra
+SaaS desenvolvido para consultores e empresas que precisam adequar-se à atualização da NR1 (Norma Regulamentadora 1), que inclui gestão de riscos psicossociais no trabalho.
+
+## Fundadores
+
+- **Pedro Santos** — Co-fundador, responsável por tecnologia e produtos
+- **João** — Co-fundador, responsável por comercial e operações
+
+## Contato
+
+- WhatsApp: +55 43 99685-0251
+- Email: pedro.santos@ogrupozentra.com
+- Site: https://www.ogrupozentra.com
+- Localização: Londrina, PR, Brasil

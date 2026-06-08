@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fotos Google — Grupo Zentra</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black:  #0A0A0A;
+      --black2: #111111;
+      --white:  #F5F0EB;
+      --white2: rgba(245,240,235,0.55);
+      --gold:   #C9A96E;
+      --gold2:  rgba(201,169,110,0.12);
+      --font: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', system-ui, sans-serif;
+    }
+
+    body {
+      background: #1a1a1a;
+      font-family: var(--font);
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .label {
+      color: #666;
+      font-size: 12px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      align-self: flex-start;
+      width: 1200px;
+    }
+
+    /* Each card: 1200×675 (16:9) */
+    .card {
+      width: 1200px;
+      height: 675px;
+      position: relative;
+      overflow: hidden;
+      background: var(--black);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ── grid bg ── */
+    .card::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(245,240,235,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(245,240,235,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse 90% 80% at 50% 50%, black 20%, transparent 100%);
+    }
+
+    /* ── ghost diamond bg ── */
+    .ghost {
+      position: absolute;
+      opacity: .03;
+      pointer-events: none;
+    }
+
+    /* ── SVG logo inline ── */
+    .logo-mark { display: block; }
+
+    /* ════════════════════════════════
+       CARD 1 — BRAND IDENTITY
+    ════════════════════════════════ */
+    .card-brand .inner {
+      position: relative; z-index: 2;
+      display: flex; flex-direction: column;
+      align-items: center; gap: 28px;
+    }
+    .card-brand .tagline {
+      font-size: 13px; letter-spacing: .3em; text-transform: uppercase;
+      color: var(--gold); font-weight: 500;
+    }
+    .card-brand h1 {
+      font-size: 72px; font-weight: 700; letter-spacing: -.04em;
+      color: var(--white); line-height: 1;
+    }
+    .card-brand h1 span { font-weight: 300; color: var(--gold); }
+    .card-brand .sub {
+      font-size: 16px; color: rgba(245,240,235,0.45);
+      letter-spacing: .08em; text-transform: uppercase;
+    }
+    .card-brand .divider {
+      width: 40px; height: 1px; background: var(--gold); opacity: .5;
+    }
+
+    /* ════════════════════════════════
+       CARD 2 — SERVIÇOS GRID
+    ════════════════════════════════ */
+    .card-services { align-items: flex-start; padding: 64px 80px; }
+    .card-services .head {
+      position: relative; z-index: 2; margin-bottom: 48px;
+    }
+    .card-services .head p {
+      font-size: 11px; letter-spacing: .25em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 10px;
+    }
+    .card-services .head h2 {
+      font-size: 40px; font-weight: 700; color: var(--white);
+      letter-spacing: -.03em;
+    }
+    .services-grid {
+      position: relative; z-index: 2;
+      display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px;
+      width: 100%;
+    }
+    .svc {
+      background: rgba(245,240,235,0.04);
+      border: 1px solid rgba(245,240,235,0.07);
+      border-radius: 4px; padding: 28px 20px;
+      display: flex; flex-direction: column; gap: 12px;
+    }
+    .svc-icon {
+      width: 32px; height: 32px;
+    }
+    .svc-name {
+      font-size: 15px; font-weight: 700; color: var(--white);
+      letter-spacing: -.01em;
+    }
+    .svc-desc {
+      font-size: 12px; color: var(--white2); line-height: 1.5;
+    }
+    .svc-tag {
+      display: inline-block; font-size: 10px; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--gold);
+      border: 1px solid rgba(201,169,110,0.3); padding: 3px 8px;
+      border-radius: 2px; margin-top: auto;
+    }
+
+    /* ════════════════════════════════
+       CARD 3 — NÚMEROS
+    ════════════════════════════════ */
+    .card-stats { padding: 0 80px; gap: 0; }
+    .card-stats .top {
+      position: relative; z-index: 2;
+      text-align: center; margin-bottom: 64px;
+    }
+    .card-stats .top p {
+      font-size: 11px; letter-spacing: .25em; color: var(--gold);
+      text-transform: uppercase; margin-bottom: 12px;
+    }
+    .card-stats .top h2 {
+      font-size: 44px; font-weight: 700; color: var(--white);
+      letter-spacing: -.03em;
+    }
+    .stats-row {
+      position: relative; z-index: 2;
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      width: 100%; border-top: 1px solid rgba(245,240,235,0.07);
+    }
+    .stat {
+      padding: 40px 32px;
+      border-right: 1px solid rgba(245,240,235,0.07);
+      display: flex; flex-direction: column; gap: 8px;
+    }
+    .stat:last-child { border-right: none; }
+    .stat-num {
+      font-size: 52px; font-weight: 700; color: var(--gold);
+      letter-spacing: -.04em; line-height: 1;
+    }
+    .stat-label {
+      font-size: 13px; color: var(--white2); line-height: 1.4;
+    }
+
+    /* ════════════════════════════════
+       CARD 4 — ZPAY
+    ════════════════════════════════ */
+    .card-zpay { padding: 0; flex-direction: row; }
+    .zpay-left {
+      width: 55%; height: 100%;
+      background: linear-gradient(135deg, #111 0%, #0d0d0d 100%);
+      display: flex; flex-direction: column;
+      justify-content: center; padding: 72px 64px;
+      position: relative; z-index: 2;
+    }
+    .zpay-right {
+      flex: 1; height: 100%;
+      background: linear-gradient(135deg, rgba(201,169,110,0.08) 0%, rgba(201,169,110,0.03) 100%);
+      display: flex; align-items: center; justify-content: center;
+      border-left: 1px solid rgba(201,169,110,0.12);
+    }
+    .zpay-eyebrow {
+      font-size: 11px; letter-spacing: .25em; color: var(--gold);
+      text-transform: uppercase; margin-bottom: 20px;
+    }
+    .zpay-title {
+      font-size: 52px; font-weight: 700; color: var(--white);
+      letter-spacing: -.04em; line-height: 1.05; margin-bottom: 20px;
+    }
+    .zpay-title em { font-style: normal; color: var(--gold); font-weight: 300; }
+    .zpay-desc {
+      font-size: 15px; color: var(--white2); line-height: 1.6; margin-bottom: 36px;
+      max-width: 380px;
+    }
+    .zpay-pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(201,169,110,0.1); border: 1px solid rgba(201,169,110,0.25);
+      padding: 10px 20px; border-radius: 2px;
+      font-size: 13px; font-weight: 600; color: var(--gold);
+      letter-spacing: .05em;
+    }
+    .zpay-big-num {
+      font-size: 96px; font-weight: 700; color: rgba(201,169,110,0.15);
+      letter-spacing: -.06em; line-height: 1; text-align: center;
+    }
+    .zpay-big-label {
+      font-size: 13px; color: var(--white2); text-align: center;
+      letter-spacing: .1em; text-transform: uppercase;
+    }
+
+    /* ════════════════════════════════
+       CARD 5 — AUTOMAÇÃO
+    ════════════════════════════════ */
+    .card-auto { padding: 0; flex-direction: row; }
+    .auto-left {
+      flex: 1; height: 100%;
+      display: flex; align-items: center; justify-content: center;
+      border-right: 1px solid rgba(245,240,235,0.07);
+      flex-direction: column; gap: 8px;
+    }
+    .auto-right {
+      width: 60%; height: 100%;
+      display: flex; flex-direction: column;
+      justify-content: center; padding: 72px 64px;
+      position: relative; z-index: 2;
+    }
+    .auto-big { font-size: 120px; font-weight: 700; color: rgba(201,169,110,0.12); letter-spacing: -.06em; line-height: 1; }
+    .auto-label { font-size: 13px; color: var(--white2); letter-spacing: .15em; text-transform: uppercase; }
+    .auto-eyebrow { font-size: 11px; letter-spacing: .25em; color: var(--gold); text-transform: uppercase; margin-bottom: 20px; }
+    .auto-title { font-size: 48px; font-weight: 700; color: var(--white); letter-spacing: -.04em; line-height: 1.05; margin-bottom: 20px; }
+    .auto-title em { font-style: normal; color: var(--gold); font-weight: 300; }
+    .auto-list { display: flex; flex-direction: column; gap: 14px; }
+    .auto-item {
+      display: flex; align-items: flex-start; gap: 14px;
+      font-size: 15px; color: var(--white2); line-height: 1.4;
+    }
+    .auto-item::before {
+      content: ''; display: block; width: 4px; height: 4px;
+      background: var(--gold); border-radius: 50%; margin-top: 8px; flex-shrink: 0;
+    }
+
+    /* ════════════════════════════════
+       CARD 6 — TEAM / FUNDADORES
+    ════════════════════════════════ */
+    .card-team { flex-direction: column; gap: 0; }
+    .team-top {
+      position: relative; z-index: 2;
+      text-align: center; padding-top: 60px; margin-bottom: 48px;
+    }
+    .team-top p { font-size: 11px; letter-spacing: .25em; color: var(--gold); text-transform: uppercase; margin-bottom: 10px; }
+    .team-top h2 { font-size: 44px; font-weight: 700; color: var(--white); letter-spacing: -.03em; }
+    .team-grid {
+      position: relative; z-index: 2;
+      display: grid; grid-template-columns: 1fr 1fr;
+      width: 100%; flex: 1;
+      border-top: 1px solid rgba(245,240,235,0.07);
+    }
+    .team-member {
+      padding: 40px 80px;
+      border-right: 1px solid rgba(245,240,235,0.07);
+      display: flex; flex-direction: column; gap: 6px;
+    }
+    .team-member:last-child { border-right: none; }
+    .member-num { font-size: 11px; color: rgba(201,169,110,0.4); letter-spacing: .2em; margin-bottom: 4px; }
+    .member-name { font-size: 28px; font-weight: 700; color: var(--white); letter-spacing: -.02em; }
+    .member-role { font-size: 14px; color: var(--gold); letter-spacing: .05em; }
+    .member-bio { font-size: 14px; color: var(--white2); line-height: 1.6; margin-top: 12px; max-width: 380px; }
+
+    /* ════════════════════════════════
+       CARD 7 — LONDRINA
+    ════════════════════════════════ */
+    .card-local {
+      background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(201,169,110,0.06) 0%, transparent 70%), var(--black);
+    }
+    .card-local .inner {
+      position: relative; z-index: 2;
+      text-align: center; display: flex; flex-direction: column;
+      align-items: center; gap: 20px;
+    }
+    .card-local .eyebrow { font-size: 11px; letter-spacing: .3em; text-transform: uppercase; color: var(--gold); }
+    .card-local h2 { font-size: 68px; font-weight: 700; color: var(--white); letter-spacing: -.04em; line-height: 1; }
+    .card-local h2 span { font-weight: 300; color: var(--gold); }
+    .card-local .address { font-size: 15px; color: var(--white2); letter-spacing: .1em; }
+    .card-local .contact-row {
+      display: flex; gap: 48px; margin-top: 12px;
+    }
+    .card-local .contact-item {
+      display: flex; flex-direction: column; align-items: center; gap: 4px;
+    }
+    .card-local .contact-item span:first-child { font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: rgba(201,169,110,0.6); }
+    .card-local .contact-item span:last-child { font-size: 15px; color: var(--white); }
+  </style>
+</head>
+<body>
+
+  <!-- ─── CARD 1: BRAND ─── -->
+  <p class="label">1 — Identidade da Marca</p>
+  <div class="card card-brand">
+    <svg class="ghost" width="700" height="700" viewBox="0 0 100 100" fill="none">
+      <polygon points="50,4 96,50 50,96 4,50" stroke="rgba(245,240,235,1)" stroke-width=".8" stroke-linejoin="miter" fill="none"/>
+      <line x1="50" y1="4" x2="50" y2="50" stroke="rgba(245,240,235,1)" stroke-width=".8"/>
+    </svg>
+    <div class="inner">
+      <svg class="logo-mark" width="80" height="80" viewBox="0 0 100 100" fill="none">
+        <polygon points="50,4 96,50 50,96 4,50" stroke="rgba(245,240,235,0.9)" stroke-width="2.2" stroke-linejoin="miter" fill="none"/>
+        <line x1="50" y1="4" x2="50" y2="50" stroke="rgba(245,240,235,0.9)" stroke-width="2.2" stroke-linecap="square"/>
+      </svg>
+      <div class="divider"></div>
+      <h1>GRUPO <span>ZENTRA</span></h1>
+      <p class="sub">Educação · Tecnologia · Automação</p>
+      <p class="tagline">Londrina, Paraná · Brasil</p>
+    </div>
+  </div>
+
+  <!-- ─── CARD 2: SERVIÇOS ─── -->
+  <p class="label">2 — Nossas Soluções</p>
+  <div class="card card-services">
+    <svg class="ghost" width="500" height="500" viewBox="0 0 100 100" fill="none" style="right:-100px;top:-50px;">
+      <polygon points="50,4 96,50 50,96 4,50" stroke="rgba(245,240,235,1)" stroke-width=".8" stroke-linejoin="miter" fill="none"/>
+      <line x1="50" y1="4" x2="50" y2="50" stroke="rgba(245,240,235,1)" stroke-width=".8"/>
+    </svg>
+    <div class="head">
+      <p>O que fazemos</p>
+      <h2>Cinco frentes, um ecossistema.</h2>
+    </div>
+    <div class="services-grid">
+      <div class="svc">
+        <svg class="svc-icon" viewBox="0 0 32 32" fill="none">
+          <rect x="4" y="8" width="24" height="16" rx="2" stroke="#C9A96E" stroke-width="1.5"/>
+          <path d="M4 13h24" stroke="#C9A96E" stroke-width="1.5"/>
+        </svg>
+        <div class="svc-name">ZPay</div>
+        <div class="svc-desc">Pagamentos high ticket integrados ao WhatsApp</div>
+        <span class="svc-tag">Pagamentos</span>
+      </div>
+      <div class="svc">
+        <svg class="svc-icon" viewBox="0 0 32 32" fill="none">
+          <circle cx="16" cy="16" r="10" stroke="#C9A96E" stroke-width="1.5"/>
+          <path d="M12 16l3 3 5-6" stroke="#C9A96E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="svc-name">Automação</div>
+        <div class="svc-desc">Atendimento automático e backoffice via WhatsApp</div>
+        <span class="svc-tag">Tecnologia</span>
+      </div>
+      <div class="svc">
+        <svg class="svc-icon" viewBox="0 0 32 32" fill="none">
+          <path d="M6 26V18M12 26V12M18 26V16M24 26V8" stroke="#C9A96E" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <div class="svc-name">Lançamentos</div>
+        <div class="svc-desc">Operação completa para infoprodutores</div>
+        <span class="svc-tag">Marketing</span>
+      </div>
+      <div class="svc">
+        <svg class="svc-icon" viewBox="0 0 32 32" fill="none">
+          <path d="M16 4l2 6h6l-5 4 2 6-5-3-5 3 2-6-5-4h6z" stroke="#C9A96E" stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+        <div class="svc-name">CEBEC</div>
+        <div class="svc-desc">Educação corporativa e bem-estar organizacional</div>
+        <span class="svc-tag">Educação</span>
+      </div>
+      <div class="svc">
+        <svg class="svc-icon" viewBox="0 0 32 32" fill="none">
+          <rect x="6" y="6" width="20" height="20" rx="4" stroke="#C9A96E" stroke-width="1.5"/>
+          <path d="M11 16h10M16 11v10" stroke="#C9A96E" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <div class="svc-name">Mindra</div>
+        <div class="svc-desc">SaaS para gestão de riscos psicossociais — NR1</div>
+        <span class="svc-tag">SaaS</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── CARD 3: NÚMEROS ─── -->
+  <p class="label">3 — Nossos Números</p>
+  <div class="card card-stats">
+    <div class="top">
+      <p>Resultados comprovados</p>
+      <h2>Impacto real, <em style="font-style:normal;color:var(--gold);font-weight:300;">números reais.</em></h2>
+    </div>
+    <div class="stats-row">
+      <div class="stat">
+        <div class="stat-num">+50</div>
+        <div class="stat-label">empresas automatizadas com IA</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">+30</div>
+        <div class="stat-label">clínicas médicas atendidas</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">R$300k</div>
+        <div class="stat-label">processados pelo ZPay</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">+200</div>
+        <div class="stat-label">alunos ativos no CEBEC</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── CARD 4: ZPAY ─── -->
+  <p class="label">4 — ZPay</p>
+  <div class="card card-zpay">
+    <div class="zpay-left">
+      <p class="zpay-eyebrow">Frente de Pagamentos</p>
+      <h2 class="zpay-title">Venda mais.<br/><em>Pelo WhatsApp.</em></h2>
+      <p class="zpay-desc">O ZPay é o meio de pagamento para vendas high ticket integrado nativamente ao WhatsApp. Checkout fluido, sem atrito, com mais de R$300 mil processados.</p>
+      <span class="zpay-pill">zarapay.com.br ↗</span>
+    </div>
+    <div class="zpay-right">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+        <div class="zpay-big-num">R$300k</div>
+        <div class="zpay-big-label">já processados</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── CARD 5: AUTOMAÇÃO ─── -->
+  <p class="label">5 — Zentra Automação</p>
+  <div class="card card-auto">
+    <div class="auto-left">
+      <div class="auto-big">50+</div>
+      <div class="auto-label">empresas atendidas</div>
+    </div>
+    <div class="auto-right">
+      <p class="auto-eyebrow">Automação Inteligente</p>
+      <h2 class="auto-title">Seu negócio<br/><em>no piloto automático.</em></h2>
+      <div class="auto-list">
+        <div class="auto-item">Atendimento 24h via WhatsApp com IA</div>
+        <div class="auto-item">Mais de 30 clínicas médicas automatizadas</div>
+        <div class="auto-item">Backoffice, agendamentos e pós-venda</div>
+        <div class="auto-item">Integração com sistemas existentes</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── CARD 6: TIME ─── -->
+  <p class="label">6 — Fundadores</p>
+  <div class="card card-team">
+    <div class="team-top">
+      <p>Quem está por trás</p>
+      <h2>Os fundadores da Zentra</h2>
+    </div>
+    <div class="team-grid">
+      <div class="team-member">
+        <div class="member-num">01</div>
+        <div class="member-name">Pedro Augusto Ferreira</div>
+        <div class="member-role">Co-fundador · Tecnologia & Produtos</div>
+        <p class="member-bio">Responsável pelo desenvolvimento dos produtos digitais, automações e infraestrutura tecnológica do ecossistema Zentra.</p>
+      </div>
+      <div class="team-member">
+        <div class="member-num">02</div>
+        <div class="member-name">João Vitor Pelizer</div>
+        <div class="member-role">Co-fundador · Comercial & Operações</div>
+        <p class="member-bio">Responsável pela operação comercial, gestão de clientes e expansão das frentes de negócio da Zentra.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── CARD 7: LOCALIZAÇÃO ─── -->
+  <p class="label">7 — Localização & Contato</p>
+  <div class="card card-local">
+    <svg class="ghost" width="600" height="600" viewBox="0 0 100 100" fill="none">
+      <polygon points="50,4 96,50 50,96 4,50" stroke="rgba(245,240,235,1)" stroke-width=".8" stroke-linejoin="miter" fill="none"/>
+      <line x1="50" y1="4" x2="50" y2="50" stroke="rgba(245,240,235,1)" stroke-width=".8"/>
+    </svg>
+    <div class="inner">
+      <p class="eyebrow">Onde estamos</p>
+      <h2>LONDRINA<br/><span>Paraná</span></h2>
+      <p class="address">ogrupozentra.com</p>
+      <div class="contact-row">
+        <div class="contact-item">
+          <span>WhatsApp</span>
+          <span>(43) 99685-0251</span>
+        </div>
+        <div class="contact-item">
+          <span>Email</span>
+          <span>pedro.santos@ogrupozentra.com</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

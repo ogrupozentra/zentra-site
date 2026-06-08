@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Logo Kit — Grupo Zentra</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #0A0A0A;
+      --white: #F5F0EB;
+      --gold:  #C9A96E;
+      --font: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', system-ui, sans-serif;
+    }
+    body { background: #141414; font-family: var(--font); padding: 60px; color: var(--white); }
+
+    h1 { font-size: 11px; letter-spacing: .3em; text-transform: uppercase; color: var(--gold); margin-bottom: 60px; }
+
+    .section-label {
+      font-size: 10px; letter-spacing: .25em; text-transform: uppercase;
+      color: rgba(245,240,235,0.25); margin-bottom: 20px; margin-top: 64px;
+    }
+
+    .row { display: flex; flex-wrap: wrap; gap: 16px; }
+
+    /* wrapper fora do swatch */
+    .sw {
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+    }
+    .sw-name {
+      font-size: 9px; letter-spacing: .15em; text-transform: uppercase;
+      color: rgba(245,240,235,0.2);
+    }
+
+    .swatch {
+      display: flex; align-items: center; justify-content: center;
+      padding: 48px 64px;
+    }
+    .swatch.dark    { background: var(--black); }
+    .swatch.light   { background: var(--white); }
+    .swatch.gold-bg { background: var(--gold); }
+
+    /* ─── WORDMARK HORIZONTAL ─── */
+    .wm-h { display: flex; align-items: center; }
+    .wm-h .text-block { display: flex; flex-direction: column; justify-content: center; }
+    .wm-h .name-top { font-size: 9px; letter-spacing: .45em; text-transform: uppercase; font-weight: 500; line-height: 1; }
+    .wm-h .name-bot { font-size: 22px; letter-spacing: .18em; text-transform: uppercase; font-weight: 300; line-height: 1; margin-top: 4px; }
+    .wm-h .div-v    { width: 1px; height: 36px; margin: 0 20px; flex-shrink: 0; }
+
+    .dark  .name-top { color: rgba(245,240,235,0.5); }
+    .dark  .name-bot { color: var(--white); }
+    .dark  .div-v    { background: rgba(201,169,110,0.35); }
+
+    .light .name-top { color: rgba(10,10,10,0.4); }
+    .light .name-bot { color: var(--black); }
+    .light .div-v    { background: rgba(10,10,10,0.25); }
+
+    .gold-bg .name-top { color: rgba(10,10,10,0.5); }
+    .gold-bg .name-bot { color: var(--black); }
+    .gold-bg .div-v    { background: rgba(10,10,10,0.25); }
+
+    /* ─── WORDMARK VERTICAL ─── */
+    .wm-v { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+    .wm-v .name-full { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+    .wm-v .name-top-v { font-size: 8px; letter-spacing: .5em; text-transform: uppercase; font-weight: 500; line-height: 1; }
+    .wm-v .name-bot-v { font-size: 20px; letter-spacing: .25em; text-transform: uppercase; font-weight: 300; line-height: 1; }
+    .wm-v .div-h { width: 32px; height: 1px; }
+
+    .dark  .name-top-v { color: rgba(245,240,235,0.5); }
+    .dark  .name-bot-v { color: var(--white); }
+    .dark  .div-h      { background: rgba(201,169,110,0.35); }
+
+    .light .name-top-v { color: rgba(10,10,10,0.4); }
+    .light .name-bot-v { color: var(--black); }
+    .light .div-h      { background: rgba(10,10,10,0.25); }
+
+    .gold-bg .name-top-v { color: rgba(10,10,10,0.5); }
+    .gold-bg .name-bot-v { color: var(--black); }
+    .gold-bg .div-h      { background: rgba(10,10,10,0.25); }
+
+    /* ─── STACKED COMPACT ─── */
+    .wm-stacked { display: flex; flex-direction: column; align-items: center; gap: 0; }
+    .wm-stacked .name-stacked {
+      font-size: 13px; letter-spacing: .4em; text-transform: uppercase;
+      font-weight: 700; line-height: 1; margin-top: 14px;
+    }
+    .wm-stacked .name-stacked span { font-weight: 300; }
+  </style>
+</head>
+<body>
+
+<h1>Grupo Zentra — Logo Kit</h1>
+
+<!-- ════ 01 MARK ════ -->
+<p class="section-label">01 — Marca / Icon</p>
+<div class="row">
+
+  <div class="sw">
+    <div class="swatch dark">
+      <svg width="80" height="80" viewBox="0 0 100 100" fill="none">
+        <polygon points="50,4 96,50 50,96 4,50" stroke="rgba(245,240,235,0.9)" stroke-width="2.8" stroke-linejoin="miter" fill="none"/>
+        <line x1="50" y1="4" x2="50" y2="50" stroke="rgba(245,240,235,0.9)" stroke-width="2.8" stroke-linecap="square"/>
+      </svg>
+    </div>
+    <span class="sw-name">Escuro · Branco</span>
+  </div>
+
+  <div class="sw">
+    <div class="swatch dark">
+      <svg width="80" height="80" viewBox="0 0 100 100" fill="none">
+        <polygon points="50,4 96,50 50,96 4,50" stroke="#C9A96E" stroke-width="2.8" stroke-linejoin="miter" fill="none"/>
+        <line x1="50" y1="4" x2="50" y2="50" stroke="#C9A96E" stroke-width="2.8" stroke-linecap="square"/>
+      </svg>
+    </div>
+    <span class="sw-name">Escuro · Ouro</span>
+  </div>
+
+  <div class="sw">
+    <div class="swatch light">
+      <svg width="80" height="80" viewBox="0 0 100 100" fill="none">
+        <polygon points="50,4 96,50 50,96 4,50" stroke="rgba(10,10,10,0.85)" stroke-width="2.8" stroke-linejoin="miter" fill="none"/>
+        <line x1="50" y1="4" x2="50" y2="50" stroke="rgba(10,10,10,0.85)" stroke-width="2.8" stroke-linecap="square"/>
+      </svg>
+    </div>
+    <span class="sw-name">Claro · Preto</span>
+  </div>
+
+  <div class="sw">
+    <div class="swatch gold-bg">
+      <svg width="80" height="80" viewBox="0 0 100 100" fill="none">
+        <polygon points="50,4 96,50 50,96 4,50" stroke="rgba(10,10,10,0.8)" stroke-width="2.8" stroke-linejoin="miter" fill="none"/>
+        <line x1="50" y1="4" x2="50" y2="50" stroke="rgba(10,10,10,0.8)" stroke-width="2.8" stroke-linecap="square"/>
+      </svg>
+    </div>
+    <span class="sw-name">Ouro · Preto</span>
+  </div>
+
+</div>
+
+<!-- ════ 02 HORIZONTAL ════ -->
+<p class="section-label">02 — Horizontal (nav, cabeçalhos)</p>
+<div class="row">
+
+  <div class="sw">
+    <div class="swatch dark">
+      <div class="wm-h">
+        <svg width="40" height="40" viewBox="0 0 100 100" fill="none">
+          <polygon points="50,4 96,50 50,96 4,50" stroke="rgba(245,240,235,0.9)" stroke-width="3" stroke-linejoin="miter" fill="none"/>
+          <line x1="50" y1="4" x2="50" y2="50" stroke="rgba(245,240,235,0.9)" stroke-width="3" stroke-linecap="square"/>
+        </svg>
+        <div class="div-v"></div>
+        <div class="text-block">
+          <span class="name-top">Grupo</span>
+          <span class="name-bot">Zentra</span>
+        </div>
+      </div>
+    </div>
+    <span class="sw-name">Escuro · Branco</span>
+  </div>
+
+  <div class="sw">
+    <div class="swatch dark">
+      <div class="wm-h">
+        <svg width="40" height="40" viewBox="0 0 100 100" fill="none">
+          <polygon points="50,4 96,50 50,96 4,50" stroke="#C9A96E" stroke-width="3" stroke-linejoin="miter" fill="none"/>
+          <line x1="50" y1="4" x2="50" y2="50" stroke="#C9A96E" stroke-width="3" stroke-linecap="square"/>
+        </svg>
+        <div class="div-v" style="background:rgba(201,169,110,0.35)"></div>
+        <div class="text-block">
+          <span class="name-top" style="color:rgba(201,169,110,0.6)">Grupo</span>
+          <span class="name-bot" style="color:#C9A96E">Zentra</span>
+        </div>
+      </div>
+    </div>
+    <span class="sw-name">Escuro · Ouro</span>
+  </div>
+
+  <div class="sw">
+    <div class="swatch light">
+      <div class="wm-h">
+        <svg width="40" height="40" viewBox="0 0 100 100" fill="none">
+          <polygon points="50,4 96,50 50,96 4,50" stroke="rgba(10,10,10,0.85)" stroke-width="3" stroke-linejoin="miter" fill="none"/>
+          <line x1="50" y1="4" x2="50" y2="50" stroke="rgba(10,10,10,0.85)" stroke-width="3" stroke-linecap="square"/>
+        </svg>
+        <div class="div-v"></div>
+        <div class="text-block">
+          <span class="name-top">Grupo</span>
+          <span class="name-bot">Zentra</span>
+        </div>
+      </div>
+    </div>
+    <span class="sw-name">Claro · Preto</span>
+  </div>
+
+  <div class="sw">
+    <div class="swatch gold-bg">
+      <div class="wm-h">
+        <svg width="40" height="40" viewBox="0 0 100 100" fill="none">
+          <polygon points="50,4 96,50 50,96 4,50" stroke="rgba(10,10,10,0.8)" stroke-width="3" stroke-linejoin="miter" fill="none"/>
+          <line x1="50" y1="4" x2="50" y2="50" stroke="rgba(10,10,10,0.8)" stroke-width="3" stroke-linecap="square"/>
+        </svg>
+        <div class="div-v"></div>
+        <div class="text-block">
+          <span class="name-top">Grupo</span>
+          <span class="name-bot">Zentra</span>
+        </div>
+      </div>
+    </div>
+    <span class="sw-name">Ouro · Preto</span>
+  </div>
+
+</div>
+
+<!-- ════ 03 VERTICAL ════ -->
+<p class="section-label">03 — Vertical (rodapés, apresentações)</p>
+<div class="row">
+
+  <div class="sw">
+    <div class="swatch dark">
+      <div class="wm-v">
+        <svg width="56" height="56" viewBox="0 0 100 100" fill="none">
+          <polygon points="50,4 96,50 50,96 4,50" stroke="rgba(245,240,235,0.9)" stroke-width="2.8" stroke-linejoin="miter" fill="none"/>
+          <line x1="50" y1="4" x2="50" y2="50" stroke="rgba(245,240,235,0.9)" stroke-width="2.8" stroke-linecap="square"/>
+        </svg>
+        <div class="div-h"></div>
+        <div class="name-full">
+          <span class="name-top-v">Grupo</span>
+          <span class="name-bot-v">Zentra</span>
+        </div>
+      </div>
+    </div>
+    <span class="sw-name">Escuro · Branco</span>
+  </div>
+
+  <div class="sw">
+    <div class="swatch dark">
+      <div class="wm-v">
+        <svg width="56" height="56" viewBox="0 0 100 100" fill="none">
+          <polygon points="50,4 96,50 50,96 4,50" stroke="#C9A96E" stroke-width="2.8" stroke-linejoin="miter" fill="none"/>
+          <line x1="50" y1="4" x2="50" y2="50" stroke="#C9A96E" stroke-width="2.8" stroke-linecap="square"/>
+        </svg>
+        <div class="div-h" style="background:#C9A96E;opacity:.4"></div>
+        <div class="name-full">
+          <span class="name-top-v" style="color:rgba(201,169,110,0.6)">Grupo</span>
+          <span class="name-bot-v" style="color:#C9A96E">Zentra</span>
+        </div>
+      </div>
+    </div>
+    <span class="sw-name">Escuro · Ouro</span>
+  </div>
+
+  <div class="sw">
+    <div class="swatch light">
+      <div class="wm-v">
+        <svg width="56" height="56" viewBox="0 0 100 100" fill="none">
+          <polygon points="50,4 96,50 50,96 4,50" stroke="rgba(10,10,10,0.85)" stroke-width="2.8" stroke-linejoin="miter" fill="none"/>
+          <line x1="50" y1="4" x2="50" y2="50" stroke="rgba(10,10,10,0.85)" stroke-width="2.8" stroke-linecap="square"/>
+        </svg>
+        <div class="div-h"></div>
+        <div class="name-full">
+          <span class="name-top-v">Grupo</span>
+          <span class="name-bot-v">Zentra</span>
+        </div>
+      </div>
+    </div>
+    <span class="sw-name">Claro · Preto</span>
+  </div>
+
+  <div class="sw">
+    <div class="swatch gold-bg">
+      <div class="wm-v">
+        <svg width="56" height="56" viewBox="0 0 100 100" fill="none">
+          <polygon points="50,4 96,50 50,96 4,50" stroke="rgba(10,10,10,0.8)" stroke-width="2.8" stroke-linejoin="miter" fill="none"/>
+          <line x1="50" y1="4" x2="50" y2="50" stroke="rgba(10,10,10,0.8)" stroke-width="2.8" stroke-linecap="square"/>
+        </svg>
+        <div class="div-h"></div>
+        <div class="name-full">
+          <span class="name-top-v">Grupo</span>
+          <span class="name-bot-v">Zentra</span>
+        </div>
+      </div>
+    </div>
+    <span class="sw-name">Ouro · Preto</span>
+  </div>
+
+</div>
+
+<!-- ════ 04 COMPACTO ════ -->
+<p class="section-label">04 — Compacto (assinaturas, slides)</p>
+<div class="row">
+
+  <div class="sw">
+    <div class="swatch dark">
+      <div class="wm-stacked">
+        <svg width="48" height="48" viewBox="0 0 100 100" fill="none">
+          <polygon points="50,4 96,50 50,96 4,50" stroke="rgba(245,240,235,0.9)" stroke-width="3" stroke-linejoin="miter" fill="none"/>
+          <line x1="50" y1="4" x2="50" y2="50" stroke="rgba(245,240,235,0.9)" stroke-width="3" stroke-linecap="square"/>
+        </svg>
+        <div class="name-stacked" style="color:var(--white)">GRUPO <span>ZENTRA</span></div>
+      </div>
+    </div>
+    <span class="sw-name">Escuro · Branco</span>
+  </div>
+
+  <div class="sw">
+    <div class="swatch dark">
+      <div class="wm-stacked">
+        <svg width="48" height="48" viewBox="0 0 100 100" fill="none">
+          <polygon points="50,4 96,50 50,96 4,50" stroke="#C9A96E" stroke-width="3" stroke-linejoin="miter" fill="none"/>
+          <line x1="50" y1="4" x2="50" y2="50" stroke="#C9A96E" stroke-width="3" stroke-linecap="square"/>
+        </svg>
+        <div class="name-stacked" style="color:#C9A96E">GRUPO <span>ZENTRA</span></div>
+      </div>
+    </div>
+    <span class="sw-name">Escuro · Ouro</span>
+  </div>
+
+  <div class="sw">
+    <div class="swatch light">
+      <div class="wm-stacked">
+        <svg width="48" height="48" viewBox="0 0 100 100" fill="none">
+          <polygon points="50,4 96,50 50,96 4,50" stroke="rgba(10,10,10,0.85)" stroke-width="3" stroke-linejoin="miter" fill="none"/>
+          <line x1="50" y1="4" x2="50" y2="50" stroke="rgba(10,10,10,0.85)" stroke-width="3" stroke-linecap="square"/>
+        </svg>
+        <div class="name-stacked" style="color:var(--black)">GRUPO <span>ZENTRA</span></div>
+      </div>
+    </div>
+    <span class="sw-name">Claro · Preto</span>
+  </div>
+
+  <div class="sw">
+    <div class="swatch gold-bg">
+      <div class="wm-stacked">
+        <svg width="48" height="48" viewBox="0 0 100 100" fill="none">
+          <polygon points="50,4 96,50 50,96 4,50" stroke="rgba(10,10,10,0.8)" stroke-width="3" stroke-linejoin="miter" fill="none"/>
+          <line x1="50" y1="4" x2="50" y2="50" stroke="rgba(10,10,10,0.8)" stroke-width="3" stroke-linecap="square"/>
+        </svg>
+        <div class="name-stacked" style="color:var(--black)">GRUPO <span>ZENTRA</span></div>
+      </div>
+    </div>
+    <span class="sw-name">Ouro · Preto</span>
+  </div>
+
+</div>
+
+<!-- ════ 05 ESCALA ════ -->
+<p class="section-label">05 — Escala do mark</p>
+<div class="row" style="align-items:flex-end;">
+
+  <div class="sw">
+    <div class="swatch dark" style="padding:32px 40px;">
+      <svg width="24" height="24" viewBox="0 0 100 100" fill="none">
+        <polygon points="50,4 96,50 50,96 4,50" stroke="rgba(245,240,235,0.9)" stroke-width="3.5" stroke-linejoin="miter" fill="none"/>
+        <line x1="50" y1="4" x2="50" y2="50" stroke="rgba(245,240,235,0.9)" stroke-width="3.5" stroke-linecap="square"/>
+      </svg>
+    </div>
+    <span class="sw-name">24px</span>
+  </div>
+
+  <div class="sw">
+    <div class="swatch dark" style="padding:32px 40px;">
+      <svg width="40" height="40" viewBox="0 0 100 100" fill="none">
+        <polygon points="50,4 96,50 50,96 4,50" stroke="rgba(245,240,235,0.9)" stroke-width="3" stroke-linejoin="miter" fill="none"/>
+        <line x1="50" y1="4" x2="50" y2="50" stroke="rgba(245,240,235,0.9)" stroke-width="3" stroke-linecap="square"/>
+      </svg>
+    </div>
+    <span class="sw-name">40px</span>
+  </div>
+
+  <div class="sw">
+    <div class="swatch dark" style="padding:32px 40px;">
+      <svg width="64" height="64" viewBox="0 0 100 100" fill="none">
+        <polygon points="50,4 96,50 50,96 4,50" stroke="rgba(245,240,235,0.9)" stroke-width="2.8" stroke-linejoin="miter" fill="none"/>
+        <line x1="50" y1="4" x2="50" y2="50" stroke="rgba(245,240,235,0.9)" stroke-width="2.8" stroke-linecap="square"/>
+      </svg>
+    </div>
+    <span class="sw-name">64px</span>
+  </div>
+
+  <div class="sw">
+    <div class="swatch dark" style="padding:32px 40px;">
+      <svg width="96" height="96" viewBox="0 0 100 100" fill="none">
+        <polygon points="50,4 96,50 50,96 4,50" stroke="rgba(245,240,235,0.9)" stroke-width="2.5" stroke-linejoin="miter" fill="none"/>
+        <line x1="50" y1="4" x2="50" y2="50" stroke="rgba(245,240,235,0.9)" stroke-width="2.5" stroke-linecap="square"/>
+      </svg>
+    </div>
+    <span class="sw-name">96px</span>
+  </div>
+
+  <div class="sw">
+    <div class="swatch dark" style="padding:32px 40px;">
+      <svg width="160" height="160" viewBox="0 0 100 100" fill="none">
+        <polygon points="50,4 96,50 50,96 4,50" stroke="rgba(245,240,235,0.9)" stroke-width="2.2" stroke-linejoin="miter" fill="none"/>
+        <line x1="50" y1="4" x2="50" y2="50" stroke="rgba(245,240,235,0.9)" stroke-width="2.2" stroke-linecap="square"/>
+      </svg>
+    </div>
+    <span class="sw-name">160px</span>
+  </div>
+
+  <div class="sw">
+    <div class="swatch dark" style="padding:32px 40px;">
+      <svg width="240" height="240" viewBox="0 0 100 100" fill="none">
+        <polygon points="50,4 96,50 50,96 4,50" stroke="rgba(245,240,235,0.9)" stroke-width="2" stroke-linejoin="miter" fill="none"/>
+        <line x1="50" y1="4" x2="50" y2="50" stroke="rgba(245,240,235,0.9)" stroke-width="2" stroke-linecap="square"/>
+      </svg>
+    </div>
+    <span class="sw-name">240px</span>
+  </div>
+
+</div>
+
+</body>
+</html>

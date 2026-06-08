@@ -1,0 +1,45 @@
+; Zone file for ogrupozentra.com
+; Updated 2026-06-08 — apex + www apontando para Netlify
+
+$ORIGIN ogrupozentra.com.
+$TTL 3600
+
+@                              3600 IN SOA   ns1.dns-parking.com. dns.hostinger.com. 2026060801 10000 2400 604800 600
+
+; === APEX — Netlify ===
+@                              3600 IN A     75.2.60.5
+
+; === WWW — Netlify ===
+www                            3600 IN CNAME ogrupozentra.netlify.app.
+
+; === NAMESERVERS ===
+@                              86400 IN NS   ns1.dns-parking.com.
+@                              86400 IN NS   ns2.dns-parking.com.
+
+; === EMAIL (MX) ===
+@                              3600 IN MX    5  mx1.hostinger.com.
+@                              3600 IN MX    10 mx2.hostinger.com.
+@                              3600 IN MX    10 mx1.titan.email.
+@                              3600 IN MX    20 mx2.titan.email.
+
+; === SPF / DMARC / BREVO ===
+@                              300  IN TXT   "v=spf1 include:_spf.mail.hostinger.com include:_spf.reach.hostinger.com -all"
+@                              300  IN TXT   "brevo-code:6eefc880e1e42fc455e0aa63cadbef45"
+_dmarc                         3600 IN TXT   "v=DMARC1; p=quarantine; rua=mailto:pedro.santos@ogrupozentra.com; pct=100"
+
+; === DKIM ===
+brevo1._domainkey              300  IN CNAME b1.ogrupozentra-com.dkim.brevo.com.
+brevo2._domainkey              300  IN CNAME b2.ogrupozentra-com.dkim.brevo.com.
+hostingermail-a._domainkey     300  IN CNAME hostingermail-a.dkim.mail.hostinger.com.
+hostingermail-b._domainkey     300  IN CNAME hostingermail-b.dkim.mail.hostinger.com.
+hostingermail-c._domainkey     300  IN CNAME hostingermail-c.dkim.mail.hostinger.com.
+hostingermail1._domainkey      3600 IN TXT   "v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp1PvLemfPPnWt1W/WMFZMcIg0IEaTBTXebp/MzCgsAYmtNITgWJJ6qouT/hPlR63ngx1ol09dSaOh6jMoE8XMIF99GaE/NPLBV6Kd1SaFu6WjXmcMt+uONLQio52wwlEQ/8o6fg0XWOlrrQkN/Yi/5QRe9Rjl5QkezumGPUSqmp4lxc7R2sh/L1lLb6HvDax/34ljgPx8XZcelZcuuX1Aurlv8sbOT3m6ss7TR9L9iKCynGOZuKaEcphzPtxzcbBcqiimZ7VMRMBzbQ4v/EpfK+3KaHmslD6nwiEX9PaPFH8DDccyIzrqi+XMpc0o/MxHKidvDyvRIFq96saefT0NQIDAQAB"
+reach-a._domainkey             300  IN CNAME reach-a.dkim.reach.hostinger.com.
+reach-b._domainkey             300  IN CNAME reach-b.dkim.reach.hostinger.com.
+
+; === SUBDOMÍNIOS ===
+n8n                            300  IN A     31.97.243.145
+pay                            300  IN A     185.158.133.1
+autoconfig                     300  IN CNAME autoconfig.mail.hostinger.com.
+autodiscover                   300  IN CNAME autodiscover.mail.hostinger.com.
+_lovable.pay                   300  IN TXT   "lovable_verify=72a1dec245d829c38ef0762c1161eadc732665716c7aedf5031b3790bd9eec0a"
