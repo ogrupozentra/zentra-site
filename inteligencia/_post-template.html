@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PWNZXS3F');</script>
+  <!-- End Google Tag Manager -->
+  <!-- Meta Pixel -->
+  <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','3992166024366579');fbq('track','PageView');</script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=3992166024366579&ev=PageView&noscript=1"/></noscript>
+  <!-- End Meta Pixel -->
+  <title>{{TITLE}} | Zentra Inteligência</title>
+  <meta name="description" content="{{EXCERPT}}" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.ogrupozentra.com/inteligencia/posts/{{SLUG}}.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.ogrupozentra.com/inteligencia/posts/{{SLUG}}.html" />
+  <meta property="og:title" content="{{TITLE}}" />
+  <meta property="og:description" content="{{EXCERPT}}" />
+  <meta property="og:image" content="https://www.ogrupozentra.com/assets/logo-black.jpg" />
+  <meta property="article:published_time" content="{{DATE_ISO}}" />
+  <meta property="article:author" content="{{AUTHOR}}" />
+  <meta property="twitter:card" content="summary_large_image" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "{{TITLE}}",
+    "description": "{{EXCERPT}}",
+    "datePublished": "{{DATE_ISO}}",
+    "author": {
+      "@type": "Person",
+      "name": "{{AUTHOR}}",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Grupo Zentra",
+        "url": "https://www.ogrupozentra.com"
+      }
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Grupo Zentra",
+      "url": "https://www.ogrupozentra.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.ogrupozentra.com/assets/logo-black.jpg"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.ogrupozentra.com/inteligencia/posts/{{SLUG}}.html"
+    },
+    "keywords": "{{TAGS}}"
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black:  #0A0A0A;
+      --black2: #111111;
+      --black3: #161616;
+      --white:  #F5F0EB;
+      --white2: rgba(245,240,235,0.55);
+      --white3: rgba(245,240,235,0.12);
+      --gold:   #C9A96E;
+      --gold2:  rgba(201,169,110,0.12);
+      --gold3:  rgba(201,169,110,0.06);
+      --border: rgba(245,240,235,0.07);
+      --font: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', system-ui, sans-serif;
+      --max: 1200px;
+      --ease: cubic-bezier(0.16,1,0.3,1);
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); background: var(--black); color: var(--white); overflow-x: hidden; line-height: 1.6; }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 28px 52px;
+      display: flex; align-items: center; justify-content: space-between;
+      transition: background .4s var(--ease), padding .4s var(--ease), border-color .4s;
+      border-bottom: 1px solid transparent;
+    }
+    nav.scrolled {
+      background: rgba(10,10,10,.88);
+      backdrop-filter: blur(20px);
+      padding: 18px 52px;
+      border-bottom-color: var(--border);
+    }
+    .nav-logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+    .nav-logo svg { height: 36px; width: auto; }
+    .nav-logo-label {
+      font-size: .68rem; font-weight: 600; letter-spacing: .18em;
+      text-transform: uppercase; color: var(--white2);
+    }
+    .nav-logo-label span { color: var(--gold); }
+    .nav-links { display: flex; gap: 36px; list-style: none; }
+    .nav-links a { color: var(--white2); text-decoration: none; font-size: .82rem; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; transition: color .2s; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta {
+      background: transparent; color: var(--gold);
+      border: 1px solid rgba(201,169,110,0.35);
+      padding: 9px 22px; border-radius: 2px;
+      font-size: .78rem; font-weight: 600; text-decoration: none;
+      letter-spacing: .08em; text-transform: uppercase;
+      transition: background .2s, border-color .2s;
+    }
+    .nav-cta:hover { background: var(--gold2); border-color: var(--gold); }
+    @media (max-width: 768px) { nav { padding: 20px 24px; } nav.scrolled { padding: 14px 24px; } .nav-links { display: none; } }
+
+    /* ── HERO DO POST ── */
+    #post-hero {
+      padding: 160px 52px 72px;
+      border-bottom: 1px solid var(--border);
+      position: relative; overflow: hidden;
+    }
+    .post-hero-bg {
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 50% 80% at 15% 50%, rgba(201,169,110,0.05) 0%, transparent 65%), var(--black);
+    }
+    .post-hero-inner {
+      position: relative; z-index: 2;
+      max-width: 760px; margin: 0 auto;
+    }
+    .post-hero-back {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: .72rem; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--white2); text-decoration: none;
+      margin-bottom: 36px; transition: color .2s;
+    }
+    .post-hero-back:hover { color: var(--gold); }
+    .post-hero-back svg { width: 14px; height: 14px; }
+    .post-frente-badge {
+      display: inline-block; font-size: .62rem; font-weight: 600;
+      letter-spacing: .18em; text-transform: uppercase; color: var(--gold);
+      border: 1px solid rgba(201,169,110,.25); padding: 4px 12px;
+      border-radius: 2px; margin-bottom: 24px;
+    }
+    .post-hero-title {
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 700; letter-spacing: -.03em; line-height: 1.15;
+      margin-bottom: 24px; color: var(--white);
+    }
+    .post-hero-excerpt {
+      font-size: 1.05rem; color: var(--white2); line-height: 1.75;
+      margin-bottom: 36px; font-weight: 300;
+    }
+    .post-hero-meta {
+      display: flex; align-items: center; gap: 24px;
+      flex-wrap: wrap;
+      padding-top: 28px; border-top: 1px solid var(--border);
+      font-size: .75rem; color: var(--white2); letter-spacing: .06em;
+    }
+    .post-hero-meta strong { color: var(--white); font-weight: 600; }
+    .post-hero-meta-dot { width: 3px; height: 3px; background: var(--border); border-radius: 50%; }
+    @media (max-width: 768px) { #post-hero { padding: 140px 24px 60px; } }
+
+    /* ── CONTEÚDO ── */
+    #post-body {
+      padding: 72px 52px 100px;
+      max-width: 760px; margin: 0 auto;
+    }
+    .post-content { font-size: .98rem; line-height: 1.85; color: var(--white2); }
+    .post-content h2 {
+      font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+      font-weight: 700; letter-spacing: -.02em; color: var(--white);
+      margin: 52px 0 18px; line-height: 1.25;
+    }
+    .post-content h3 {
+      font-size: 1.05rem; font-weight: 700; color: var(--white);
+      margin: 36px 0 14px;
+    }
+    .post-content p { margin-bottom: 22px; }
+    .post-content p:last-child { margin-bottom: 0; }
+    .post-content strong { color: var(--white); font-weight: 600; }
+    .post-content em { font-style: italic; color: var(--white); }
+    .post-content ul, .post-content ol {
+      padding-left: 0; list-style: none;
+      margin-bottom: 22px; display: flex; flex-direction: column; gap: 10px;
+    }
+    .post-content ul li, .post-content ol li {
+      padding-left: 22px; position: relative;
+    }
+    .post-content ul li::before {
+      content: '—'; position: absolute; left: 0;
+      color: rgba(201,169,110,.4);
+    }
+    .post-content ol { counter-reset: ol-counter; }
+    .post-content ol li { counter-increment: ol-counter; }
+    .post-content ol li::before {
+      content: counter(ol-counter) '.'; position: absolute; left: 0;
+      color: var(--gold); font-weight: 700; font-size: .82rem;
+    }
+    .post-content blockquote {
+      border-left: 2px solid var(--gold);
+      padding: 16px 24px; margin: 32px 0;
+      background: var(--gold3);
+      font-size: 1rem; font-style: italic; color: var(--white);
+      line-height: 1.7;
+    }
+    .post-content a { color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(201,169,110,.3); transition: border-color .2s; }
+    .post-content a:hover { border-color: var(--gold); }
+    .post-content hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+    @media (max-width: 768px) { #post-body { padding: 52px 24px 80px; } }
+
+    /* ── CTA INLINE ── */
+    .post-cta {
+      margin-top: 64px; padding: 40px;
+      border: 1px solid var(--border);
+      background: var(--black2);
+      text-align: center;
+    }
+    .post-cta p {
+      font-size: .85rem; color: var(--white2);
+      margin-bottom: 22px; line-height: 1.6;
+    }
+    .post-cta strong { color: var(--white); display: block; font-size: 1.1rem; margin-bottom: 8px; font-weight: 700; letter-spacing: -.01em; }
+    .btn-wpp {
+      background: #25D366; color: #fff;
+      padding: 12px 28px; border-radius: 2px; font-weight: 700;
+      font-size: .78rem; letter-spacing: .08em; text-transform: uppercase;
+      text-decoration: none; display: inline-flex; align-items: center; gap: 10px;
+      transition: opacity .2s;
+    }
+    .btn-wpp:hover { opacity: .9; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--black); padding: 36px 52px;
+      display: flex; align-items: center; justify-content: space-between;
+      border-top: 1px solid var(--border);
+    }
+    .footer-copy { color: rgba(245,240,235,.2); font-size: .75rem; }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { color: rgba(245,240,235,.25); font-size: .75rem; text-decoration: none; transition: color .2s; }
+    .footer-links a:hover { color: var(--gold); }
+    @media (max-width: 640px) { footer { flex-direction: column; gap: 18px; text-align: center; padding: 28px 24px; } }
+  </style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PWNZXS3F" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="/" class="nav-logo" aria-label="Grupo Zentra">
+    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="50,4 96,50 50,96 4,50" stroke="rgba(245,240,235,0.9)" stroke-width="2.2" stroke-linejoin="miter" fill="none"/>
+      <line x1="50" y1="4" x2="50" y2="50" stroke="rgba(245,240,235,0.9)" stroke-width="2.2" stroke-linecap="square"/>
+    </svg>
+    <span class="nav-logo-label">Grupo Zentra <span>/ Inteligência</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/inteligencia/">← Inteligência</a></li>
+    <li><a href="/#frentes">Soluções</a></li>
+  </ul>
+  <a href="https://wa.me/5543996850251" class="nav-cta" target="_blank" rel="noopener">Falar com a Zentra</a>
+</nav>
+
+<!-- HERO DO POST -->
+<section id="post-hero">
+  <div class="post-hero-bg"></div>
+  <div class="post-hero-inner">
+    <a href="/inteligencia/" class="post-hero-back">
+      <svg viewBox="0 0 14 14" fill="none"><line x1="9" y1="2" x2="3" y2="7" stroke="currentColor" stroke-width="1.4" stroke-linecap="square"/><line x1="3" y1="7" x2="9" y2="12" stroke="currentColor" stroke-width="1.4" stroke-linecap="square"/></svg>
+      Zentra Inteligência
+    </a>
+    <span class="post-frente-badge">{{FRENTE_LABEL}}</span>
+    <h1 class="post-hero-title">{{TITLE}}</h1>
+    <p class="post-hero-excerpt">{{EXCERPT}}</p>
+    <div class="post-hero-meta">
+      <span><strong>{{AUTHOR}}</strong></span>
+      <span class="post-hero-meta-dot"></span>
+      <span>{{DATE_BR}}</span>
+      <span class="post-hero-meta-dot"></span>
+      <span>{{READ_TIME}} min de leitura</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTEÚDO DO ARTIGO -->
+<article id="post-body">
+  <div class="post-content">
+    {{CONTENT}}
+  </div>
+
+  <!-- CTA INLINE -->
+  <div class="post-cta">
+    <strong>Quer aplicar isso na sua empresa?</strong>
+    <p>A Zentra conecta estratégia e execução — automação, pagamentos, compliance e lançamentos em um único ecossistema.</p>
+    <a href="https://wa.me/5543996850251" class="btn-wpp" target="_blank" rel="noopener">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.532 5.858L0 24l6.335-1.658A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.002-1.366l-.358-.213-3.76.984.999-3.658-.234-.376A9.78 9.78 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+      Falar no WhatsApp
+    </a>
+  </div>
+</article>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <svg viewBox="0 0 100 115" fill="none" xmlns="http://www.w3.org/2000/svg" style="height:28px;width:auto;opacity:.4" aria-label="Grupo Zentra">
+      <polygon points="50,4 96,50 50,96 4,50" stroke="rgba(245,240,235,1)" stroke-width="2.2" stroke-linejoin="miter" fill="none"/>
+      <line x1="50" y1="4" x2="50" y2="50" stroke="rgba(245,240,235,1)" stroke-width="2.2" stroke-linecap="square"/>
+      <text x="50" y="110" text-anchor="middle" font-size="10" letter-spacing="3" fill="rgba(245,240,235,0.8)" font-family="-apple-system,BlinkMacSystemFont,'SF Pro Display','Helvetica Neue',sans-serif"><tspan font-weight="700">GRUPO</tspan><tspan font-weight="300"> ZENTRA</tspan></text>
+    </svg>
+  </div>
+  <p class="footer-copy">© 2025 Grupo Zentra. Todos os direitos reservados.</p>
+  <div class="footer-links">
+    <a href="/inteligencia/">Inteligência</a>
+    <a href="/">Início</a>
+    <a href="/#contato">Contato</a>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); }, { passive: true });
+</script>
+</body>
+</html>
