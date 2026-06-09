@@ -33,6 +33,7 @@
     "author": {
       "@type": "Person",
       "name": "{{AUTHOR}}",
+      "sameAs": "{{AUTHOR_LINKEDIN}}",
       "worksFor": {
         "@type": "Organization",
         "name": "Grupo Zentra",
@@ -55,6 +56,20 @@
     "keywords": "{{TAGS}}"
   }
   </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://www.ogrupozentra.com" },
+      { "@type": "ListItem", "position": 2, "name": "Inteligência", "item": "https://www.ogrupozentra.com/inteligencia/" },
+      { "@type": "ListItem", "position": 3, "name": "{{TITLE}}", "item": "https://www.ogrupozentra.com/inteligencia/posts/{{SLUG}}.html" }
+    ]
+  }
+  </script>
+
+  {{FAQ_SCHEMA}}
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -208,6 +223,17 @@
     .post-content hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
     @media (max-width: 768px) { #post-body { padding: 52px 24px 80px; } }
 
+    /* ── FAQ ── */
+    .post-faq { margin-top: 64px; border-top: 1px solid var(--border); padding-top: 52px; }
+    .post-faq > h2 {
+      font-size: 1.1rem; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 36px;
+    }
+    .faq-item { margin-bottom: 32px; padding-bottom: 32px; border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .faq-item h3 { font-size: 1rem; font-weight: 700; color: var(--white); margin-bottom: 12px; line-height: 1.4; }
+    .faq-item p { font-size: .95rem; color: var(--white2); line-height: 1.75; margin: 0; }
+
     /* ── CTA INLINE ── */
     .post-cta {
       margin-top: 64px; padding: 40px;
@@ -288,6 +314,8 @@
   <div class="post-content">
     {{CONTENT}}
   </div>
+
+  {{FAQ_HTML}}
 
   <!-- CTA INLINE -->
   <div class="post-cta">
