@@ -20,9 +20,3 @@
   [headers.values]
     Cache-Control = "public, max-age=3600"
     Content-Type = "text/plain; charset=utf-8"
-
-[[redirects]]
-  from = "https://ogrupozentra.com/*"
-  to   = "https://www.ogrupozentra.com/:splat"
-  status = 301
-  force  = true
