@@ -11,9 +11,13 @@
   <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=3992166024366579&ev=PageView&noscript=1"/></noscript>
   <!-- End Meta Pixel -->
   <title>Grupo Zentra | Ecossistema de Educação, Tecnologia e Automação</title>
-  <meta name="description" content="A Zentra é um ecossistema de educação, tecnologia e desenvolvimento organizacional. ZPay, Automação, Lançamentos, CEBEC e Mindra — transformamos empresas por meio da ciência do comportamento e tecnologia." />
+  <meta name="description" content="Grupo Zentra — automação empresarial, pagamentos high ticket e educação corporativa em Londrina, PR. Automação para clínicas médicas, ZPay, CEBEC e Mindra. Atendemos todo o Brasil." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.ogrupozentra.com" />
+  <meta name="geo.region" content="BR-PR" />
+  <meta name="geo.placename" content="Londrina, Paraná" />
+  <meta name="geo.position" content="-23.3045;-51.1696" />
+  <meta name="ICBM" content="-23.3045, -51.1696" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.ogrupozentra.com" />
   <meta property="og:title" content="Grupo Zentra | Educação, Tecnologia e Automação" />
@@ -26,22 +30,44 @@
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Organization",
+        "@type": ["LocalBusiness", "ProfessionalService"],
         "@id": "https://www.ogrupozentra.com/#organization",
         "name": "Grupo Zentra",
         "url": "https://www.ogrupozentra.com",
         "logo": "https://www.ogrupozentra.com/assets/logo-black.jpg",
+        "telephone": "+55-43-99685-0251",
+        "email": "pedro.santos@ogrupozentra.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Londrina",
+          "addressRegion": "PR",
+          "addressCountry": "BR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -23.3045,
+          "longitude": -51.1696
+        },
+        "areaServed": [
+          {"@type": "City", "name": "Londrina"},
+          {"@type": "City", "name": "Cambé"},
+          {"@type": "City", "name": "Rolândia"},
+          {"@type": "City", "name": "Arapongas"},
+          {"@type": "City", "name": "Apucarana"},
+          {"@type": "State", "name": "Paraná"},
+          {"@type": "Country", "name": "Brasil"}
+        ],
         "contactPoint": {"@type":"ContactPoint","telephone":"+55-43-99685-0251","email":"pedro.santos@ogrupozentra.com","contactType":"customer service","availableLanguage":"Portuguese"},
-        "description": "Ecossistema de educação, tecnologia e desenvolvimento organizacional que ajuda empresas e profissionais a evoluírem por meio da ciência do comportamento, liderança e bem-estar corporativo.",
-        "foundingLocation": "Londrina, PR, Brasil",
+        "description": "Empresa de tecnologia, automação e educação corporativa sediada em Londrina, PR. Especialistas em automação para clínicas médicas, pagamentos high ticket via WhatsApp, lançamentos digitais e SaaS NR1.",
+        "foundingLocation": {"@type": "Place", "name": "Londrina, PR, Brasil"},
         "hasOfferCatalog": {
           "@type": "OfferCatalog", "name": "Soluções Zentra",
           "itemListElement": [
-            {"@type":"Offer","itemOffered":{"@type":"Service","name":"ZPay","description":"Meio de pagamento focado em vendas high ticket integrado no WhatsApp"}},
-            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Zentra Automação","description":"Automação de backoffice, atendimento ao cliente e pós-venda para empresas"}},
-            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Zentra Lançamentos","description":"Criação, gerenciamento e operação completa para infoprodutores"}},
-            {"@type":"Offer","itemOffered":{"@type":"Service","name":"CEBEC","description":"Centro de Educação de Bem-estar Corporativo com mais de 200 alunos ativos"}},
-            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Mindra","description":"SaaS para consultores com foco na atualização da NR1"}}
+            {"@type":"Offer","itemOffered":{"@type":"Service","name":"ZPay","description":"Meio de pagamento focado em vendas high ticket integrado ao WhatsApp. Desenvolvido em Londrina, PR."}},
+            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Zentra Automação","description":"Automação de backoffice, atendimento e pós-venda para empresas em Londrina e no Brasil. Especialistas em automação para clínicas médicas."}},
+            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Zentra Lançamentos","description":"Operação completa de lançamentos digitais para infoprodutores em Londrina e no Brasil."}},
+            {"@type":"Offer","itemOffered":{"@type":"Service","name":"CEBEC","description":"Centro de Educação de Bem-estar Corporativo com mais de 200 alunos ativos. Parceria com Angela Pelizer."}},
+            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Mindra","description":"SaaS para adequação à NR1 (riscos psicossociais), desenvolvido em Londrina para consultores e empresas do Brasil."}}
           ]
         }
       },
@@ -59,10 +85,12 @@
       {
         "@type": "FAQPage",
         "mainEntity": [
-          {"@type":"Question","name":"O que é o Grupo Zentra?","acceptedAnswer":{"@type":"Answer","text":"O Grupo Zentra é um ecossistema de educação, tecnologia e desenvolvimento organizacional. Atuamos em cinco frentes: ZPay (pagamentos high ticket), Automação de negócios, Lançamentos digitais, CEBEC (educação corporativa) e Mindra (SaaS NR1)."}},
-          {"@type":"Question","name":"O que é o ZPay?","acceptedAnswer":{"@type":"Answer","text":"O ZPay é um meio de pagamento focado em vendas high ticket integrado ao WhatsApp. Já processou mais de R$300 mil em transações."}},
-          {"@type":"Question","name":"Como a Zentra automatiza clínicas médicas?","acceptedAnswer":{"@type":"Answer","text":"A Zentra Automação automatiza atendimento via WhatsApp, agendamentos, pós-consulta e backoffice. Já atendemos mais de 30 clínicas médicas."}},
-          {"@type":"Question","name":"O que é a Mindra?","acceptedAnswer":{"@type":"Answer","text":"A Mindra é um SaaS para consultores e empresas que precisam adequar-se à atualização da NR1, que inclui gestão de riscos psicossociais no trabalho."}},
+          {"@type":"Question","name":"O que é o Grupo Zentra?","acceptedAnswer":{"@type":"Answer","text":"O Grupo Zentra é uma empresa de tecnologia, automação e educação corporativa sediada em Londrina, Paraná, Brasil. Atuamos em cinco frentes: ZPay (pagamentos high ticket), Automação de negócios, Lançamentos digitais, CEBEC (educação corporativa) e Mindra (SaaS NR1)."}},
+          {"@type":"Question","name":"O Grupo Zentra é de Londrina?","acceptedAnswer":{"@type":"Answer","text":"Sim. O Grupo Zentra é sediado em Londrina, Paraná, Brasil, fundado por Pedro Augusto Ferreira e João Vitor Pelizer. Atende presencialmente empresas em Londrina e região, e remotamente em todo o Brasil."}},
+          {"@type":"Question","name":"A Zentra faz automação para clínicas médicas em Londrina?","acceptedAnswer":{"@type":"Answer","text":"Sim. A Zentra Automação é especializada em automação para clínicas médicas em Londrina e no Norte do Paraná. Automatizamos agendamentos, confirmações de consulta, atendimento via WhatsApp 24h e backoffice administrativo. Mais de 30 clínicas já foram atendidas."}},
+          {"@type":"Question","name":"A Zentra faz automação de marketing em Londrina?","acceptedAnswer":{"@type":"Answer","text":"Sim. A Zentra oferece automação de marketing digital em Londrina: fluxos de WhatsApp, email marketing automatizado, follow-up inteligente e integrações com n8n, Make e Zapier para negócios locais."}},
+          {"@type":"Question","name":"O que é o ZPay?","acceptedAnswer":{"@type":"Answer","text":"O ZPay é um meio de pagamento focado em vendas high ticket integrado ao WhatsApp, desenvolvido pelo Grupo Zentra em Londrina, PR. Já processou mais de R$300 mil em transações."}},
+          {"@type":"Question","name":"O que é a Mindra?","acceptedAnswer":{"@type":"Answer","text":"A Mindra é um SaaS para consultores e empresas que precisam adequar-se à atualização da NR1, que inclui gestão de riscos psicossociais no trabalho. Desenvolvido pelo Grupo Zentra em Londrina."}},
           {"@type":"Question","name":"O que é o CEBEC?","acceptedAnswer":{"@type":"Answer","text":"O CEBEC é o Centro de Educação de Bem-estar Corporativo, com Angela Pelizer. Mais de 200 alunos ativos e 6 cursos lançados."}}
         ]
       }
@@ -483,7 +511,7 @@
   <div class="hero-grid"></div>
 
   <div class="hero-content">
-    <p class="hero-eyebrow reveal">Educação · Tecnologia · Automação</p>
+    <p class="hero-eyebrow reveal">Londrina, PR · Educação · Tecnologia · Automação</p>
     <svg class="hero-logo reveal reveal-delay-1" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Grupo Zentra">
     <polygon points="50,4 96,50 50,96 4,50" stroke="rgba(245,240,235,0.9)" stroke-width="2.2" stroke-linejoin="miter" fill="none"/>
     <line x1="50" y1="4" x2="50" y2="50" stroke="rgba(245,240,235,0.9)" stroke-width="2.2" stroke-linecap="square"/>
@@ -540,8 +568,8 @@
       <div class="sobre-line reveal reveal-delay-2"></div>
     </div>
     <div class="sobre-right reveal reveal-delay-2">
-      <p>A Zentra nasceu da crença de que tecnologia e comportamento humano caminham juntos. Não entregamos ferramentas — entregamos transformação.</p>
-      <p>Por meio do CEBEC e da Mindra, combinamos educação corporativa, automação inteligente e pagamentos de alta performance em um único ecossistema.</p>
+      <p>Nascida em Londrina, PR, a Zentra foi fundada com a crença de que tecnologia e comportamento humano caminham juntos. Não entregamos ferramentas — entregamos transformação.</p>
+      <p>Por meio do CEBEC e da Mindra, combinamos educação corporativa, automação inteligente e pagamentos de alta performance em um único ecossistema — atendendo empresas em Londrina, no Norte do Paraná e em todo o Brasil.</p>
     </div>
   </div>
 </section>
@@ -619,16 +647,16 @@
     <div>
       <span class="product-badge reveal">Automação</span>
       <h2 class="product-title reveal reveal-delay-1">Zentra Automação</h2>
-      <p class="product-subtitle reveal reveal-delay-2">Automatizamos as funções que consomem tempo e travam o crescimento: backoffice, atendimento ao cliente, pós-venda e muito mais.</p>
+      <p class="product-subtitle reveal reveal-delay-2">Automatizamos as funções que consomem tempo e travam o crescimento: backoffice, atendimento ao cliente, pós-venda e muito mais. Referência em automação para clínicas médicas em Londrina e no Norte do Paraná.</p>
       <div class="product-stats reveal reveal-delay-3">
         <div class="ps"><div class="ps-num">50+</div><div class="ps-label">Empresas</div></div>
         <div class="ps"><div class="ps-num">30+</div><div class="ps-label">Clínicas médicas</div></div>
       </div>
       <ul class="product-features reveal reveal-delay-4">
-        <li>Automação de backoffice com IA</li>
+        <li>Automação para clínicas médicas em Londrina e região</li>
         <li>Atendimento ao cliente 24/7 via WhatsApp</li>
+        <li>Automação de marketing digital e follow-up</li>
         <li>Pós-venda automatizado com seguimento inteligente</li>
-        <li>Especialistas em automação para clínicas médicas</li>
         <li>Integração com n8n, Make, Zapier e sistemas legados</li>
       </ul>
     </div>
@@ -767,6 +795,14 @@
     <div class="faq-item reveal reveal-delay-4">
       <button class="faq-q">O CEBEC emite certificado? <svg class="icon" viewBox="0 0 20 20" fill="none"><line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="1.5"/><line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5"/></svg></button>
       <div class="faq-a"><p>Sim. O CEBEC, em parceria com Angela Pelizer, oferece certificações em liderança, bem-estar corporativo e ciência do comportamento. Já são mais de 200 alunos ativos e 6 cursos lançados.</p></div>
+    </div>
+    <div class="faq-item reveal reveal-delay-5">
+      <button class="faq-q">A Zentra atende empresas em Londrina e região? <svg class="icon" viewBox="0 0 20 20" fill="none"><line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="1.5"/><line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5"/></svg></button>
+      <div class="faq-a"><p>Sim. O Grupo Zentra é sediado em Londrina, PR, e atende presencialmente empresas em Londrina, Cambé, Rolândia, Arapongas e todo o Norte do Paraná. Para automação, SaaS e lançamentos digitais, atendemos clientes em todo o Brasil.</p></div>
+    </div>
+    <div class="faq-item reveal reveal-delay-5">
+      <button class="faq-q">A Zentra faz automação de marketing e WhatsApp em Londrina? <svg class="icon" viewBox="0 0 20 20" fill="none"><line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="1.5"/><line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5"/></svg></button>
+      <div class="faq-a"><p>Sim. Automatizamos campanhas de marketing digital, fluxos de WhatsApp, email marketing, follow-up automático e atendimento 24h para negócios em Londrina e no Norte do Paraná. Mais de 50 empresas já foram atendidas, com destaque para clínicas médicas e infoprodutores.</p></div>
     </div>
   </div>
 </section>

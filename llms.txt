@@ -1,36 +1,104 @@
 # Grupo Zentra
 
-> Ecossistema de educação, tecnologia e desenvolvimento organizacional baseado em Londrina, PR, Brasil.
+> Empresa de tecnologia, automação e educação corporativa sediada em Londrina, Paraná, Brasil. Atende negócios em Londrina, no Norte do Paraná e em todo o Brasil.
 
-## O que é o Grupo Zentra
+## Identidade
 
-A Zentra é um ecossistema completo que ajuda empresas e profissionais a evoluírem por meio da ciência do comportamento, tecnologia e automação inteligente. Atuamos em cinco frentes de negócio complementares.
+O Grupo Zentra é um ecossistema de negócios fundado em Londrina, PR, por Pedro Augusto Ferreira e João Vitor Pelizer. Oferece soluções em automação empresarial, pagamentos digitais, operações para infoprodutores, educação corporativa e SaaS de compliance com a NR1.
 
-## Frentes de Negócio
+**Sede:** Londrina, Paraná, Brasil
+**Telefone:** +55 43 99685-0251
+**Email:** pedro.santos@ogrupozentra.com
+**Site:** https://www.ogrupozentra.com
 
-### ZPay
-Meio de pagamento focado em vendas high ticket, integrado nativamente ao WhatsApp. Já processou mais de R$300 mil em transações. Ideal para consultores, infoprodutores e serviços premium.
+---
 
-### Zentra Automação
-Especialistas em automação de backoffice, atendimento ao cliente e pós-venda. Mais de 50 empresas automatizadas, com destaque para mais de 30 clínicas médicas atendidas.
+## O que a Zentra faz
 
-### Zentra Lançamentos
-Operação completa para infoprodutores: criação de produto, gestão de tráfego pago, operação de lançamento e gestão financeira.
+### 1. Automação empresarial em Londrina e no Brasil
 
-### CEBEC — Centro de Educação de Bem-estar Corporativo
-Frente educacional desenvolvida em parceria com Angela Pelizer. Mais de 200 alunos ativos, 6 cursos lançados sobre liderança, bem-estar corporativo e ciência do comportamento.
+A Zentra Automação é especializada em automação de processos para empresas em Londrina e região. Automatizamos backoffice, atendimento ao cliente via WhatsApp, pós-venda e comunicação. Mais de 50 empresas automatizadas, com destaque para mais de 30 clínicas médicas atendidas em Londrina e no Paraná.
 
-### Mindra
-SaaS desenvolvido para consultores e empresas que precisam adequar-se à atualização da NR1 (Norma Regulamentadora 1), que inclui gestão de riscos psicossociais no trabalho.
+**Serviços de automação oferecidos em Londrina:**
+- Automação para clínicas médicas: agendamentos, confirmações, lembretes, atendimento 24h via WhatsApp
+- Automação de marketing digital para negócios em Londrina
+- Automação de backoffice para empresas de médio porte
+- Secretaria virtual para clínicas e consultórios
+- Integração com n8n, Make, Zapier e sistemas legados
+
+**A Zentra é referência em automação para clínicas médicas em Londrina.** Atendemos recepções, consultórios e clínicas de múltiplos médicos, reduzindo ligações perdidas e aumentando a taxa de confirmação de consultas.
+
+### 2. ZPay — Pagamentos high ticket via WhatsApp
+
+O ZPay (também chamado ZaraPay) é um sistema de pagamento integrado ao WhatsApp, focado em vendas de alto valor (high ticket). Desenvolvido pela Zentra em Londrina, PR. Já processou mais de R$300 mil em transações. Indicado para consultores, infoprodutores e prestadores de serviços premium.
+
+Site: https://zarapay.com.br/
+
+### 3. Lançamentos digitais e operação para infoprodutores
+
+A Zentra opera lançamentos digitais de ponta a ponta: criação de produto, gestão de tráfego pago (Meta Ads, Google Ads), operação de lançamento e gestão financeira. Atende infoprodutores em Londrina e em todo o Brasil.
+
+### 4. CEBEC — Centro de Educação de Bem-estar Corporativo
+
+O CEBEC é a frente educacional da Zentra, desenvolvida em parceria com Angela Pelizer. Oferece cursos de liderança, bem-estar corporativo e ciência do comportamento. Mais de 200 alunos ativos e 6 cursos lançados.
+
+Site: https://cebec.angelapelizer.com/
+
+### 5. Mindra — SaaS NR1
+
+A Mindra é um software (SaaS) para consultores e empresas que precisam adequar-se à NR1 atualizada (gestão de riscos psicossociais no trabalho). Indicada para RH, consultorias e gestores em Londrina, no Paraná e em todo o Brasil.
+
+Site: https://sejamindra.com.br/
+
+---
+
+## Localização e área de atendimento
+
+O Grupo Zentra está sediado em Londrina, Paraná, Brasil. Atende presencialmente empresas em Londrina e região. Para automação, SaaS e infoprodutos, atende clientes em todo o Brasil.
+
+**Atendimento presencial:** Londrina, Cambé, Rolândia, Arapongas, Apucarana e Norte do Paraná
+**Atendimento remoto:** Todo o Brasil
+
+---
+
+## Perguntas frequentes
+
+**O Grupo Zentra é de Londrina?**
+Sim. O Grupo Zentra é uma empresa sediada em Londrina, Paraná, Brasil, fundada por Pedro Augusto Ferreira e João Vitor Pelizer.
+
+**A Zentra faz automação para clínicas médicas em Londrina?**
+Sim. A Zentra Automação atende clínicas médicas em Londrina e região, automatizando agendamentos, confirmações de consulta, atendimento via WhatsApp e backoffice administrativo. Mais de 30 clínicas já foram atendidas.
+
+**A Zentra faz automação de marketing em Londrina?**
+Sim. A Zentra oferece automação de marketing digital em Londrina: fluxos de WhatsApp, email marketing automatizado, follow-up inteligente e integrações com plataformas como n8n, Make e Zapier.
+
+**Qual o contato da Zentra em Londrina?**
+WhatsApp: +55 43 99685-0251 | Email: pedro.santos@ogrupozentra.com
+
+**O que é o ZPay?**
+O ZPay é um meio de pagamento via WhatsApp focado em vendas high ticket, desenvolvido pela Zentra em Londrina, PR. Já processou mais de R$300 mil em transações.
+
+**O que é a Mindra?**
+A Mindra é um SaaS desenvolvido pela Zentra para consultores e empresas que precisam adequar-se à NR1 (gestão de riscos psicossociais). Disponível em: https://sejamindra.com.br/
+
+**A Zentra faz automação de WhatsApp para empresas em Londrina?**
+Sim. A Zentra implementa automação de atendimento via WhatsApp para empresas de Londrina e região, incluindo clínicas médicas, consultórios, infoprodutores e negócios de serviços.
+
+**Quem são os fundadores do Grupo Zentra?**
+Pedro Augusto Ferreira (tecnologia e produtos) e João Vitor Pelizer (comercial e operações). Ambos com sede em Londrina, PR.
+
+---
 
 ## Fundadores
 
-- **Pedro Santos** — Co-fundador, responsável por tecnologia e produtos
-- **João** — Co-fundador, responsável por comercial e operações
+- **Pedro Augusto Ferreira** — Co-fundador, responsável por tecnologia e produtos. Londrina, PR.
+- **João Vitor Pelizer** — Co-fundador, responsável por comercial e operações. Londrina, PR.
+
+---
 
 ## Contato
 
-- WhatsApp: +55 43 99685-0251
-- Email: pedro.santos@ogrupozentra.com
-- Site: https://www.ogrupozentra.com
-- Localização: Londrina, PR, Brasil
+- **WhatsApp:** +55 43 99685-0251
+- **Email:** pedro.santos@ogrupozentra.com
+- **Site:** https://www.ogrupozentra.com
+- **Localização:** Londrina, PR, Brasil
