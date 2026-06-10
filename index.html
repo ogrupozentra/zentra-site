@@ -430,6 +430,48 @@
     .founder-num { font-size: 2rem; font-weight: 800; color: var(--border); letter-spacing: -.04em; }
     @media (max-width: 640px) { .founders-grid { grid-template-columns: 1fr; max-width: 380px; } }
 
+    /* ── INTELIGÊNCIA ── */
+    #inteligencia { padding: 120px 0; background: var(--black3); }
+    .intel-header { text-align: center; margin-bottom: 64px; padding: 0 24px; }
+    .intel-grid {
+      max-width: var(--max); margin: 0 auto; padding: 0 52px;
+      display: grid; grid-template-columns: repeat(3,1fr); gap: 2px;
+    }
+    .intel-card {
+      background: var(--black2); padding: 36px 32px;
+      text-decoration: none; display: flex; flex-direction: column;
+      border: 1px solid var(--border); border-radius: 0;
+      transition: background .3s, border-color .3s;
+    }
+    .intel-card:hover { background: var(--black3); border-color: rgba(201,169,110,.2); }
+    .intel-tag {
+      font-size: .62rem; font-weight: 700; letter-spacing: .18em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 14px;
+    }
+    .intel-title {
+      font-size: 1rem; font-weight: 700; letter-spacing: -.01em;
+      color: var(--white); line-height: 1.4; margin-bottom: 12px; flex: 1;
+    }
+    .intel-excerpt { font-size: .8rem; color: var(--white2); line-height: 1.65; margin-bottom: 24px; }
+    .intel-meta {
+      display: flex; align-items: center; justify-content: space-between;
+      font-size: .68rem; color: rgba(245,240,235,.25); letter-spacing: .06em;
+    }
+    .intel-cta {
+      display: block; text-align: center; margin: 48px auto 0;
+      max-width: var(--max); padding: 0 52px;
+    }
+    .intel-cta a {
+      display: inline-block; border: 1px solid var(--border); color: var(--white2);
+      padding: 13px 36px; font-size: .78rem; font-weight: 500;
+      letter-spacing: .1em; text-transform: uppercase; text-decoration: none;
+      transition: border-color .2s, color .2s;
+    }
+    .intel-cta a:hover { border-color: var(--gold); color: var(--gold); }
+    .intel-empty { text-align: center; color: var(--white2); font-size: .9rem; padding: 40px; }
+    @media (max-width: 900px) { .intel-grid { grid-template-columns: 1fr; padding: 0 24px; } .intel-cta { padding: 0 24px; } }
+    @media (max-width: 640px) { .intel-grid { grid-template-columns: 1fr; } }
+
     /* ── FAQ ── */
     #faq { padding: 120px 0; background: var(--black); }
     .faq-header { text-align: center; margin-bottom: 64px; }
@@ -523,6 +565,7 @@
     <li><a href="#sobre">Sobre</a></li>
     <li><a href="#frentes">Soluções</a></li>
     <li><a href="#founders">Time</a></li>
+    <li><a href="/inteligencia/">Inteligência</a></li>
     <li><a href="#faq">FAQ</a></li>
   </ul>
   <a href="https://wa.me/5543996850251" class="nav-cta" target="_blank" rel="noopener">Falar com a Zentra</a>
@@ -792,6 +835,20 @@
   </div>
 </section>
 
+<!-- INTELIGÊNCIA -->
+<section id="inteligencia">
+  <div class="intel-header">
+    <p class="section-label reveal">Zentra Inteligência</p>
+    <h2 class="section-title reveal reveal-delay-1">Conteúdo que informa e gera resultado.</h2>
+  </div>
+  <div class="intel-grid" id="intel-grid">
+    <p class="intel-empty">Carregando artigos...</p>
+  </div>
+  <div class="intel-cta reveal">
+    <a href="/inteligencia/">Ver todos os artigos →</a>
+  </div>
+</section>
+
 <!-- FAQ -->
 <section id="faq">
   <div class="faq-header" style="padding:0 24px">
@@ -871,6 +928,27 @@
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
   }, { threshold: 0.1 });
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Zentra Inteligência — carrega últimos 3 posts
+  const FRENTE_LABELS = { automacao:'Automação', zpay:'ZPay', nr1:'NR1 · Mindra', cebec:'CEBEC', lancamentos:'Lançamentos' };
+  fetch('/inteligencia/posts.json')
+    .then(r => r.json())
+    .then(({ posts }) => {
+      const grid = document.getElementById('intel-grid');
+      const latest = posts.slice(0, 3);
+      if (!latest.length) { grid.innerHTML = '<p class="intel-empty">Em breve.</p>'; return; }
+      grid.innerHTML = latest.map(p => {
+        const date = new Date(p.date + 'T12:00:00').toLocaleDateString('pt-BR', { day:'numeric', month:'short', year:'numeric' });
+        return `<a href="/inteligencia/posts/${p.slug}.html" class="intel-card reveal">
+          <div class="intel-tag">${FRENTE_LABELS[p.frente] || p.frente}</div>
+          <div class="intel-title">${p.title}</div>
+          <div class="intel-excerpt">${p.excerpt}</div>
+          <div class="intel-meta"><span>${date}</span><span>→</span></div>
+        </a>`;
+      }).join('');
+      grid.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    })
+    .catch(() => { document.getElementById('intel-grid').innerHTML = ''; });
 
   document.querySelectorAll('.faq-q').forEach(btn => {
     btn.addEventListener('click', () => {
