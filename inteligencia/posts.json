@@ -2,6 +2,15 @@
   "posts": [
     {
       "slug": "saude-mental-no-trabalho-como-obrigacao-legal-impactos-da-nova-nr1",
+      "title": "Saúde Mental no Trabalho: Obligações Legais da NR1",
+      "excerpt": "Entenda como a nova NR1 impõe responsabilidades legais para a saúde mental nas empresas.",
+      "frente": "nr1",
+      "author": "Pedro Augusto Ferreira",
+      "date": "2026-06-10",
+      "tags": "saúde mental, NR1, riscos psicossociais, gestão de RH, segurança do trabalho"
+    },
+    {
+      "slug": "saude-mental-no-trabalho-como-obrigacao-legal-impactos-da-nova-nr1",
       "title": "Saúde Mental no Trabalho: A Nova NR1 e Suas Obrigações",
       "excerpt": "Com a atualização da NR1, empresas enfrentam novas demandas legais sobre saúde mental no trabalho. Entenda os impactos da norma.",
       "frente": "nr1",
