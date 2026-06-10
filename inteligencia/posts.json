@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "slug": "saude-mental-no-trabalho-como-obrigacao-legal-impactos-da-nova-nr1",
+      "title": "Saúde Mental no Trabalho e a Nova NR1: Uma Análise Necessária",
+      "excerpt": "Explore como a nova NR1 transforma a saúde mental no trabalho em obrigação legal e seus impactos nas empresas.",
+      "frente": "nr1",
+      "author": "Pedro Augusto Ferreira",
+      "date": "2026-06-10",
+      "tags": "saúde mental, NR1, riscos psicossociais, saúde no trabalho, gestão de pessoas"
+    },
+    {
       "slug": "integracao-de-pagamento-com-whatsapp-o-que-os-infoprodutores-precisam-saber",
       "title": "Integração de Pagamento com WhatsApp para Infoprodutores",
       "excerpt": "Descubra como a integração de pagamentos via WhatsApp pode transformar as vendas de infoprodutores e otimizar conversões.",
