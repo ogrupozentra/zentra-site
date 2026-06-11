@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "slug": "lideranca-baseada-em-evidencias-o-que-a-ciencia-do-comportamento-ensina",
+      "title": "Liderança baseada em evidências: o que a ciência do comportamento ensina",
+      "excerpt": "Descubra como a ciência do comportamento transforma a liderança com decisões baseadas em evidências.",
+      "frente": "cebec",
+      "author": "João Vitor Pelizer",
+      "date": "2026-06-11",
+      "tags": "liderança, ciência do comportamento, desenvolvimento organizacional, engajamento, feedback"
+    },
+    {
       "slug": "saude-mental-no-trabalho-como-obrigacao-legal-impactos-da-nova-nr1",
       "title": "Saúde Mental no Trabalho: Obligações Legais da NR1",
       "excerpt": "Entenda como a nova NR1 impõe responsabilidades legais para a saúde mental nas empresas.",
