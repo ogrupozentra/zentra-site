@@ -2,6 +2,15 @@
   "posts": [
     {
       "slug": "lideranca-baseada-em-evidencias-o-que-a-ciencia-do-comportamento-ensina",
+      "title": "Liderança Baseada em Evidências: Ciência do Comportamento Aplicada",
+      "excerpt": "Explore como a ciência do comportamento molda a liderança eficaz e baseada em evidências para organizações modernas.",
+      "frente": "cebec",
+      "author": "João Vitor Pelizer",
+      "date": "2026-06-11",
+      "tags": "liderança, ciência do comportamento, gestão, tomada de decisão, desenvolvimento organizacional"
+    },
+    {
+      "slug": "lideranca-baseada-em-evidencias-o-que-a-ciencia-do-comportamento-ensina",
       "title": "Liderança baseada em evidências: o que a ciência do comportamento ensina",
       "excerpt": "Descubra como a ciência do comportamento transforma a liderança com decisões baseadas em evidências.",
       "frente": "cebec",
