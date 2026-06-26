@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "slug": "lideranca-baseada-em-evidencias-o-que-a-ciencia-do-comportamento-ensina",
+      "title": "Liderança baseada em evidências: lições da ciência do comportamento",
+      "excerpt": "Explore como a liderança baseada em evidências pode transformar organizações com insights da ciência do comportamento.",
+      "frente": "cebec",
+      "author": "João Vitor Pelizer",
+      "date": "2026-06-26",
+      "tags": "liderança, ciência do comportamento, gestão de pessoas, tomada de decisão, desenvolvimento organizacional"
+    },
+    {
       "slug": "nr1-atualizada-2025-o-que-muda-na-gestao-de-riscos-psicossociais",
       "title": "Atualizações na NR1 sobre Riscos Psicossociais em 2025",
       "excerpt": "Entenda as mudanças na NR1 de 2025 e como elas impactam a gestão de riscos psicossociais nas empresas.",
