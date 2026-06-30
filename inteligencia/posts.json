@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "slug": "como-estruturar-uma-esteira-de-produtos-digitais-do-zero",
+      "title": "Como estruturar uma esteira de produtos digitais do zero",
+      "excerpt": "Aprenda a criar uma esteira de produtos digitais eficaz para escalar negócios online.",
+      "frente": "lancamentos",
+      "author": "Pedro Augusto Ferreira",
+      "date": "2026-06-30",
+      "tags": "produtos digitais, infoprodutos, marketing digital, e-learning, lançamento de produtos"
+    },
+    {
       "slug": "lideranca-baseada-em-evidencias-o-que-a-ciencia-do-comportamento-ensina",
       "title": "Liderança baseada em evidências: lições da ciência do comportamento",
       "excerpt": "Explore como a liderança baseada em evidências pode transformar organizações com insights da ciência do comportamento.",
