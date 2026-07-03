@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "slug": "claude-code-na-pratica-como-usar-ia-para-programar-do-zero-ao-deploy",
+      "title": "Claude Code na prática: da programação ao deploy",
+      "excerpt": "Descubra como usar Claude Code para acelerar o desenvolvimento de software do início ao fim.",
+      "frente": "ia-tools",
+      "author": "João Vitor Pelizer",
+      "date": "2026-07-03",
+      "tags": "Claude Code, Inteligência Artificial, Desenvolvimento de Software, Deploy, Automação"
+    },
+    {
       "slug": "como-estruturar-uma-esteira-de-produtos-digitais-do-zero",
       "title": "Como estruturar uma esteira de produtos digitais do zero",
       "excerpt": "Aprenda a criar uma esteira de produtos digitais eficaz para escalar negócios online.",
