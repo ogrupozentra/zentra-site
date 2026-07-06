@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "slug": "consultoria-automacao-ia-pequenas-empresas-brasil",
+      "title": "Consultoria em Automação com IA para Pequenas Empresas no Brasil: O Caminho para a Escalabilidade",
+      "excerpt": "A automação com IA é uma solução poderosa para pequenas empresas no Brasil. Descubra como implementá-la para escalar seus negócios sem aumentar os custos.",
+      "frente": "tecnologia e negócios",
+      "author": "Pedro Augusto Ferreira",
+      "date": "2026-07-06",
+      "tags": "automação, IA, pequenas empresas, consultoria, Brasil"
+    },
+    {
       "slug": "claude-code-na-pratica-como-usar-ia-para-programar-do-zero-ao-deploy",
       "title": "Claude Code na prática: da programação ao deploy",
       "excerpt": "Descubra como usar Claude Code para acelerar o desenvolvimento de software do início ao fim.",
