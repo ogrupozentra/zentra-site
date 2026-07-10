@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "slug": "os-repositorios-open-source-mais-impactantes-de-2026-e-o-que-aprender-com-eles",
+      "title": "Repositórios Open Source Impactantes de 2026",
+      "excerpt": "Descubra os repositórios open source que estão moldando o futuro da tecnologia em 2026 e insights valiosos para profissionais.",
+      "frente": "github-trends",
+      "author": "João Vitor Pelizer",
+      "date": "2026-07-10",
+      "tags": "open source, tecnologia, inovação, desenvolvimento, segurança"
+    },
+    {
       "slug": "como-llms-realmente-funcionam-o-que-todo-empreendedor-precisa-entender",
       "title": "Como LLMs Funcionam: O Que Todo Empreendedor Precisa Saber",
       "excerpt": "Entenda como LLMs operam e seu impacto nos negócios em 2026.",
