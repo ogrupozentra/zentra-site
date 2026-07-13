@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "slug": "empresa-automacao-ia-londrina",
+      "title": "Como Escolher uma Empresa de Automação com IA em Londrina",
+      "excerpt": "A automação com IA pode transformar a gestão das PMEs em Londrina. Neste artigo, você aprenderá como escolher a empresa ideal para suas necessidades.",
+      "frente": "tecnologia e negócios",
+      "author": "Pedro Augusto Ferreira",
+      "date": "2026-07-13",
+      "tags": "automação, IA, PMEs, Londrina"
+    },
+    {
       "slug": "os-repositorios-open-source-mais-impactantes-de-2026-e-o-que-aprender-com-eles",
       "title": "Repositórios Open Source Impactantes de 2026",
       "excerpt": "Descubra os repositórios open source que estão moldando o futuro da tecnologia em 2026 e insights valiosos para profissionais.",
