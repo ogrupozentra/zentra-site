@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "slug": "consultoria-automacao-ia-londrina",
+      "title": "Consultoria de Automação com IA em Londrina: Soluções para PMEs",
+      "excerpt": "Automatizar processos é essencial para o crescimento de PMEs. Descubra como a consultoria de automação com IA pode ajudar seu negócio em Londrina.",
+      "frente": "tecnologia e negócios",
+      "author": "Pedro Augusto Ferreira",
+      "date": "2026-07-13",
+      "tags": "automação, IA, PME, Londrina"
+    },
+    {
       "slug": "empresa-automacao-ia-londrina",
       "title": "Como Escolher uma Empresa de Automação com IA em Londrina",
       "excerpt": "A automação com IA pode transformar a gestão das PMEs em Londrina. Neste artigo, você aprenderá como escolher a empresa ideal para suas necessidades.",
