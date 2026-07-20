@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PWNZXS3F');</script>
+  <!-- End Google Tag Manager -->
+  <!-- Meta Pixel -->
+  <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','3992166024366579');fbq('track','PageView');</script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=3992166024366579&ev=PageView&noscript=1"/></noscript>
+  <!-- End Meta Pixel -->
+  <title>Atendimento ao Cidadão Automatizado | Grupo Zentra</title>
+  <meta name="description" content="Reduza filas e ligações na sua prefeitura. Automação de atendimento ao cidadão via WhatsApp com IA, para saúde, assistência social e serviços municipais." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.ogrupozentra.com/setor-publico/" />
+  <meta name="geo.region" content="BR-PR" />
+  <meta name="geo.placename" content="Londrina, Paraná" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.ogrupozentra.com/setor-publico/" />
+  <meta property="og:title" content="Atendimento ao Cidadão Automatizado | Grupo Zentra" />
+  <meta property="og:description" content="Automação de atendimento ao cidadão via WhatsApp com IA para prefeituras e órgãos públicos. Menos filas, menos ligações, mais eficiência." />
+  <meta property="og:image" content="https://www.ogrupozentra.com/assets/logo-black.jpg" />
+  <meta property="twitter:card" content="summary_large_image" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": "https://www.ogrupozentra.com/setor-publico/#service",
+        "name": "Automação de Atendimento ao Cidadão",
+        "provider": { "@id": "https://www.ogrupozentra.com/#organization" },
+        "serviceType": "Automação de atendimento via WhatsApp para orgãos públicos",
+        "areaServed": { "@type": "Country", "name": "Brasil" },
+        "description": "Automação com IA do atendimento ao cidadão via WhatsApp para prefeituras e secretarias municipais (saúde, assistência social, ouvidoria)."
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {"@type":"Question","name":"Como funciona a automação de atendimento ao cidadão?","acceptedAnswer":{"@type":"Answer","text":"Um chatbot com IA atende o cidadão via WhatsApp 24h, respondendo dúvidas frequentes, encaminhando solicitações às secretarias corretas (saúde, assistência social, ouvidoria) e reduzindo o volume de ligações e filas presenciais."}},
+          {"@type":"Question","name":"Precisa trocar o número de WhatsApp da prefeitura?","acceptedAnswer":{"@type":"Answer","text":"Não necessariamente. A automação pode ser integrada ao número já utilizado pela prefeitura ou secretaria, mantendo a comunicação existente com o cidadão."}},
+          {"@type":"Question","name":"Funciona para qual secretaria?","acceptedAnswer":{"@type":"Answer","text":"Já implementamos para secretarias de saúde e assistência social, e adaptamos o fluxo para ouvidoria, protocolo e outros serviços municipais conforme a necessidade do órgão."}},
+          {"@type":"Question","name":"Como é feita a contratação por um órgão público?","acceptedAnswer":{"@type":"Answer","text":"Avaliamos junto ao órgão o modelo de contratação adequado (dispensa, licitação ou adesão a ata), conforme o porte do município e o serviço desejado."}}
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" href="/assets/logo-white.png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/assets/logo-white.png" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black:  #0A0A0A;
+      --black2: #111111;
+      --black3: #161616;
+      --white:  #F5F0EB;
+      --white2: rgba(245,240,235,0.55);
+      --white3: rgba(245,240,235,0.12);
+      --gold:   #C9A96E;
+      --gold2:  rgba(201,169,110,0.12);
+      --gold3:  rgba(201,169,110,0.06);
+      --border: rgba(245,240,235,0.07);
+      --gray:   #737373;
+      --font: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', system-ui, sans-serif;
+      --max: 1100px;
+      --ease: cubic-bezier(0.16,1,0.3,1);
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); background: var(--black); color: var(--white); overflow-x: hidden; line-height: 1.6; }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 28px 52px;
+      display: flex; align-items: center; justify-content: space-between;
+      transition: background .4s var(--ease), padding .4s var(--ease), border-color .4s;
+      border-bottom: 1px solid transparent;
+    }
+    nav.scrolled {
+      background: rgba(10,10,10,.88);
+      backdrop-filter: blur(20px);
+      padding: 18px 52px;
+      border-bottom-color: var(--border);
+    }
+    .nav-logo svg { height: 36px; width: auto; }
+    .nav-cta {
+      background: var(--gold); color: var(--black);
+      padding: 10px 24px; border-radius: 2px;
+      font-size: .78rem; font-weight: 700; text-decoration: none;
+      letter-spacing: .08em; text-transform: uppercase;
+      transition: opacity .2s;
+    }
+    .nav-cta:hover { opacity: .88; }
+    @media (max-width: 768px) { nav { padding: 20px 24px; } nav.scrolled { padding: 14px 24px; } }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: 92vh;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      position: relative; overflow: hidden;
+      padding: 140px 24px 80px;
+      text-align: center;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 70% 50% at 30% 70%, rgba(201,169,110,0.08) 0%, transparent 65%),
+        radial-gradient(ellipse 60% 50% at 70% 30%, rgba(201,169,110,0.06) 0%, transparent 65%),
+        var(--black);
+    }
+    .hero-grid {
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(var(--white3) 1px, transparent 1px),
+        linear-gradient(90deg, var(--white3) 1px, transparent 1px);
+      background-size: 64px 64px;
+      mask-image: radial-gradient(ellipse 90% 70% at 50% 40%, black 20%, transparent 100%);
+      opacity: .4;
+    }
+    .hero-content { position: relative; z-index: 10; max-width: 780px; }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 12px;
+      font-size: .68rem; font-weight: 600; letter-spacing: .18em;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: 28px;
+    }
+    .hero-eyebrow::before, .hero-eyebrow::after {
+      content: ''; display: block; width: 28px; height: 1px;
+      background: var(--gold); opacity: .5;
+    }
+    .hero-title {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 700; letter-spacing: -.03em; line-height: 1.12;
+      margin-bottom: 22px; color: var(--white);
+    }
+    .hero-title em { font-style: normal; color: var(--gold); font-weight: 300; }
+    .hero-sub {
+      font-size: clamp(.95rem, 1.8vw, 1.15rem);
+      color: var(--white2); font-weight: 300;
+      max-width: 620px; margin: 0 auto 40px; line-height: 1.75;
+    }
+    .hero-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .btn-gold {
+      background: var(--gold); color: var(--black);
+      padding: 15px 34px; border-radius: 2px; font-weight: 700;
+      font-size: .82rem; letter-spacing: .08em; text-transform: uppercase;
+      text-decoration: none; transition: opacity .2s;
+    }
+    .btn-gold:hover { opacity: .88; }
+    .btn-ghost {
+      border: 1px solid var(--border); color: var(--white2);
+      padding: 15px 34px; border-radius: 2px; font-weight: 500;
+      font-size: .82rem; letter-spacing: .08em; text-transform: uppercase;
+      text-decoration: none; transition: border-color .2s, color .2s;
+    }
+    .btn-ghost:hover { border-color: rgba(245,240,235,.3); color: var(--white); }
+
+    /* ── STATS ── */
+    #stats {
+      background: var(--black2);
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      display: grid; grid-template-columns: repeat(3,1fr);
+    }
+    .stat { padding: 44px 24px; text-align: center; border-right: 1px solid var(--border); }
+    .stat:last-child { border-right: none; }
+    .stat-num { font-size: clamp(1.6rem, 3vw, 2.25rem); font-weight: 800; letter-spacing: -.03em; color: var(--gold); line-height: 1; margin-bottom: 8px; }
+    .stat-label { font-size: .7rem; color: var(--white2); letter-spacing: .1em; text-transform: uppercase; font-weight: 500; }
+    @media (max-width: 640px) { .stat { padding: 28px 12px; font-size: .9em; } }
+
+    /* ── SEÇÃO GENÉRICA ── */
+    section.block { padding: 100px 24px; max-width: var(--max); margin: 0 auto; }
+    .block-header { text-align: center; margin-bottom: 56px; }
+    .section-label { font-size: .7rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; font-weight: 500; }
+    .section-title { font-size: clamp(1.5rem, 3.2vw, 2.4rem); font-weight: 700; letter-spacing: -.025em; color: var(--white); }
+    .section-sub { color: var(--white2); font-size: .95rem; max-width: 620px; margin: 16px auto 0; }
+
+    /* ── PROBLEMA / SOLUÇÃO ── */
+    .problem-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--border); }
+    .problem-card { background: var(--black); padding: 40px; }
+    .problem-card h3 { font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; }
+    .problem-card ul { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+    .problem-card li { font-size: .9rem; color: var(--white2); line-height: 1.6; padding-left: 20px; position: relative; }
+    .problem-card.no li::before { content: '×'; position: absolute; left: 0; color: #a35b5b; font-weight: 700; }
+    .problem-card.yes li::before { content: '—'; position: absolute; left: 0; color: var(--gold); }
+    @media (max-width: 760px) { .problem-grid { grid-template-columns: 1fr; } }
+
+    /* ── CASOS DE USO ── */
+    .use-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; background: var(--border); }
+    .use-card { background: var(--black2); padding: 36px 28px; }
+    .use-tag { font-size: .68rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
+    .use-title { font-size: 1rem; font-weight: 700; color: var(--white); margin-bottom: 10px; }
+    .use-desc { font-size: .85rem; color: var(--white2); line-height: 1.6; }
+    @media (max-width: 900px) { .use-grid { grid-template-columns: 1fr; } }
+
+    /* ── FORM ── */
+    #lead { background: var(--black2); padding: 100px 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .lead-inner { max-width: 640px; margin: 0 auto; }
+    .lead-form { display: flex; flex-direction: column; gap: 18px; margin-top: 40px; }
+    .lead-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    @media (max-width: 640px) { .lead-row { grid-template-columns: 1fr; } }
+    .field label { display: block; font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--white2); margin-bottom: 8px; }
+    .field input, .field select, .field textarea {
+      width: 100%; background: var(--black3); border: 1px solid var(--border);
+      color: var(--white); padding: 13px 16px; font-size: .9rem; font-family: var(--font);
+      border-radius: 2px; transition: border-color .2s;
+    }
+    .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--gold); }
+    .field textarea { resize: vertical; min-height: 90px; }
+    .hidden-field { position: absolute; left: -9999px; }
+    .lead-submit {
+      background: var(--gold); color: var(--black); border: none;
+      padding: 16px 34px; border-radius: 2px; font-weight: 700;
+      font-size: .85rem; letter-spacing: .08em; text-transform: uppercase;
+      cursor: pointer; transition: opacity .2s; margin-top: 8px;
+    }
+    .lead-submit:hover { opacity: .88; }
+    .lead-note { font-size: .78rem; color: rgba(245,240,235,.35); margin-top: 14px; text-align: center; }
+
+    /* ── FAQ ── */
+    #faq { padding: 100px 24px; }
+    .faq-list { max-width: 700px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-q {
+      width: 100%; background: none; border: none; text-align: left;
+      padding: 22px 0; font-family: var(--font); font-size: .92rem;
+      font-weight: 600; cursor: pointer; display: flex; justify-content: space-between;
+      align-items: center; gap: 16px; color: var(--white); letter-spacing: -.01em;
+    }
+    .faq-q .icon { width: 18px; height: 18px; flex-shrink: 0; transition: transform .3s; color: var(--gold); }
+    .faq-q.open .icon { transform: rotate(45deg); }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height .4s var(--ease); }
+    .faq-a p { padding-bottom: 22px; color: var(--white2); line-height: 1.75; font-size: .88rem; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--black); padding: 32px 52px;
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+      border-top: 1px solid var(--border);
+    }
+    .footer-copy { color: rgba(245,240,235,.2); font-size: .75rem; }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { color: rgba(245,240,235,.25); font-size: .75rem; text-decoration: none; transition: color .2s; }
+    .footer-links a:hover { color: var(--gold); }
+    @media (max-width: 640px) { footer { flex-direction: column; text-align: center; padding: 28px 24px; } }
+
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
+    .reveal.visible { opacity: 1; transform: none; }
+  </style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PWNZXS3F" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="/" class="nav-logo" aria-label="Grupo Zentra">
+    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="50,4 96,50 50,96 4,50" stroke="rgba(245,240,235,0.9)" stroke-width="2.2" stroke-linejoin="miter" fill="none"/>
+      <line x1="50" y1="4" x2="50" y2="50" stroke="rgba(245,240,235,0.9)" stroke-width="2.2" stroke-linecap="square"/>
+    </svg>
+  </a>
+  <a href="#lead" class="nav-cta">Falar com um especialista</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow reveal">Automação · Setor Público</p>
+    <h1 class="hero-title reveal">Atendimento ao cidadão <em>sem fila, sem espera.</em></h1>
+    <p class="hero-sub reveal">Chatbot com IA no WhatsApp para prefeituras e secretarias — saúde, assistência social, ouvidoria e demais serviços municipais. Menos ligações perdidas, menos gente na fila, mais eficiência no atendimento.</p>
+    <div class="hero-actions reveal">
+      <a href="#lead" class="btn-gold">Quero uma demonstração</a>
+      <a href="https://wa.me/5543996850251?text=Ol%C3%A1%2C%20sou%20de%20um%20%C3%B3rg%C3%A3o%20p%C3%BAblico%20e%20quero%20saber%20mais%20sobre%20a%20automa%C3%A7%C3%A3o%20de%20atendimento%20ao%20cidad%C3%A3o." class="btn-ghost" target="_blank" rel="noopener">Falar agora no WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section id="stats">
+  <div class="stat reveal">
+    <div class="stat-num">50+</div>
+    <div class="stat-label">Empresas e serviços automatizados</div>
+  </div>
+  <div class="stat reveal">
+    <div class="stat-num">24/7</div>
+    <div class="stat-label">Atendimento contínuo via WhatsApp</div>
+  </div>
+  <div class="stat reveal">
+    <div class="stat-num">n8n</div>
+    <div class="stat-label">Integração com sistemas já usados pelo órgão</div>
+  </div>
+</section>
+
+<!-- PROBLEMA -->
+<section class="block">
+  <div class="block-header">
+    <p class="section-label reveal">O problema</p>
+    <h2 class="section-title reveal">Fila e ligação perdida custam caro — para o cidadão e para o órgão.</h2>
+  </div>
+  <div class="problem-grid reveal">
+    <div class="problem-card no">
+      <h3>Sem automação</h3>
+      <ul>
+        <li>Cidadão espera na fila para uma dúvida simples</li>
+        <li>Linha telefônica sobrecarregada em horário de pico</li>
+        <li>Servidor gasta tempo repetindo a mesma resposta</li>
+        <li>Sem registro estruturado do que foi pedido</li>
+      </ul>
+    </div>
+    <div class="problem-card yes">
+      <h3>Com Zentra Automação</h3>
+      <ul>
+        <li>Respostas automáticas 24h para dúvidas frequentes</li>
+        <li>Encaminhamento direto à secretaria certa</li>
+        <li>Servidor só entra para casos que exigem humano</li>
+        <li>Histórico de conversas e solicitações organizado</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CASOS DE USO -->
+<section class="block" style="max-width:var(--max)">
+  <div class="block-header">
+    <p class="section-label reveal">Onde já funciona</p>
+    <h2 class="section-title reveal">Um chatbot, várias secretarias.</h2>
+  </div>
+  <div class="use-grid reveal">
+    <div class="use-card">
+      <div class="use-tag">Saúde</div>
+      <div class="use-title">Agendamento e informações de UBS</div>
+      <div class="use-desc">Consulta de horários, unidades de referência, campanhas de vacinação e dúvidas frequentes sobre atendimento.</div>
+    </div>
+    <div class="use-card">
+      <div class="use-tag">Assistência Social</div>
+      <div class="use-title">CadÚnico e benefícios</div>
+      <div class="use-desc">Orientação sobre cadastro, documentos necessários e status de programas sociais, sem precisar ir ao CRAS.</div>
+    </div>
+    <div class="use-card">
+      <div class="use-tag">Ouvidoria</div>
+      <div class="use-title">Protocolo e encaminhamento</div>
+      <div class="use-desc">Registro de solicitações e reclamações com protocolo automático, encaminhado ao setor responsável.</div>
+    </div>
+  </div>
+</section>
+
+<!-- LEAD FORM -->
+<section id="lead">
+  <div class="lead-inner">
+    <div class="block-header" style="margin-bottom:0">
+      <p class="section-label reveal">Vamos conversar</p>
+      <h2 class="section-title reveal">Peça uma demonstração para o seu órgão.</h2>
+      <p class="section-sub reveal">Preencha os dados abaixo. Nossa equipe entra em contato para entender a necessidade da sua prefeitura ou secretaria e apresentar como funciona na prática.</p>
+    </div>
+
+    <form name="lead-setor-publico" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/setor-publico/obrigado.html" class="lead-form reveal">
+      <input type="hidden" name="form-name" value="lead-setor-publico" />
+      <p class="hidden-field">
+        <label>Não preencha este campo: <input name="bot-field" /></label>
+      </p>
+
+      <div class="lead-row">
+        <div class="field">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" required />
+        </div>
+        <div class="field">
+          <label for="orgao">Órgão / Prefeitura</label>
+          <input type="text" id="orgao" name="orgao" required />
+        </div>
+      </div>
+
+      <div class="lead-row">
+        <div class="field">
+          <label for="cargo">Cargo / Secretaria</label>
+          <input type="text" id="cargo" name="cargo" />
+        </div>
+        <div class="field">
+          <label for="whatsapp">WhatsApp</label>
+          <input type="tel" id="whatsapp" name="whatsapp" required />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="municipio">Município / UF</label>
+        <input type="text" id="municipio" name="municipio" required />
+      </div>
+
+      <div class="field">
+        <label for="mensagem">Qual o principal problema no atendimento hoje?</label>
+        <textarea id="mensagem" name="mensagem" placeholder="Ex: fila presencial, telefone sempre ocupado, falta de resposta rápida..."></textarea>
+      </div>
+
+      <button type="submit" class="lead-submit">Solicitar demonstração</button>
+      <p class="lead-note">Seus dados são usados apenas para retorno da nossa equipe comercial.</p>
+    </form>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="block-header">
+    <p class="section-label reveal">Perguntas frequentes</p>
+    <h2 class="section-title reveal">Antes de falar com a gente.</h2>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item reveal">
+      <button class="faq-q">Como funciona a automação de atendimento ao cidadão? <svg class="icon" viewBox="0 0 20 20" fill="none"><line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="1.5"/><line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5"/></svg></button>
+      <div class="faq-a"><p>Um chatbot com IA atende o cidadão via WhatsApp 24h, respondendo dúvidas frequentes, encaminhando solicitações às secretarias corretas (saúde, assistência social, ouvidoria) e reduzindo o volume de ligações e filas presenciais.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q">Precisa trocar o número de WhatsApp da prefeitura? <svg class="icon" viewBox="0 0 20 20" fill="none"><line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="1.5"/><line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5"/></svg></button>
+      <div class="faq-a"><p>Não necessariamente. A automação pode ser integrada ao número já utilizado pela prefeitura ou secretaria, mantendo a comunicação existente com o cidadão.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q">Funciona para qual secretaria? <svg class="icon" viewBox="0 0 20 20" fill="none"><line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="1.5"/><line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5"/></svg></button>
+      <div class="faq-a"><p>Já implementamos para secretarias de saúde e assistência social, e adaptamos o fluxo para ouvidoria, protocolo e outros serviços municipais conforme a necessidade do órgão.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q">Como é feita a contratação por um órgão público? <svg class="icon" viewBox="0 0 20 20" fill="none"><line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="1.5"/><line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5"/></svg></button>
+      <div class="faq-a"><p>Avaliamos junto ao órgão o modelo de contratação adequado (dispensa, licitação ou adesão a ata), conforme o porte do município e o serviço desejado.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p class="footer-copy">© 2026 Grupo Zentra. Todos os direitos reservados.</p>
+  <div class="footer-links">
+    <a href="/">Site institucional</a>
+    <a href="https://wa.me/5543996850251" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); }, { passive: true });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const isOpen = btn.classList.contains('open');
+      document.querySelectorAll('.faq-q').forEach(b => { b.classList.remove('open'); b.nextElementSibling.style.maxHeight = null; });
+      if (!isOpen) { btn.classList.add('open'); const a = btn.nextElementSibling; a.style.maxHeight = a.scrollHeight + 'px'; }
+    });
+  });
+</script>
+</body>
+</html>
