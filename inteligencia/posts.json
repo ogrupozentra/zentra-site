@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "slug": "fornecedor-automacao-ia-pme",
+      "title": "Como Escolher um Fornecedor de Automação com Inteligência Artificial para PMEs",
+      "excerpt": "Neste artigo, abordamos a importância da automação com IA para PMEs e como escolher um fornecedor adequado. Entenda como soluções sob medida podem alavancar sua empresa.",
+      "frente": "tecnologia e inovação",
+      "author": "Pedro Augusto Ferreira",
+      "date": "2026-07-20",
+      "tags": "automação, inteligência artificial, PMEs"
+    },
+    {
       "slug": "checkout-no-whatsapp-por-que-converte-melhor-que-landing-pages-tradicionais",
       "title": "Checkout no WhatsApp: A Nova Fronteira da Conversão",
       "excerpt": "Entenda por que o checkout no WhatsApp supera landing pages tradicionais na conversão de vendas high ticket.",
