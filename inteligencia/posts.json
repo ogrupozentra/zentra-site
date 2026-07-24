@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "slug": "bem-estar-corporativo-como-vantagem-competitiva-dados-e-estrategias-praticas",
+      "title": "Bem-estar Corporativo como Vantagem Competitiva",
+      "excerpt": "Explore como o bem-estar corporativo transforma a vantagem competitiva na sua organização.",
+      "frente": "cebec",
+      "author": "João Vitor Pelizer",
+      "date": "2026-07-24",
+      "tags": "bem-estar, produtividade, saúde mental, vantagem competitiva, liderança"
+    },
+    {
       "slug": "fornecedor-automacao-ia-pme",
       "title": "Como Escolher um Fornecedor de Automação com Inteligência Artificial para PMEs",
       "excerpt": "Neste artigo, abordamos a importância da automação com IA para PMEs e como escolher um fornecedor adequado. Entenda como soluções sob medida podem alavancar sua empresa.",
