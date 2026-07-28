@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PWNZXS3F');</script>
+  <!-- End Google Tag Manager -->
+  <!-- Meta Pixel -->
+  <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','3992166024366579');fbq('track','PageView');</script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=3992166024366579&ev=PageView&noscript=1"/></noscript>
+  <!-- End Meta Pixel -->
+  <title>Z Club | Clube de Founders de Londrina, Maringá e Região</title>
+  <meta name="description" content="Z Club é o clube de negócios para jovens founders de Londrina, Maringá, Apucarana, Cambé, Marília, Assis e região. Candidatura curada, organizado pelo Grupo Zentra." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.ogrupozentra.com/zclub" />
+  <meta name="geo.region" content="BR-PR" />
+  <meta name="geo.placename" content="Londrina, Paraná" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.ogrupozentra.com/zclub" />
+  <meta property="og:title" content="Z Club | Clube de Founders de Londrina, Maringá e Região" />
+  <meta property="og:description" content="Comunidade de jovens founders de Londrina, Maringá, Apucarana, Cambé, Marília, Assis e região. Candidatura curada, organizado pelo Grupo Zentra." />
+  <meta property="og:image" content="https://www.ogrupozentra.com/assets/logo-black.jpg" />
+  <meta property="twitter:card" content="summary_large_image" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://www.ogrupozentra.com/zclub#page",
+        "url": "https://www.ogrupozentra.com/zclub",
+        "name": "Z Club | Clube de Founders de Londrina, Maringá e Região",
+        "isPartOf": {"@id": "https://www.ogrupozentra.com/#website"},
+        "about": {"@id": "https://www.ogrupozentra.com/#organization"},
+        "inLanguage": "pt-BR"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {"@type":"Question","name":"O que é o Z Club?","acceptedAnswer":{"@type":"Answer","text":"O Z Club é um clube de negócios para founders e donos de negócio de Londrina, Maringá e região. Organizado pelo Grupo Zentra, reúne empreendedores locais para trocar experiência, indicação e parceria."}},
+          {"@type":"Question","name":"Quem pode entrar no Z Club?","acceptedAnswer":{"@type":"Answer","text":"Jovens founders e donos de negócio com empresa ativa em Londrina, Maringá, Apucarana, Cambé, Rolândia, Marília, Assis ou cidades da região. A entrada é curada por candidatura."}},
+          {"@type":"Question","name":"O Z Club é pago?","acceptedAnswer":{"@type":"Answer","text":"Não. A participação no Z Club é gratuita. A curadoria existe para manter a qualidade da comunidade, não para monetizar o acesso."}},
+          {"@type":"Question","name":"Como funciona a candidatura?","acceptedAnswer":{"@type":"Answer","text":"Você preenche o formulário com os dados do seu negócio. A curadoria do Grupo Zentra analisa e, se aprovado, envia o acesso ao grupo por WhatsApp."}}
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" href="/assets/logo-white.png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/assets/logo-white.png" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black:  #0A0A0A;
+      --black2: #111111;
+      --black3: #161616;
+      --white:  #F5F0EB;
+      --white2: rgba(245,240,235,0.55);
+      --white3: rgba(245,240,235,0.12);
+      --gold:   #C9A96E;
+      --gold2:  rgba(201,169,110,0.12);
+      --gold3:  rgba(201,169,110,0.06);
+      --border: rgba(245,240,235,0.07);
+      --gray:   #737373;
+      --font: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', system-ui, sans-serif;
+      --max: 1200px;
+      --ease: cubic-bezier(0.16,1,0.3,1);
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); background: var(--black); color: var(--white); overflow-x: hidden; line-height: 1.6; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 28px 52px;
+      display: flex; align-items: center; justify-content: space-between;
+      transition: background .4s var(--ease), padding .4s var(--ease), border-color .4s;
+      border-bottom: 1px solid transparent;
+    }
+    nav.scrolled { background: rgba(10,10,10,.88); backdrop-filter: blur(20px); padding: 18px 52px; border-bottom-color: var(--border); }
+    .nav-logo svg { height: 34px; width: auto; }
+    .nav-logo polygon, .nav-logo line { stroke: rgba(245,240,235,0.9); }
+    .nav-links { display: flex; gap: 36px; list-style: none; }
+    .nav-links a { color: var(--white2); text-decoration: none; font-size: .82rem; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; transition: color .2s; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta { background: var(--gold); color: var(--black); border: 1px solid var(--gold); padding: 9px 22px; border-radius: 2px; font-size: .78rem; font-weight: 700; text-decoration: none; letter-spacing: .08em; text-transform: uppercase; transition: opacity .2s; }
+    .nav-cta:hover { opacity: .88; }
+    @media (max-width: 768px) { nav { padding: 20px 24px; } nav.scrolled { padding: 14px 24px; } .nav-links { display: none; } }
+
+    /* HERO */
+    #hero { min-height: 88vh; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden; padding: 140px 24px 80px; text-align: center; }
+    .hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 70% 50% at 50% 30%, rgba(201,169,110,0.08) 0%, transparent 65%), var(--black); }
+    .hero-content { position: relative; z-index: 10; max-width: 760px; }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: 12px; font-size: .68rem; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--gold); margin-bottom: 28px; }
+    .hero-eyebrow::before, .hero-eyebrow::after { content: ''; display: block; width: 28px; height: 1px; background: var(--gold); opacity: .5; }
+    .hero-title { font-size: clamp(2.4rem, 7vw, 5rem); font-weight: 800; letter-spacing: -.03em; line-height: 1; margin-bottom: 22px; color: var(--white); }
+    .hero-title em { font-style: normal; color: var(--gold); font-weight: 300; }
+    .hero-sub { font-size: clamp(.95rem, 1.8vw, 1.15rem); color: var(--white2); font-weight: 300; max-width: 600px; margin: 0 auto 20px; line-height: 1.75; }
+    .hero-cities { font-size: .78rem; color: var(--white2); letter-spacing: .04em; margin-bottom: 40px; }
+    .hero-cities strong { color: var(--gold); font-weight: 600; }
+    .hero-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: var(--black); padding: 15px 32px; border-radius: 2px; font-weight: 700; font-size: .82rem; letter-spacing: .08em; text-transform: uppercase; text-decoration: none; transition: opacity .2s; display: inline-block; }
+    .btn-gold:hover { opacity: .88; }
+    .btn-ghost { border: 1px solid var(--border); color: var(--white2); padding: 15px 32px; border-radius: 2px; font-weight: 500; font-size: .82rem; letter-spacing: .08em; text-transform: uppercase; text-decoration: none; transition: border-color .2s, color .2s; display: inline-block; }
+    .btn-ghost:hover { border-color: rgba(245,240,235,.3); color: var(--white); }
+
+    /* SECTION SHARED */
+    .section { padding: 100px 24px; max-width: var(--max); margin: 0 auto; }
+    .section + .section { border-top: 1px solid var(--border); }
+    .section-header { text-align: center; max-width: 640px; margin: 0 auto 56px; }
+    .section-label { font-size: .7rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; font-weight: 500; }
+    .section-title { font-size: clamp(1.6rem, 3.5vw, 2.5rem); font-weight: 700; letter-spacing: -.025em; color: var(--white); margin-bottom: 16px; }
+    .section-sub { font-size: .95rem; color: var(--white2); line-height: 1.75; }
+
+    /* SOBRE / GRID 3 */
+    .pillars { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; background: var(--border); border: 1px solid var(--border); }
+    .pillar { background: var(--black); padding: 36px 32px; }
+    .pillar-num { font-size: .68rem; color: rgba(201,169,110,.6); letter-spacing: .14em; text-transform: uppercase; margin-bottom: 16px; }
+    .pillar h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 10px; color: var(--white); }
+    .pillar p { font-size: .85rem; color: var(--white2); line-height: 1.7; }
+    @media (max-width: 800px) { .pillars { grid-template-columns: 1fr; } }
+
+    /* CIDADES */
+    .cities-wrap { text-align: center; }
+    .cities-list { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 32px; }
+    .city-pill { border: 1px solid rgba(201,169,110,.3); color: var(--gold); font-size: .82rem; font-weight: 600; letter-spacing: .04em; padding: 9px 20px; border-radius: 20px; }
+    .cities-note { font-size: .8rem; color: var(--white2); margin-top: 24px; }
+
+    /* COMO FUNCIONA */
+    .steps { display: grid; grid-template-columns: repeat(3,1fr); gap: 40px; }
+    .step { position: relative; padding-left: 0; }
+    .step-num { font-size: 2.5rem; font-weight: 800; color: var(--gold3); -webkit-text-stroke: 1px var(--gold); line-height: 1; margin-bottom: 18px; }
+    .step h3 { font-size: 1rem; font-weight: 700; margin-bottom: 10px; color: var(--white); }
+    .step p { font-size: .85rem; color: var(--white2); line-height: 1.7; }
+    @media (max-width: 800px) { .steps { grid-template-columns: 1fr; gap: 32px; } }
+
+    /* CURADORIA */
+    .founders-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 2px; max-width: 640px; margin: 0 auto; }
+    .founder-card { background: var(--black3); overflow: hidden; position: relative; }
+    .founder-photo { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: center top; display: block; filter: grayscale(.8); transition: filter .5s ease, transform .5s ease; }
+    .founder-card:hover .founder-photo { filter: grayscale(0); transform: scale(1.03); }
+    .founder-info { padding: 24px 28px 28px; border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
+    .founder-name { font-size: 1.05rem; font-weight: 700; letter-spacing: -.01em; color: var(--white); }
+    .founder-role { font-size: .72rem; color: var(--gold); letter-spacing: .1em; text-transform: uppercase; font-weight: 500; margin-top: 4px; }
+    @media (max-width: 640px) { .founders-grid { grid-template-columns: 1fr; max-width: 320px; } }
+
+    /* FAQ */
+    .faq-list { max-width: 700px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-q { width: 100%; background: none; border: none; text-align: left; padding: 22px 0; font-family: var(--font); font-size: .95rem; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; color: var(--white); letter-spacing: -.01em; }
+    .faq-q .icon { width: 18px; height: 18px; flex-shrink: 0; transition: transform .3s; color: var(--gold); }
+    .faq-q.open .icon { transform: rotate(45deg); }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height .4s var(--ease); }
+    .faq-a p { padding-bottom: 22px; color: var(--white2); line-height: 1.75; font-size: .9rem; }
+
+    /* FORM */
+    #form { background: var(--black2); border-top: 1px solid var(--border); }
+    .form-wrap { max-width: 640px; margin: 0 auto; }
+    .form-card { background: var(--black); border: 1px solid var(--border); padding: 44px; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .f-field { display: flex; flex-direction: column; gap: 7px; }
+    .f-field.full { grid-column: 1 / -1; }
+    .f-field label { font-size: .72rem; color: var(--white2); letter-spacing: .06em; text-transform: uppercase; font-weight: 600; }
+    .f-field input, .f-field textarea { background: var(--black2); border: 1px solid var(--border); color: var(--white); padding: 13px 14px; font-family: var(--font); font-size: .9rem; border-radius: 2px; }
+    .f-field input:focus, .f-field textarea:focus { outline: none; border-color: var(--gold); }
+    .f-field textarea { resize: vertical; min-height: 90px; }
+    .form-submit { margin-top: 26px; width: 100%; background: var(--gold); color: var(--black); border: none; padding: 16px; font-weight: 700; font-size: .85rem; letter-spacing: .08em; text-transform: uppercase; cursor: pointer; border-radius: 2px; transition: opacity .2s; }
+    .form-submit:hover { opacity: .88; }
+    .form-note { font-size: .75rem; color: rgba(245,240,235,.35); margin-top: 16px; text-align: center; line-height: 1.6; }
+    @media (max-width: 640px) { .form-grid { grid-template-columns: 1fr; } .f-field.full { grid-column: 1; } .form-card { padding: 28px 22px; } }
+
+    /* FOOTER */
+    footer { background: var(--black); padding: 36px 52px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--border); flex-wrap: wrap; gap: 18px; }
+    .footer-logo svg { height: 22px; width: auto; opacity: .4; }
+    .footer-copy { color: rgba(245,240,235,.2); font-size: .75rem; }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { color: rgba(245,240,235,.25); font-size: .75rem; text-decoration: none; transition: color .2s; }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-links button.f-seo-toggle { background: none; border: none; padding: 0; color: rgba(245,240,235,.25); font-size: .75rem; font-family: var(--font); cursor: pointer; transition: color .2s; }
+    .footer-links button.f-seo-toggle:hover { color: var(--gold); }
+    .f-seo { flex-basis: 100%; max-height: 0; overflow: hidden; transition: max-height .4s var(--ease); }
+    .f-seo.open { max-height: 700px; }
+    .f-seo-inner { padding-top: 24px; margin-top: 4px; border-top: 1px solid var(--border); font-size: .78rem; line-height: 1.85; color: rgba(245,240,235,.35); max-width: var(--max); margin-left: auto; margin-right: auto; }
+    .f-seo-inner p { margin-bottom: 14px; }
+    .f-seo-inner strong { color: rgba(245,240,235,.55); }
+    @media (max-width: 640px) { footer { flex-direction: column; gap: 18px; text-align: center; padding: 28px 24px; } }
+  </style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PWNZXS3F" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<nav id="nav">
+  <a href="/" class="nav-logo">
+    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Grupo Zentra">
+      <polygon points="50,4 96,50 50,96 4,50" stroke="rgba(245,240,235,0.9)" stroke-width="2.2" stroke-linejoin="miter" fill="none"/>
+      <line x1="50" y1="4" x2="50" y2="50" stroke="rgba(245,240,235,0.9)" stroke-width="2.2" stroke-linecap="square"/>
+    </svg>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#sobre">O que é</a></li>
+    <li><a href="#cidades">Cidades</a></li>
+    <li><a href="#como-funciona">Como funciona</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <a href="#form" class="nav-cta">Candidatar-se</a>
+</nav>
+
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Grupo Zentra apresenta</div>
+    <h1 class="hero-title">Z <em>Club</em></h1>
+    <p class="hero-sub">O clube de negócios pra jovem founder de Londrina e região. Um lugar pra trocar experiência, indicação e parceria com gente da sua geração que também está construindo.</p>
+    <p class="hero-cities">Londrina · Maringá · Apucarana · Cambé · Rolândia · Marília · Assis <strong>e região</strong></p>
+    <div class="hero-actions">
+      <a href="#form" class="btn-gold">Candidatar-se ao Z Club</a>
+      <a href="#sobre" class="btn-ghost">Entender melhor</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="sobre">
+  <div class="section-header">
+    <p class="section-label">O que é</p>
+    <h2 class="section-title">Networking de verdade, não grupo de spam</h2>
+    <p class="section-sub">O Z Club existe pra resolver um problema simples: jovem founder bom de verdade é difícil de encontrar perto de casa. A curadoria existe pra manter isso assim.</p>
+  </div>
+  <div class="pillars">
+    <div class="pillar">
+      <div class="pillar-num">01</div>
+      <h3>Comunidade curada</h3>
+      <p>Entrada por candidatura. Foco em founders jovens com negócio ativo na região — sem lead frio, sem vendedor de curso.</p>
+    </div>
+    <div class="pillar">
+      <div class="pillar-num">02</div>
+      <h3>Conexão local</h3>
+      <p>Gente que você pode encontrar pessoalmente, indicar cliente, fechar parceria — não só trocar figurinha em grupo de WhatsApp.</p>
+    </div>
+    <div class="pillar">
+      <div class="pillar-num">03</div>
+      <h3>Organizado pela Zentra</h3>
+      <p>Curadoria e organização do Grupo Zentra, empresa de tecnologia e automação sediada em Londrina, PR.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section cities-wrap" id="cidades">
+  <div class="section-header">
+    <p class="section-label">Onde alcança</p>
+    <h2 class="section-title">Londrina, Maringá e região</h2>
+    <p class="section-sub">O Z Club é pra founders e donos de negócio de Londrina e das cidades mais próximas — Norte do Paraná e divisa com o Oeste Paulista.</p>
+  </div>
+  <div class="cities-list">
+    <span class="city-pill">Londrina</span>
+    <span class="city-pill">Maringá</span>
+    <span class="city-pill">Apucarana</span>
+    <span class="city-pill">Cambé</span>
+    <span class="city-pill">Rolândia</span>
+    <span class="city-pill">Arapongas</span>
+    <span class="city-pill">Marília</span>
+    <span class="city-pill">Assis</span>
+  </div>
+  <p class="cities-note">Não é sua cidade? Se você é founder de uma cidade próxima e faz sentido pra você, candidate-se do mesmo jeito.</p>
+</section>
+
+<section class="section" id="como-funciona">
+  <div class="section-header">
+    <p class="section-label">Como funciona</p>
+    <h2 class="section-title">Três passos até o grupo</h2>
+  </div>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">01</div>
+      <h3>Você se candidata</h3>
+      <p>Preenche o formulário com os dados do seu negócio. Leva menos de 2 minutos.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <h3>A curadoria analisa</h3>
+      <p>O Grupo Zentra confere se você é founder ou dono de negócio ativo na região.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <h3>Você entra no grupo</h3>
+      <p>Aprovado, você recebe o acesso ao grupo do Z Club diretamente no seu WhatsApp.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="curadoria">
+  <div class="section-header">
+    <p class="section-label">Curadoria</p>
+    <h2 class="section-title">Quem organiza o Z Club</h2>
+    <p class="section-sub">Curadoria e organização do Grupo Zentra, empresa de tecnologia e automação sediada em Londrina, PR.</p>
+  </div>
+  <div class="founders-grid">
+    <div class="founder-card">
+      <img src="/assets/pedro.jpg" alt="Pedro Augusto Ferreira" class="founder-photo" loading="lazy" decoding="async">
+      <div class="founder-info">
+        <div>
+          <div class="founder-name">Pedro Augusto Ferreira</div>
+          <div class="founder-role">Fundador · Z Club</div>
+        </div>
+      </div>
+    </div>
+    <div class="founder-card">
+      <img src="/assets/joao.jpg" alt="João Vitor Pelizer" class="founder-photo" loading="lazy" decoding="async">
+      <div class="founder-info">
+        <div>
+          <div class="founder-name">João Vitor Pelizer</div>
+          <div class="founder-role">Fundador · Z Club</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="section-header">
+    <p class="section-label">Perguntas frequentes</p>
+    <h2 class="section-title">Tudo sobre o Z Club</h2>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-q">O Z Club é pago? <svg class="icon" viewBox="0 0 20 20" fill="none"><line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="1.5"/><line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5"/></svg></button>
+      <div class="faq-a"><p>Não. A participação é gratuita. A curadoria existe pra manter a qualidade da comunidade, não pra monetizar o acesso.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Preciso ter empresa formalizada (CNPJ)? <svg class="icon" viewBox="0 0 20 20" fill="none"><line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="1.5"/><line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5"/></svg></button>
+      <div class="faq-a"><p>O critério é ser founder ou dono de negócio real e ativo na região — não exigimos porte ou faturamento mínimo.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Só entra quem é de Londrina? <svg class="icon" viewBox="0 0 20 20" fill="none"><line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="1.5"/><line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5"/></svg></button>
+      <div class="faq-a"><p>Não. O Z Club recebe founders de Londrina, Maringá, Apucarana, Cambé, Rolândia, Arapongas, Marília, Assis e cidades da região.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Quem organiza o Z Club? <svg class="icon" viewBox="0 0 20 20" fill="none"><line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="1.5"/><line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5"/></svg></button>
+      <div class="faq-a"><p>O Grupo Zentra, empresa de tecnologia e automação sediada em Londrina, PR, atua como curadoria e organizador da comunidade.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Quanto tempo leva pra aprovação? <svg class="icon" viewBox="0 0 20 20" fill="none"><line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="1.5"/><line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5"/></svg></button>
+      <div class="faq-a"><p>A curadoria analisa as candidaturas manualmente. O acesso é enviado por WhatsApp assim que aprovado.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="form">
+  <div class="section" style="padding-bottom:100px">
+    <div class="section-header">
+      <p class="section-label">Candidatura</p>
+      <h2 class="section-title">Candidate-se ao Z Club</h2>
+      <p class="section-sub">Conta um pouco sobre seu negócio. A curadoria do Grupo Zentra analisa e retorna por WhatsApp.</p>
+    </div>
+    <div class="form-wrap">
+      <div class="form-card">
+        <form name="zclub-candidatura" method="POST" action="/zclub/obrigado" data-netlify="true" netlify-honeypot="site-empresa">
+          <input type="hidden" name="form-name" value="zclub-candidatura">
+          <p style="display:none"><label>Não preencher: <input name="site-empresa"></label></p>
+          <div class="form-grid">
+            <div class="f-field"><label for="z-nome">Nome</label><input id="z-nome" name="nome" type="text" required></div>
+            <div class="f-field"><label for="z-whats">WhatsApp</label><input id="z-whats" name="whatsapp" type="tel" required></div>
+            <div class="f-field"><label for="z-negocio">Negócio / empresa</label><input id="z-negocio" name="negocio" type="text" required></div>
+            <div class="f-field"><label for="z-cidade">Cidade</label><input id="z-cidade" name="cidade" type="text" required></div>
+            <div class="f-field full"><label for="z-sobre">O que seu negócio faz</label><textarea id="z-sobre" name="sobre_negocio" required></textarea></div>
+          </div>
+          <button type="submit" class="form-submit">Enviar candidatura</button>
+          <div class="form-note">Sua candidatura é analisada pela curadoria do Grupo Zentra. Se aprovado, você recebe o acesso ao grupo por WhatsApp.</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">
+    <svg viewBox="0 0 100 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="50,4 96,50 50,96 4,50" stroke="rgba(245,240,235,1)" stroke-width="2.2" stroke-linejoin="miter" fill="none"/>
+      <line x1="50" y1="4" x2="50" y2="50" stroke="rgba(245,240,235,1)" stroke-width="2.2" stroke-linecap="square"/>
+      <text x="50" y="110" text-anchor="middle" font-size="10" letter-spacing="3" fill="rgba(245,240,235,0.8)" font-family="-apple-system,BlinkMacSystemFont,'SF Pro Display','Helvetica Neue',sans-serif"><tspan font-weight="700">GRUPO</tspan><tspan font-weight="300"> ZENTRA</tspan></text>
+    </svg>
+  </div>
+  <p class="footer-copy">© 2026 Z Club · um projeto Grupo Zentra</p>
+  <div class="footer-links">
+    <a href="/">Site Zentra</a>
+    <a href="#sobre">O que é</a>
+    <a href="#faq">FAQ</a>
+    <button class="f-seo-toggle" id="seoToggle" aria-expanded="false">SEO</button>
+  </div>
+  <div class="f-seo" id="seoBlock">
+    <div class="f-seo-inner">
+      <p><strong>Clube de negócios:</strong> o Z Club é um clube de negócios e networking de empreendedores em Londrina, PR, reunindo donos de negócio para conexão local, indicação e parceria. Funciona como comunidade de empreendedores curada, com entrada por candidatura em vez de acesso aberto.</p>
+      <p><strong>Região atendida:</strong> clube de negócios em Londrina, Maringá, Apucarana, Cambé, Rolândia e Arapongas, além de Marília e Assis no Oeste Paulista, cobrindo o eixo de founders do Norte do Paraná e cidades próximas.</p>
+      <p><strong>Formato:</strong> comunidade de WhatsApp para founders, com curadoria manual do Grupo Zentra garantindo que só donos de negócio ativo na região participem. Não é grupo de vendas nem lista de contatos aberta.</p>
+      <p><strong>Para quem é:</strong> jovens founders de startup, donos de pequena e média empresa, prestadores de serviço e empreendedores locais que buscam encontro de jovens empreendedores e comunidade de negócios fora das redes sociais tradicionais.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); }, { passive: true });
+
+  const seoToggle = document.getElementById('seoToggle');
+  const seoBlock = document.getElementById('seoBlock');
+  if (seoToggle) {
+    seoToggle.addEventListener('click', () => {
+      const open = seoBlock.classList.toggle('open');
+      seoToggle.setAttribute('aria-expanded', open);
+    });
+  }
+
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const isOpen = btn.classList.contains('open');
+      document.querySelectorAll('.faq-q').forEach(b => { b.classList.remove('open'); b.nextElementSibling.style.maxHeight = null; });
+      if (!isOpen) { btn.classList.add('open'); btn.nextElementSibling.style.maxHeight = btn.nextElementSibling.scrollHeight + 'px'; }
+    });
+  });
+</script>
+
+</body>
+</html>

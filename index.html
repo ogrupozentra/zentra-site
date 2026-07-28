@@ -528,6 +528,13 @@
     .footer-links { display: flex; gap: 24px; }
     .footer-links a { color: rgba(245,240,235,.25); font-size: .75rem; text-decoration: none; transition: color .2s; }
     .footer-links a:hover { color: var(--gold); }
+    .footer-links button.f-seo-toggle { background: none; border: none; padding: 0; color: rgba(245,240,235,.25); font-size: .75rem; font-family: var(--font); cursor: pointer; transition: color .2s; }
+    .footer-links button.f-seo-toggle:hover { color: var(--gold); }
+    .f-seo { flex-basis: 100%; max-height: 0; overflow: hidden; transition: max-height .4s var(--ease); }
+    .f-seo.open { max-height: 700px; }
+    .f-seo-inner { padding-top: 24px; margin-top: 4px; border-top: 1px solid var(--border); font-size: .78rem; line-height: 1.85; color: rgba(245,240,235,.35); max-width: var(--max); margin-left: auto; margin-right: auto; }
+    .f-seo-inner p { margin-bottom: 14px; }
+    .f-seo-inner strong { color: rgba(245,240,235,.55); }
     @media (max-width: 640px) { footer { flex-direction: column; gap: 18px; text-align: center; padding: 28px 24px; } }
 
     /* ── ANIMATIONS ── */
@@ -918,12 +925,31 @@
     <a href="#sobre">Sobre</a>
     <a href="#frentes">Soluções</a>
     <a href="#contato">Contato</a>
+    <button class="f-seo-toggle" id="seoToggle" aria-expanded="false">SEO</button>
+  </div>
+  <div class="f-seo" id="seoBlock">
+    <div class="f-seo-inner">
+      <p><strong>Grupo Zentra:</strong> ecossistema de tecnologia, automação e educação corporativa sediado em Londrina, Paraná, atendendo empresas em todo o Brasil. Reúne cinco frentes de negócio sob uma só operação: pagamentos, automação com IA, lançamentos digitais, educação corporativa e gestão de riscos psicossociais.</p>
+      <p><strong>ZPay:</strong> plataforma de pagamentos high ticket integrada ao WhatsApp, com checkout, gateway de pagamento e cobrança recorrente pensados para infoprodutores e negócios digitais de ticket alto.</p>
+      <p><strong>Automação:</strong> automação de backoffice, atendimento ao cliente e atendimento ao cidadão com IA, incluindo automação para clínicas médicas, secretária virtual via WhatsApp e chatbot de atendimento automatizado.</p>
+      <p><strong>Lançamentos digitais:</strong> operação completa de lançamento para infoprodutores, cobrindo gestão de tráfego pago, funil de vendas e infraestrutura técnica do lançamento.</p>
+      <p><strong>CEBEC e Mindra:</strong> CEBEC oferece educação corporativa e bem-estar organizacional. Mindra é o SaaS de gestão de riscos psicossociais e conformidade com a NR-1 para consultores de SST e RH corporativo.</p>
+    </div>
   </div>
 </footer>
 
 <script>
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); }, { passive: true });
+
+  const seoToggle = document.getElementById('seoToggle');
+  const seoBlock = document.getElementById('seoBlock');
+  if (seoToggle) {
+    seoToggle.addEventListener('click', () => {
+      const open = seoBlock.classList.toggle('open');
+      seoToggle.setAttribute('aria-expanded', open);
+    });
+  }
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
