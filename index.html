@@ -573,6 +573,7 @@
     <li><a href="#frentes">Soluções</a></li>
     <li><a href="#founders">Time</a></li>
     <li><a href="/inteligencia/">Inteligência</a></li>
+    <li><a href="/zclub">Z Club</a></li>
     <li><a href="#faq">FAQ</a></li>
   </ul>
   <a href="https://wa.me/5543996850251" class="nav-cta" target="_blank" rel="noopener">Falar com a Zentra</a>
@@ -925,6 +926,7 @@
     <a href="#sobre">Sobre</a>
     <a href="#frentes">Soluções</a>
     <a href="#contato">Contato</a>
+    <a href="/zclub">Z Club</a>
     <a href="/politica-de-privacidade">Privacidade</a>
     <button class="f-seo-toggle" id="seoToggle" aria-expanded="false">SEO</button>
   </div>
@@ -938,6 +940,17 @@
     </div>
   </div>
 </footer>
+
+<!-- Z CLUB EXIT-INTENT POPUP -->
+<div id="zclubExitOverlay" style="display:none;position:fixed;inset:0;z-index:1000;background:rgba(10,10,10,.82);backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:24px">
+  <div style="position:relative;max-width:480px;width:100%;background:linear-gradient(160deg,#111111 0%,#0A0A0A 100%);border:1px solid rgba(201,169,110,.25);padding:44px 36px;text-align:center;box-shadow:0 30px 80px rgba(0,0,0,.6)">
+    <button id="zclubExitClose" aria-label="Fechar" style="position:absolute;top:16px;right:16px;background:none;border:none;color:rgba(245,240,235,.4);font-size:1.4rem;line-height:1;cursor:pointer;padding:6px">×</button>
+    <p style="font-size:.68rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#C9A96E;margin-bottom:18px">Acesso por convite · Vagas limitadas</p>
+    <h3 style="font-size:clamp(1.35rem,3.5vw,1.75rem);font-weight:800;letter-spacing:-.02em;line-height:1.25;color:#F5F0EB;margin-bottom:16px">Essa é sua chance de sentar na mesa de quem empreende de verdade.</h3>
+    <p style="font-size:.92rem;line-height:1.7;color:rgba(245,240,235,.65);margin-bottom:28px">Enquanto a maioria constrói sozinha, um grupo seleto de jovens founders de Londrina e região já decidiu trocar de verdade. O Z Club é essa mesa — sem palco, sem pitch, só gente resolvendo negócio real. Se você tá construindo algo que importa, seu lugar pode ser aqui.</p>
+    <a href="/zclub" style="display:inline-block;background:#C9A96E;color:#0A0A0A;padding:14px 34px;font-weight:700;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border-radius:2px">Quero minha vaga</a>
+  </div>
+</div>
 
 <script>
   const nav = document.getElementById('nav');
@@ -985,6 +998,26 @@
       if (!isOpen) { btn.classList.add('open'); const a = btn.nextElementSibling; a.style.maxHeight = a.scrollHeight + 'px'; }
     });
   });
+
+  // Z Club exit-intent popup
+  (function() {
+    const overlay = document.getElementById('zclubExitOverlay');
+    const closeBtn = document.getElementById('zclubExitClose');
+    if (!overlay || sessionStorage.getItem('zclubExitShown')) return;
+
+    function show() {
+      if (sessionStorage.getItem('zclubExitShown')) return;
+      overlay.style.display = 'flex';
+      sessionStorage.setItem('zclubExitShown', '1');
+    }
+
+    document.addEventListener('mouseout', (e) => {
+      if (!e.relatedTarget && e.clientY <= 0) show();
+    });
+
+    closeBtn.addEventListener('click', () => { overlay.style.display = 'none'; });
+    overlay.addEventListener('click', (e) => { if (e.target === overlay) overlay.style.display = 'none'; });
+  })();
 </script>
 </body>
 </html>
