@@ -49,6 +49,9 @@
   }
   </script>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="icon" type="image/png" href="/assets/logo-white.png" sizes="32x32" />
   <link rel="apple-touch-icon" href="/assets/logo-white.png" />
@@ -100,8 +103,11 @@
     .hero-content { position: relative; z-index: 10; max-width: 760px; }
     .hero-eyebrow { display: inline-flex; align-items: center; gap: 12px; font-size: .68rem; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--gold); margin-bottom: 28px; }
     .hero-eyebrow::before, .hero-eyebrow::after { content: ''; display: block; width: 28px; height: 1px; background: var(--gold); opacity: .5; }
-    .hero-title { font-size: clamp(2.4rem, 7vw, 5rem); font-weight: 800; letter-spacing: -.03em; line-height: 1; margin-bottom: 22px; color: var(--white); }
-    .hero-title em { font-style: normal; color: var(--gold); font-weight: 300; }
+    .hero-mark { width: clamp(90px, 12vw, 130px); height: auto; margin: 0 auto 20px; display: block; }
+    .hero-title { font-family: 'Archivo Black', var(--font); font-size: clamp(2.6rem, 8vw, 5.5rem); font-weight: 400; letter-spacing: .01em; line-height: 1; margin-bottom: 14px; color: var(--white); text-transform: uppercase; }
+    .hero-title em { font-style: normal; color: var(--gold); }
+    .hero-by { font-size: .8rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--gray); margin-bottom: 28px; }
+    .hero-by span { color: var(--white2); font-weight: 500; text-transform: none; letter-spacing: normal; }
     .hero-sub { font-size: clamp(.95rem, 1.8vw, 1.15rem); color: var(--white2); font-weight: 300; max-width: 600px; margin: 0 auto 20px; line-height: 1.75; }
     .hero-cities { font-size: .78rem; color: var(--white2); letter-spacing: .04em; margin-bottom: 40px; }
     .hero-cities strong { color: var(--gold); font-weight: 600; }
@@ -217,8 +223,10 @@
 <section id="hero">
   <div class="hero-bg"></div>
   <div class="hero-content">
-    <div class="hero-eyebrow">Grupo Zentra apresenta</div>
+    <div class="hero-eyebrow">Acesso por convite · Vagas limitadas</div>
+    <img src="/zclub/assets/zclub-mark.png" alt="" class="hero-mark" loading="eager" />
     <h1 class="hero-title">Z <em>Club</em></h1>
+    <p class="hero-by">by <span>Grupo Zentra</span></p>
     <p class="hero-sub">O clube de negócios pra jovem founder de Londrina e região. Um lugar pra trocar experiência, indicação e parceria com gente da sua geração que também está construindo.</p>
     <p class="hero-cities">Londrina · Maringá · Apucarana · Cambé · Rolândia · Marília · Assis <strong>e região</strong></p>
     <div class="hero-actions">
