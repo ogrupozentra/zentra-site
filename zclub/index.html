@@ -434,6 +434,50 @@
       if (!isOpen) { btn.classList.add('open'); btn.nextElementSibling.style.maxHeight = btn.nextElementSibling.scrollHeight + 'px'; }
     });
   });
+
+  function getCookie(name) {
+    const m = document.cookie.match('(?:^|; )' + name + '=([^;]*)');
+    return m ? decodeURIComponent(m[1]) : undefined;
+  }
+
+  const candForm = document.querySelector('form[name="zclub-candidatura"]');
+  if (candForm) {
+    candForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const submitBtn = candForm.querySelector('.form-submit');
+      submitBtn.disabled = true;
+
+      const formData = new FormData(candForm);
+      const eventId = 'zclub-lead-' + Date.now() + '-' + Math.random().toString(36).slice(2, 10);
+
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString(),
+      }).then(() => {
+        if (typeof fbq === 'function') {
+          fbq('track', 'Lead', {}, { eventID: eventId });
+        }
+        fetch('/.netlify/functions/capi-zclub-lead', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            whatsapp: formData.get('whatsapp'),
+            event_id: eventId,
+            event_source_url: window.location.href,
+            user_agent: navigator.userAgent,
+            fbp: getCookie('_fbp'),
+            fbc: getCookie('_fbc'),
+          }),
+        }).catch(() => {}).finally(() => {
+          window.location.href = '/zclub/obrigado';
+        });
+      }).catch(() => {
+        submitBtn.disabled = false;
+        candForm.submit();
+      });
+    });
+  }
 </script>
 
 </body>
