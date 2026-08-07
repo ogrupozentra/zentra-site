@@ -1,6 +1,24 @@
 {
   "posts": [
     {
+      "slug": "por-que-ias-alucinam-causas-consequencias-e-como-mitigar-nos-negocios",
+      "title": "Por que IAs alucinam: causas e mitigações nos negócios",
+      "excerpt": "Entenda as causas das alucinações em IA e como mitigá-las nos negócios.",
+      "frente": "ia-curiosidades",
+      "author": "Pedro Augusto Ferreira",
+      "date": "2026-08-04",
+      "tags": "Inteligência Artificial, Alucinações em IA, Mitigação, Negócios, Dados"
+    },
+    {
+      "slug": "como-escolher-empresa-automacao-ia-londrina",
+      "title": "Como Escolher uma Empresa de Automação com IA em Londrina",
+      "excerpt": "A automação com IA é essencial para PMEs que desejam escalar suas operações. Neste artigo, entenda como escolher a melhor empresa em Londrina.",
+      "frente": "tecnologia",
+      "author": "Pedro Augusto Ferreira",
+      "date": "2026-08-03",
+      "tags": "automação, IA, PMEs, Londrina"
+    },
+    {
       "slug": "gemini-cli-vs-claude-code-qual-ferramenta-de-ia-escolher-para-desenvolvimento",
       "title": "Gemini CLI vs Claude Code: qual ferramenta de IA escolher?",
       "excerpt": "Compare Gemini CLI e Claude Code para otimizar seu desenvolvimento com IA e tome uma decisão informada.",
