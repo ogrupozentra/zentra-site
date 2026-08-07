@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "slug": "n8n-vs-langflow-vs-dify-qual-plataforma-de-automacao-open-source-escolher",
+      "title": "n8n vs Langflow vs Dify: qual plataforma de automação escolher?",
+      "excerpt": "Compare n8n, Langflow e Dify para descobrir qual plataforma open source atende melhor suas necessidades de automação.",
+      "frente": "github-trends",
+      "author": "João Vitor Pelizer",
+      "date": "2026-08-07",
+      "tags": "automação, open source, n8n, Langflow, Dify"
+    },
+    {
       "slug": "por-que-ias-alucinam-causas-consequencias-e-como-mitigar-nos-negocios",
       "title": "Por que IAs alucinam: causas e mitigações nos negócios",
       "excerpt": "Entenda as causas das alucinações em IA e como mitigá-las nos negócios.",
