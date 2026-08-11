@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "slug": "backoffice-automatizado-como-eliminar-tarefas-manuais-no-pos-venda",
+      "title": "Backoffice automatizado: como eliminar tarefas manuais",
+      "excerpt": "Descubra como a automação no backoffice pode otimizar o pós-venda em clínicas e empresas.",
+      "frente": "automacao",
+      "author": "Pedro Augusto Ferreira",
+      "date": "2026-08-11",
+      "tags": "automação, backoffice, pós-venda, eficiência, clínicas médicas"
+    },
+    {
       "slug": "n8n-vs-langflow-vs-dify-qual-plataforma-de-automacao-open-source-escolher",
       "title": "n8n vs Langflow vs Dify: qual plataforma de automação escolher?",
       "excerpt": "Compare n8n, Langflow e Dify para descobrir qual plataforma open source atende melhor suas necessidades de automação.",
