@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "slug": "como-processar-pagamentos-parcelados-para-infoprodutos-premium",
+      "title": "Processamento de Pagamentos Parcelados para Infoprodutos Premium",
+      "excerpt": "Descubra como implementar pagamentos parcelados para infoprodutos de alto valor com eficácia.",
+      "frente": "zpay",
+      "author": "João Vitor Pelizer",
+      "date": "2026-08-14",
+      "tags": "pagamentos, infoprodutos, e-commerce, compliance, consultoria"
+    },
+    {
       "slug": "backoffice-automatizado-como-eliminar-tarefas-manuais-no-pos-venda",
       "title": "Backoffice automatizado: como eliminar tarefas manuais",
       "excerpt": "Descubra como a automação no backoffice pode otimizar o pós-venda em clínicas e empresas.",
