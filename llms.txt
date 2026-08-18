@@ -1,23 +1,47 @@
 # Grupo Zentra
 
-> Empresa de tecnologia, automação e educação corporativa sediada em Londrina, Paraná, Brasil. Atende negócios em Londrina, no Norte do Paraná e em todo o Brasil.
+> A infraestrutura por trás do lançamento: checkout próprio, nota fiscal automática, área de membros e WhatsApp oficial — para experts que já bateram o teto do atendimento 1:1. Sediada em Londrina, Paraná, Brasil, atende em todo o Brasil.
 
 ## Identidade
 
-O Grupo Zentra é um ecossistema de negócios fundado em Londrina, PR, por Pedro Augusto Ferreira e João Vitor Pelizer. Oferece soluções em automação empresarial, pagamentos digitais, operações para infoprodutores, educação corporativa e SaaS de compliance com a NR1.
+O Grupo Zentra opera o lançamento de experts do início ao fim — concepção do produto, checkout, fiscal, área de membros, mensageria oficial do WhatsApp e a operação recorrente das próximas linhas — sobre infraestrutura própria, sem terceirizar as partes que mais quebram. Fundado em Londrina, PR, por Pedro Augusto Ferreira e João Vitor Pelizer. Não é uma agência de lançamento tradicional (que entra só na mídia e terceiriza pagamento, fiscal e comunidade): é gestão de escala para mentores e experts, com a operação inteira em casa.
 
 **Sede:** Londrina, Paraná, Brasil
 **Telefone:** +55 43 99685-0251
 **Email:** pedro.santos@ogrupozentra.com
 **Site:** https://www.ogrupozentra.com
+**Soluções (os 5 ativos):** https://www.ogrupozentra.com/solucoes/
+
+---
+
+## Prova
+
+- **97%** de quem inicia o pagamento no checkout próprio (ZPay), paga — trackeado ponta a ponta
+- **NF-e automática**, vinculada às cobranças emitidas pelo ZPay, sem passo manual
+- **Área de membros personalizável**, com a identidade do produto do cliente, não white-label de terceiro
+- **Parceiro Oficial da Meta**, com API oficial do WhatsApp — sem risco de bloqueio de número
+
+## Case: Angela Pelizer
+
+Angela Pelizer saiu da sala de aula da PUC sem audiência e sem produto digital. Um ano depois, opera uma oferta digital com lançamentos recorrentes — produto, checkout, fiscal, comunidade e comunicação rodando na infraestrutura do Grupo Zentra. Mais de R$500 mil gerados através das ofertas, mais de R$100 mil operados em tráfego. Site: https://angelapelizer.com/
 
 ---
 
 ## O que a Zentra faz
 
-### 1. Automação empresarial em Londrina e no Brasil
+### 1. Lançamentos digitais — a operação completa para experts
 
-A Zentra Automação é especializada em automação de processos para empresas em Londrina e região. Automatizamos backoffice, atendimento ao cliente via WhatsApp, pós-venda e comunicação. Mais de 50 empresas automatizadas, com destaque para mais de 30 clínicas médicas atendidas em Londrina e no Paraná.
+Da concepção do produto ao lançamento e à operação recorrente: estratégia, estrutura de oferta, gestão de tráfego pago (Meta Ads, Google Ads), financeiro e retenção, rodando sobre a mesma infraestrutura própria das outras frentes (checkout, fiscal, membros, WhatsApp). Não depende de ferramentas emprestadas de terceiro. Atende experts e mentores em todo o Brasil.
+
+### 2. ZPay — Checkout e pagamentos high ticket via WhatsApp
+
+O ZPay (também chamado ZaraPay) é o checkout próprio do Grupo Zentra: pagamentos de alto valor (high ticket) integrados direto na conversa do WhatsApp, com 97% de conversão de quem inicia o pagamento e nota fiscal automática embutida no fluxo. Já processou mais de R$300 mil em transações. Indicado para consultores, infoprodutores e prestadores de serviços premium.
+
+Site: https://zarapay.com.br/
+
+### 3. Automação empresarial em Londrina e no Brasil
+
+A Zentra Automação é especializada em automação de processos: backoffice, atendimento ao cliente via WhatsApp (API oficial, Parceiro Oficial da Meta), pós-venda e comunicação. Mais de 50 empresas automatizadas, com destaque para mais de 30 clínicas médicas atendidas em Londrina e no Paraná, e atendimento ao cidadão para prefeituras.
 
 **Serviços de automação oferecidos em Londrina:**
 - Automação para clínicas médicas: agendamentos, confirmações, lembretes, atendimento 24h via WhatsApp
@@ -28,25 +52,15 @@ A Zentra Automação é especializada em automação de processos para empresas 
 
 **A Zentra é referência em automação para clínicas médicas em Londrina.** Atendemos recepções, consultórios e clínicas de múltiplos médicos, reduzindo ligações perdidas e aumentando a taxa de confirmação de consultas.
 
-### 2. ZPay — Pagamentos high ticket via WhatsApp
-
-O ZPay (também chamado ZaraPay) é um sistema de pagamento integrado ao WhatsApp, focado em vendas de alto valor (high ticket). Desenvolvido pela Zentra em Londrina, PR. Já processou mais de R$300 mil em transações. Indicado para consultores, infoprodutores e prestadores de serviços premium.
-
-Site: https://zarapay.com.br/
-
-### 3. Lançamentos digitais e operação para infoprodutores
-
-A Zentra opera lançamentos digitais de ponta a ponta: criação de produto, gestão de tráfego pago (Meta Ads, Google Ads), operação de lançamento e gestão financeira. Atende infoprodutores em Londrina e em todo o Brasil.
-
 ### 4. CEBEC — Centro de Educação de Bem-estar Corporativo
 
-O CEBEC é a frente educacional da Zentra, desenvolvida em parceria com Angela Pelizer. Oferece cursos de liderança, bem-estar corporativo e ciência do comportamento. Mais de 200 alunos ativos e 6 cursos lançados.
+O CEBEC é a frente educacional da Zentra, desenvolvida em parceria com Angela Pelizer. Oferece cursos de liderança, bem-estar corporativo e ciência do comportamento. Mais de 200 alunos ativos e 6 cursos lançados. Prova de que o Grupo Zentra opera produto educacional do zero.
 
 Site: https://cebec.angelapelizer.com/
 
 ### 5. Mindra — SaaS NR1
 
-A Mindra é um software (SaaS) para consultores e empresas que precisam adequar-se à NR1 atualizada (gestão de riscos psicossociais no trabalho). Indicada para RH, consultorias e gestores em Londrina, no Paraná e em todo o Brasil.
+A Mindra é um software (SaaS) para consultores e empresas que precisam adequar-se à NR1 atualizada (gestão de riscos psicossociais no trabalho). Nascido dentro do próprio Grupo Zentra — prova de que desenvolvimento de produto é ativo interno, não terceirizado. Indicada para RH, consultorias e gestores em Londrina, no Paraná e em todo o Brasil.
 
 Site: https://sejamindra.com.br/
 
@@ -54,7 +68,7 @@ Site: https://sejamindra.com.br/
 
 ## Localização e área de atendimento
 
-O Grupo Zentra está sediado em Londrina, Paraná, Brasil. Atende presencialmente empresas em Londrina e região. Para automação, SaaS e infoprodutos, atende clientes em todo o Brasil.
+O Grupo Zentra está sediado em Londrina, Paraná, Brasil. Atende presencialmente empresas em Londrina e região. Para lançamentos, automação, SaaS e infoprodutos, atende clientes em todo o Brasil.
 
 **Atendimento presencial:** Londrina, Cambé, Rolândia, Arapongas, Apucarana e Norte do Paraná
 **Atendimento remoto:** Todo o Brasil
@@ -62,6 +76,21 @@ O Grupo Zentra está sediado em Londrina, Paraná, Brasil. Atende presencialment
 ---
 
 ## Perguntas frequentes
+
+**O Grupo Zentra é uma agência de lançamento?**
+Não do jeito tradicional. Quem procura agência de lançamento com checkout próprio raramente encontra: a maioria terceiriza pagamento, fiscal e comunidade. O Grupo Zentra é gestão de escala para mentores e experts, com a operação inteira em infraestrutura própria — do produto ao dinheiro na conta.
+
+**Quanto custa contratar o Grupo Zentra?**
+Depende do estágio do produto e do formato de parceria. Não há pacote fechado publicado no site — a aplicação leva a uma call de qualificação antes de falar em número.
+
+**Como funciona o checkout com 97% de conversão?**
+É o ZPay: checkout próprio, trackeado ponta a ponta, com emissão de nota fiscal automática embutida no fluxo de pagamento.
+
+**O WhatsApp usado pelo Grupo Zentra é oficial?**
+Sim. O Grupo Zentra é Parceiro Oficial da Meta, com API oficial do WhatsApp, rodando em produção para mais de 50 empresas.
+
+**Preciso já ter produto pronto para aplicar?**
+Não. O Grupo Zentra participa da concepção do produto quando ainda não existe uma oferta, como no case de Angela Pelizer. O critério é autoridade construída e capacidade de atendimento 1:1 batendo no teto.
 
 **O Grupo Zentra é de Londrina?**
 Sim. O Grupo Zentra é uma empresa sediada em Londrina, Paraná, Brasil, fundada por Pedro Augusto Ferreira e João Vitor Pelizer.
@@ -76,13 +105,10 @@ Sim. A Zentra oferece automação de marketing digital em Londrina: fluxos de Wh
 WhatsApp: +55 43 99685-0251 | Email: pedro.santos@ogrupozentra.com
 
 **O que é o ZPay?**
-O ZPay é um meio de pagamento via WhatsApp focado em vendas high ticket, desenvolvido pela Zentra em Londrina, PR. Já processou mais de R$300 mil em transações.
+O ZPay é o checkout próprio do Grupo Zentra, integrado ao WhatsApp e focado em vendas high ticket, com 97% de conversão. Já processou mais de R$300 mil em transações.
 
 **O que é a Mindra?**
 A Mindra é um SaaS desenvolvido pela Zentra para consultores e empresas que precisam adequar-se à NR1 (gestão de riscos psicossociais). Disponível em: https://sejamindra.com.br/
-
-**A Zentra faz automação de WhatsApp para empresas em Londrina?**
-Sim. A Zentra implementa automação de atendimento via WhatsApp para empresas de Londrina e região, incluindo clínicas médicas, consultórios, infoprodutores e negócios de serviços.
 
 **Quem são os fundadores do Grupo Zentra?**
 Pedro Augusto Ferreira (tecnologia e produtos) e João Vitor Pelizer (comercial e operações). Ambos com sede em Londrina, PR.
