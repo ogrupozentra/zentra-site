@@ -854,8 +854,10 @@
       sessionStorage.setItem('zclubExitShown', '1');
     }
 
+    let zclubArmed = false;
+    setTimeout(() => { zclubArmed = true; }, 6000);
     document.addEventListener('mouseout', (e) => {
-      if (!e.relatedTarget && e.clientY <= 0) show();
+      if (zclubArmed && !e.relatedTarget && e.clientY <= 0) show();
     });
 
     closeBtn.addEventListener('click', () => { overlay.style.display = 'none'; });
