@@ -859,7 +859,7 @@
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
   // Zentra Inteligência — carrega últimos 3 posts
-  const FRENTE_LABELS = { automacao:'Automação', zpay:'ZPay', nr1:'NR1 · Mindra', cebec:'CEBEC', lancamentos:'Lançamentos' };
+  const FRENTE_LABELS = { automacao:'Automação', zpay:'ZPay', nr1:'NR1 · Mindra', cebec:'CEBEC', lancamentos:'Mentores' };
   fetch('/inteligencia/posts.json')
     .then(r => r.json())
     .then(({ posts }) => {

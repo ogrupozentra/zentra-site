@@ -31,7 +31,7 @@ Angela Pelizer saiu da sala de aula da PUC sem audiência e sem produto digital.
 
 ### 1. Mentores — marketing e infraestrutura completa para mentorias
 
-Da concepção da mentoria ao lançamento das turmas e à operação recorrente: estratégia, estrutura de oferta, gestão de tráfego pago (Meta Ads, Google Ads), financeiro e retenção, rodando sobre a mesma infraestrutura própria das outras frentes (checkout, fiscal, membros, WhatsApp). Não depende de ferramentas emprestadas de terceiro. Atende experts e mentores em todo o Brasil.
+Da concepção da mentoria às turmas e à operação recorrente: estratégia, estrutura de oferta, gestão de tráfego pago (Meta Ads, Google Ads), financeiro e retenção, rodando sobre a mesma infraestrutura própria das outras frentes (checkout, fiscal, membros, WhatsApp). Não depende de ferramentas emprestadas de terceiro. Atende experts e mentores em todo o Brasil.
 
 ### 2. ZPay — Checkout e pagamentos high ticket via WhatsApp
 
