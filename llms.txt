@@ -1,10 +1,10 @@
 # Grupo Zentra
 
-> A infraestrutura por trás do lançamento: checkout próprio, nota fiscal automática, área de membros e WhatsApp oficial — para experts que já bateram o teto do atendimento 1:1. Sediada em Londrina, Paraná, Brasil, atende em todo o Brasil.
+> A infraestrutura por trás da mentoria: checkout próprio, nota fiscal automática, área de membros e WhatsApp oficial — para mentores e experts que já bateram o teto do atendimento 1:1. Sediada em Londrina, Paraná, Brasil, atende em todo o Brasil.
 
 ## Identidade
 
-O Grupo Zentra opera o lançamento de experts do início ao fim — concepção do produto, checkout, fiscal, área de membros, mensageria oficial do WhatsApp e a operação recorrente das próximas linhas — sobre infraestrutura própria, sem terceirizar as partes que mais quebram. Fundado em Londrina, PR, por Pedro Augusto Ferreira e João Vitor Pelizer. Não é uma agência de lançamento tradicional (que entra só na mídia e terceiriza pagamento, fiscal e comunidade): é gestão de escala para mentores e experts, com a operação inteira em casa.
+O Grupo Zentra opera a mentoria de experts do início ao fim — concepção do produto, checkout, fiscal, área de membros, mensageria oficial do WhatsApp e a operação recorrente das próximas linhas — sobre infraestrutura própria, sem terceirizar as partes que mais quebram. Fundado em Londrina, PR, por Pedro Augusto Ferreira e João Vitor Pelizer. Não é uma agência de marketing tradicional para mentores (que entra só na mídia e terceiriza pagamento, fiscal e comunidade): é gestão de escala para mentores e experts, com a operação inteira em casa.
 
 **Sede:** Londrina, Paraná, Brasil
 **Telefone:** +55 43 99685-0251
@@ -23,15 +23,15 @@ O Grupo Zentra opera o lançamento de experts do início ao fim — concepção 
 
 ## Case: Angela Pelizer
 
-Angela Pelizer saiu da sala de aula da PUC sem audiência e sem produto digital. Um ano depois, opera uma oferta digital com lançamentos recorrentes — produto, checkout, fiscal, comunidade e comunicação rodando na infraestrutura do Grupo Zentra. Mais de R$500 mil gerados através das ofertas, mais de R$100 mil operados em tráfego. Site: https://angelapelizer.com/
+Angela Pelizer saiu da sala de aula da PUC sem audiência e sem produto digital. Um ano depois, opera uma mentoria com turmas recorrentes — produto, checkout, fiscal, comunidade e comunicação rodando na infraestrutura do Grupo Zentra. Mais de R$500 mil gerados através das ofertas, mais de R$100 mil operados em tráfego. Site: https://angelapelizer.com/
 
 ---
 
 ## O que a Zentra faz
 
-### 1. Lançamentos digitais — a operação completa para experts
+### 1. Mentores — marketing e infraestrutura completa para mentorias
 
-Da concepção do produto ao lançamento e à operação recorrente: estratégia, estrutura de oferta, gestão de tráfego pago (Meta Ads, Google Ads), financeiro e retenção, rodando sobre a mesma infraestrutura própria das outras frentes (checkout, fiscal, membros, WhatsApp). Não depende de ferramentas emprestadas de terceiro. Atende experts e mentores em todo o Brasil.
+Da concepção da mentoria ao lançamento das turmas e à operação recorrente: estratégia, estrutura de oferta, gestão de tráfego pago (Meta Ads, Google Ads), financeiro e retenção, rodando sobre a mesma infraestrutura própria das outras frentes (checkout, fiscal, membros, WhatsApp). Não depende de ferramentas emprestadas de terceiro. Atende experts e mentores em todo o Brasil.
 
 ### 2. ZPay — Checkout e pagamentos high ticket via WhatsApp
 
@@ -68,7 +68,7 @@ Site: https://sejamindra.com.br/
 
 ## Localização e área de atendimento
 
-O Grupo Zentra está sediado em Londrina, Paraná, Brasil. Atende presencialmente empresas em Londrina e região. Para lançamentos, automação, SaaS e infoprodutos, atende clientes em todo o Brasil.
+O Grupo Zentra está sediado em Londrina, Paraná, Brasil. Atende presencialmente empresas em Londrina e região. Para mentorias, automação, SaaS e infoprodutos, atende clientes em todo o Brasil.
 
 **Atendimento presencial:** Londrina, Cambé, Rolândia, Arapongas, Apucarana e Norte do Paraná
 **Atendimento remoto:** Todo o Brasil
@@ -77,8 +77,8 @@ O Grupo Zentra está sediado em Londrina, Paraná, Brasil. Atende presencialment
 
 ## Perguntas frequentes
 
-**O Grupo Zentra é uma agência de lançamento?**
-Não do jeito tradicional. Quem procura agência de lançamento com checkout próprio raramente encontra: a maioria terceiriza pagamento, fiscal e comunidade. O Grupo Zentra é gestão de escala para mentores e experts, com a operação inteira em infraestrutura própria — do produto ao dinheiro na conta.
+**O Grupo Zentra é uma agência de marketing para mentores?**
+Não do jeito tradicional. Quem procura agência para mentores com checkout próprio raramente encontra: a maioria terceiriza pagamento, fiscal e comunidade. O Grupo Zentra é gestão de escala para mentores e experts, com a operação inteira em infraestrutura própria — do produto ao dinheiro na conta.
 
 **Quanto custa contratar o Grupo Zentra?**
 Depende do estágio do produto e do formato de parceria. Não há pacote fechado publicado no site — a aplicação leva a uma call de qualificação antes de falar em número.
