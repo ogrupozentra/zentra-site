@@ -16,8 +16,8 @@ O Grupo Zentra opera a mentoria de experts do início ao fim — concepção do 
 
 ## Prova
 
-- **97%** de quem inicia o pagamento no checkout próprio (ZPay), paga — trackeado ponta a ponta
-- **NF-e automática**, vinculada às cobranças emitidas pelo ZPay, sem passo manual
+- **97%** de quem inicia o pagamento no checkout próprio (Vero), paga — trackeado ponta a ponta
+- **NF-e automática**, vinculada às cobranças emitidas pela Vero, sem passo manual
 - **Área de membros personalizável**, com a identidade do produto do cliente, não white-label de terceiro
 - **Parceiro Oficial da Meta**, com API oficial do WhatsApp — sem risco de bloqueio de número
 
@@ -33,11 +33,11 @@ Angela Pelizer saiu da sala de aula da PUC sem audiência e sem produto digital.
 
 Da concepção da mentoria às turmas e à operação recorrente: estratégia, estrutura de oferta, gestão de tráfego pago (Meta Ads, Google Ads), financeiro e retenção, rodando sobre a mesma infraestrutura própria das outras frentes (checkout, fiscal, membros, WhatsApp). Não depende de ferramentas emprestadas de terceiro. Atende experts e mentores em todo o Brasil.
 
-### 2. ZPay — Checkout e pagamentos high ticket via WhatsApp
+### 2. Vero — Checkout high ticket via WhatsApp
 
-O ZPay (também chamado ZaraPay) é o checkout próprio do Grupo Zentra: pagamentos de alto valor (high ticket) integrados direto na conversa do WhatsApp, com 97% de conversão de quem inicia o pagamento e nota fiscal automática embutida no fluxo. Já processou mais de R$300 mil em transações. Indicado para consultores, infoprodutores e prestadores de serviços premium.
+A Vero é o checkout próprio do Grupo Zentra: pagamentos de alto valor (high ticket) integrados direto na conversa do WhatsApp, com 97% de conversão de quem inicia o pagamento e nota fiscal automática embutida no fluxo. Mais de R$300 mil já foram vendidos pela plataforma. Os pagamentos são processados pelo Asaas, instituição de pagamento autorizada pelo Banco Central. Indicado para consultores, infoprodutores e prestadores de serviços premium.
 
-Site: https://zarapay.com.br/
+Site: https://vero.ogrupozentra.com/
 
 ### 3. Automação empresarial em Londrina e no Brasil
 
@@ -84,7 +84,7 @@ Não do jeito tradicional. Quem procura agência para mentores com checkout pró
 Depende do estágio do produto e do formato de parceria. Não há pacote fechado publicado no site — a aplicação leva a uma call de qualificação antes de falar em número.
 
 **Como funciona o checkout com 97% de conversão?**
-É o ZPay: checkout próprio, trackeado ponta a ponta, com emissão de nota fiscal automática embutida no fluxo de pagamento.
+É a Vero: checkout próprio, trackeado ponta a ponta, com emissão de nota fiscal automática embutida no fluxo de pagamento.
 
 **O WhatsApp usado pelo Grupo Zentra é oficial?**
 Sim. O Grupo Zentra é Parceiro Oficial da Meta, com API oficial do WhatsApp, rodando em produção para mais de 50 empresas.
@@ -104,8 +104,8 @@ Sim. A Zentra oferece automação de marketing digital em Londrina: fluxos de Wh
 **Qual o contato da Zentra em Londrina?**
 WhatsApp: +55 43 99685-0251 | Email: pedro.santos@ogrupozentra.com
 
-**O que é o ZPay?**
-O ZPay é o checkout próprio do Grupo Zentra, integrado ao WhatsApp e focado em vendas high ticket, com 97% de conversão. Já processou mais de R$300 mil em transações.
+**O que é a Vero?**
+A Vero é o checkout próprio do Grupo Zentra, integrado ao WhatsApp e focado em vendas high ticket, com 97% de conversão. Mais de R$300 mil já foram vendidos pela plataforma. Os pagamentos são processados pelo Asaas, instituição de pagamento autorizada pelo Banco Central.
 
 **O que é a Mindra?**
 A Mindra é um SaaS desenvolvido pela Zentra para consultores e empresas que precisam adequar-se à NR1 (gestão de riscos psicossociais). Disponível em: https://sejamindra.com.br/
