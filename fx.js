@@ -21,8 +21,17 @@
     lastFrame = now;
     return false;
   }
+  // Desktop: start when idle after load. Mobile: on first interaction or 3s after load,
+  // so the shader never competes with first paint on slow phones.
   function startLater(fn) {
-    const go = function () { (window.requestIdleCallback || setTimeout)(function () { requestAnimationFrame(fn); }, { timeout: 1200 }); };
+    let started = false;
+    const run = function () { if (started) return; started = true; requestAnimationFrame(fn); };
+    const go = isSmall
+      ? function () {
+          setTimeout(run, 3000);
+          ['touchstart', 'scroll', 'pointerdown'].forEach(function (e) { window.addEventListener(e, run, { once: true, passive: true }); });
+        }
+      : function () { (window.requestIdleCallback || setTimeout)(run, { timeout: 1200 }); };
     if (document.readyState === 'complete') go(); else window.addEventListener('load', go, { once: true });
   }
 
