@@ -25,7 +25,7 @@
   // so the shader never competes with first paint on slow phones.
   function startLater(fn) {
     let started = false;
-    const run = function () { if (started) return; started = true; requestAnimationFrame(fn); };
+    const run = function () { if (started) return; started = true; fn(); };
     const go = isSmall
       ? function () {
           setTimeout(run, 3000);
@@ -38,7 +38,7 @@
   /* ==========================================================================
      1. LIQUID IRIDESCENT ATMOSPHERIC FLUID CANVAS (#fx-liquid)
      ========================================================================== */
-  const LiquidShader = (function () {
+  startLater(function initLiquid() {
     let canvas = document.getElementById('fx-liquid');
     if (!canvas) return { setMouse() {} };
 
@@ -125,7 +125,7 @@
 
         // static frame only: animated 2D gradients cost too much CPU
       }
-      startLater(draw2D);
+      draw2D(performance.now());
       return {
         setMouse(x, y) {
           targetMX = x / width;
@@ -302,7 +302,7 @@
 
       if (!isReducedMotion) requestAnimationFrame(renderGL);
     }
-    startLater(renderGL);
+    requestAnimationFrame(renderGL);
 
     return {
       setMouse(x, y) {
@@ -310,7 +310,7 @@
         targetMY = y / window.innerHeight;
       }
     };
-  })();
+  });
 
   /* ==========================================================================
      2. PARTICLES DISABLED (Minimalist Pure Liquid Silk Background)
