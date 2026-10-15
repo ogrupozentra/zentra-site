@@ -13,7 +13,7 @@
   const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const isSmall = window.matchMedia('(max-width: 768px)').matches;
   const RENDER_SCALE = isSmall ? 0.3 : 0.45;
-  const FRAME_MS = isSmall ? 1000 / 30 : 1000 / 45;
+  const FRAME_MS = isSmall ? 1000 / 24 : 1000 / 40;
   let lastFrame = 0;
   function shouldSkip(now) {
     if (document.hidden) return true;
@@ -30,11 +30,23 @@
      1. LIQUID IRIDESCENT ATMOSPHERIC FLUID CANVAS (#fx-liquid)
      ========================================================================== */
   const LiquidShader = (function () {
-    const canvas = document.getElementById('fx-liquid');
+    let canvas = document.getElementById('fx-liquid');
     if (!canvas) return { setMouse() {} };
 
     // Try WebGL first for ultra-smooth fluid gradient distortion
-    const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+    // Software-rendered WebGL (no GPU) blocks the main thread: treat as unavailable
+    const glOpts = { failIfMajorPerformanceCaveat: true, antialias: false, depth: false, powerPreference: 'low-power' };
+    let gl = canvas.getContext('webgl', glOpts) || canvas.getContext('experimental-webgl', glOpts);
+    if (gl) {
+      const dbg = gl.getExtension('WEBGL_debug_renderer_info');
+      const renderer = dbg ? String(gl.getParameter(dbg.UNMASKED_RENDERER_WEBGL)) : '';
+      if (/swiftshader|llvmpipe|software|basic render/i.test(renderer)) {
+        gl = null;
+        const fresh = canvas.cloneNode(false); // a canvas keeps its first context type
+        canvas.replaceWith(fresh);
+        canvas = fresh;
+      }
+    }
     let width = 0, height = 0, dpr = 1;
     let mouseX = 0.5, mouseY = 0.5;
     let targetMX = 0.5, targetMY = 0.5;
@@ -51,11 +63,10 @@
         canvas.height = Math.round(height * dpr);
         ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       }
-      window.addEventListener('resize', resize2D);
+      window.addEventListener('resize', function () { resize2D(); draw2D(performance.now()); });
       resize2D();
 
       function draw2D(now) {
-        if (shouldSkip(now)) { requestAnimationFrame(draw2D); return; }
         t = now * 0.0006;
         ctx.fillStyle = '#080809';
         ctx.fillRect(0, 0, width, height);
@@ -103,7 +114,7 @@
         ctx.fillStyle = g3;
         ctx.fillRect(0, 0, width, height);
 
-        if (!isReducedMotion) requestAnimationFrame(draw2D);
+        // static frame only: animated 2D gradients cost too much CPU
       }
       startLater(draw2D);
       return {
