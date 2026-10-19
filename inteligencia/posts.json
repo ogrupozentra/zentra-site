@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "slug": "como-consultoria-automacao-ia-transformar-pequenas-empresas-brasil",
+      "title": "Como a Consultoria em Automação com IA Pode Transformar Pequenas Empresas no Brasil",
+      "excerpt": "A automação com IA é uma ferramenta poderosa para pequenas empresas no Brasil. Conheça como ela pode otimizar processos e aumentar a produtividade.",
+      "frente": "tecnologia e negócios",
+      "author": "Pedro Augusto Ferreira",
+      "date": "2026-10-19",
+      "tags": "automação, IA, pequenas empresas, consultoria, transformação digital"
+    },
+    {
       "slug": "como-criar-programas-de-desenvolvimento-organizacional-que-geram-resultado",
       "title": "Programas Eficazes de Desenvolvimento Organizacional",
       "excerpt": "Descubra como implementar programas de desenvolvimento organizacional que realmente geram resultados consistentes e sustentáveis.",
