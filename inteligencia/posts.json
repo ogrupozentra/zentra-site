@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "slug": "automacao-ia-londrina",
+      "title": "Como a Automação com IA Pode Transformar Empresas em Londrina",
+      "excerpt": "A automação com IA está revolucionando o mercado de trabalho em Londrina. Descubra como sua empresa pode se beneficiar dessa tecnologia inovadora.",
+      "frente": "tecnologia e inovação",
+      "author": "Pedro Augusto Ferreira",
+      "date": "2026-10-19",
+      "tags": "automação, IA, Londrina, PMEs, tecnologia"
+    },
+    {
       "slug": "como-consultoria-automacao-ia-transformar-pequenas-empresas-brasil",
       "title": "Como a Consultoria em Automação com IA Pode Transformar Pequenas Empresas no Brasil",
       "excerpt": "A automação com IA é uma ferramenta poderosa para pequenas empresas no Brasil. Conheça como ela pode otimizar processos e aumentar a produtividade.",
