@@ -27,9 +27,30 @@ h2.q{font-weight:800;font-size:23px;line-height:1.18;letter-spacing:-.01em}
 .sub{font-size:14.5px;color:var(--mute);line-height:1.45;margin-top:-6px}
 mark{background:var(--hi);color:var(--ink);padding:0 .12em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
 .hero{width:100%;height:auto;aspect-ratio:960/600;border-radius:14px;display:block;object-fit:cover;background:#ccc}
-.phone{position:relative;width:76%;max-width:340px;margin:-64px auto 0;height:330px;background:#F7F6F2;padding-top:26px;border:9px solid #0A0A0A;border-bottom:0;border-radius:36px 36px 0 0;overflow:hidden;box-shadow:0 -10px 30px rgba(0,0,0,.18);-webkit-mask-image:linear-gradient(#000 78%,transparent);mask-image:linear-gradient(#000 78%,transparent)}
+.phone{position:relative;width:76%;max-width:340px;margin:0 auto;height:330px;background:#F7F6F2;padding-top:26px;border:9px solid #0A0A0A;border-bottom:0;border-radius:36px 36px 0 0;overflow:hidden;box-shadow:0 -10px 30px rgba(0,0,0,.18);-webkit-mask-image:linear-gradient(#000 78%,transparent);mask-image:linear-gradient(#000 78%,transparent)}
 .phone::before{content:'';position:absolute;top:6px;left:50%;transform:translateX(-50%);width:34%;height:18px;background:#0A0A0A;border-radius:12px;z-index:2}
 .phone img{display:block;width:100%;height:auto}
+body.no-foot footer{display:none}
+body.is-fit .wrap,body.no-foot .wrap{padding-bottom:14px}
+.intro{height:calc(100vh - 104px);height:calc(100svh - 104px);min-height:430px;gap:12px}
+.intro h1{font-size:clamp(22px,4.3svh,36px)}
+.media{position:relative;flex:1 1 0;min-height:170px}
+.hero-i{position:absolute;top:0;left:0;width:100%;height:60%;object-fit:cover;object-position:center 28%;border-radius:14px;display:block;background:#ccc}
+.phone.phone-i{position:absolute;bottom:0;left:50%;transform:translateX(-50%);margin:0;height:68%;width:auto;aspect-ratio:10/12.5;max-width:82%;padding-top:20px;border-width:7px}
+.phone.phone-i::before{height:13px;top:4px}
+.media-cap{position:absolute;left:0;right:0;bottom:0;text-align:center;font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.intro .lead{font-size:clamp(14px,2.2svh,17px);line-height:1.4}
+.intro .cta{flex:none;padding:clamp(13px,2.2svh,18px) 14px}
+.fitp{height:calc(100vh - 104px);height:calc(100svh - 104px);min-height:430px;gap:10px}
+.fitp h2.q{font-size:clamp(18px,3.1svh,23px)}
+.fitp .big{font-size:clamp(28px,5svh,40px)}
+.fitp .quote{font-size:clamp(13.5px,2.1svh,16px);padding:12px 14px}
+.fitp .cta{flex:none;padding:clamp(13px,2.2svh,18px) 14px}
+.fitp .hint{font-size:11.5px}
+.proof-phone{position:relative;flex:1 1 0;min-height:120px}
+.proof-phone .phone{position:absolute;top:0;bottom:16px;left:50%;transform:translateX(-50%);height:auto;width:auto;aspect-ratio:10/12.5;max-width:82%;padding-top:20px;border-width:7px}
+.proof-phone .phone::before{height:13px;top:4px}
+.proof-phone .phone-cap{position:absolute;bottom:0;left:0;right:0;margin:0;font-size:9.5px}
 .phone-cap{margin-top:-6px;text-align:center;font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
 .lead{font-size:17px;line-height:1.45;text-align:center;color:#1d1c1a}
 .lead b{font-weight:800}
@@ -69,6 +90,22 @@ input.f:focus{outline:none;border-color:var(--ink)}
 footer{margin-top:6px;font-size:11.5px;color:var(--mute);line-height:1.5;text-align:center}
 footer a{color:var(--mute)}
 @media (min-width:480px){h1{font-size:36px}}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.checks div{padding:10px 12px;font-size:13px}
+.checks b{font-size:14.5px;margin-bottom:2px}
+@media (max-height:760px){
+  .wrap{gap:12px;padding-top:16px}
+  h2.q{font-size:20px}
+  .sub{font-size:13.5px}
+  .opts{gap:8px}
+  .opt{padding:12px 14px;font-size:15.5px}
+  .checks div{padding:9px 10px;font-size:12px}
+  .checks b{font-size:13.5px}
+  input.f{padding:11px 13px;font-size:16px}
+  label{margin-bottom:4px}
+  .gate-sub{display:none}
+  .screen{gap:11px}
+}
 </style>
 <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','4323927661251100');fbq('track','PageView');</script>
 </head>
@@ -281,16 +318,17 @@ footer a{color:var(--mute)}
     progress(id);window.scrollTo(0,0);
     if(st.type==='intro'){
       h='<h1>Descubra onde sua mentoria <mark>perde venda</mark></h1>'+
-        '<img class="hero" src="/diagnostico/time.webp" alt="Time do Grupo Zentra" width="960" height="600" fetchpriority="high">'+
-        PHONE+
-        '<p class="lead">Responda algumas perguntas rápidas e veja qual é o gargalo da sua operação: <b>tráfego</b>, <b>atendimento</b>, <b>estrutura</b> ou <b>dados</b>.</p>'+
-        '<button class="cta" type="button" data-next>Começar diagnóstico</button><p class="hint">Leva cerca de 1 minuto.</p>';
+        '<div class="media"><img class="hero-i" src="/diagnostico/time.webp" alt="Time do Grupo Zentra" width="960" height="600" fetchpriority="high">'+
+        '<div class="phone phone-i"><img src="/diagnostico/painel.webp" alt="Painel de resultados de uma mentoria atendida pela Zentra" width="596" height="789"></div>'+
+        '<span class="media-cap">Painel real · mentoria atendida pela Zentra</span></div>'+
+        '<p class="lead">Responda perguntas rápidas e veja o gargalo da sua operação: <b>tráfego</b>, <b>atendimento</b>, <b>estrutura</b> ou <b>dados</b>. Leva 1 minuto.</p>'+
+        '<button class="cta" type="button" data-next>Começar diagnóstico</button>';
     }else if(st.type==='q'){
       h=backBtn()+'<h2 class="q">'+esc(st.q)+'</h2>'+(st.sub?'<p class="sub">'+esc(st.sub)+'</p>':'')+optsHTML(id,st.opts(s));
     }else if(st.type==='proof'){
       var p=proofHTML(s);
-      h=backBtn()+'<h2 class="q">'+esc(p.t)+'</h2><div class="big">'+p.big+'<small>'+p.cap+'</small></div><div class="quote">'+p.q+'</div>'+(p.phone?'<div style="margin-top:72px">'+PHONE+'</div>':'')+
-        '<button class="cta" type="button" data-next>Quero esse resultado</button><p class="hint">Resultados de operações reais da Zentra. Clientes não identificados.</p>';
+      h=backBtn()+'<h2 class="q">'+esc(p.t)+'</h2><div class="big">'+p.big+'<small>'+p.cap+'</small></div><div class="quote">'+p.q+'</div>'+(p.phone?'<div class="proof-phone">'+PHONE+'</div>':'')+
+        '<button class="cta" type="button" data-next>Quero esse resultado</button><p class="hint">Operações reais da Zentra. Clientes não identificados.</p>';
     }else if(st.type==='mirror'){
       h=backBtn()+'<h2 class="q">E se eu te contar que, além de <mark>'+esc(s.objetivo||'vender mais')+'</mark>, a operação certa resolve tudo isso junto?</h2>'+
         '<div class="checks"><div><b>Demanda previsível</b>Tráfego feito pro seu ticket, trazendo lead qualificado.</div><div><b>Atendimento que fecha</b>Primeiro contato em minutos, com processo comercial.</div><div><b>Checkout que converte</b>Página e pagamento prontos pra mentoria high ticket.</div><div><b>Dados de cada venda</b>Você sabe qual anúncio trouxe cada real.</div></div>'+
@@ -299,7 +337,7 @@ footer a{color:var(--mute)}
       h=backBtn()+'<h2 class="q" style="font-weight:700">'+agreeText(s)+'</h2>'+optsHTML(id,st.opts(s));
     }else if(st.type==='gate'){
       h=backBtn()+'<h2 class="q">Seu diagnóstico está pronto. <mark>Pra onde mandamos?</mark></h2>'+
-        '<p class="sub">O time da Zentra usa esses dados só pra falar com você sobre o diagnóstico.</p>'+
+        '<p class="sub gate-sub">O time da Zentra usa esses dados só pra falar com você sobre o diagnóstico.</p>'+
         '<div><label for="nome">Seu nome</label><input class="f" id="nome" autocomplete="name" placeholder="Nome e sobrenome" value="'+esc(lead.nome||'')+'"></div>'+
         '<div><label for="whats">WhatsApp</label><input class="f" id="whats" type="tel" inputmode="tel" autocomplete="tel" placeholder="(43) 99999-9999" value="'+esc(lead.whatsappFmt||'')+'"></div>'+
         '<div><label for="email">E-mail</label><input class="f" id="email" type="email" inputmode="email" autocomplete="email" placeholder="voce@email.com" value="'+esc(lead.email||'')+'"></div>'+
@@ -315,7 +353,10 @@ footer a{color:var(--mute)}
         '<a class="cta" id="wa" target="_blank" rel="noopener" href="'+waLink(s,r)+'">Falar com o time no WhatsApp</a>'+
         '<p class="hint">Mande a mensagem pronta: o time já recebe suas respostas e continua o diagnóstico com você.</p>';
     }
-    app.innerHTML='<section class="screen">'+h+'</section>';
+    var fit=st.type==='intro'?' intro':(st.type==='proof'&&s.estagio==='escala'?' fitp':'');
+    document.body.classList.toggle('is-fit',!!fit);
+    document.body.classList.toggle('no-foot',st.type!=='result');
+    app.innerHTML='<section class="screen'+fit+'">'+h+'</section>';
     bind(id,st);
   }
   function waLink(s,r){
@@ -364,6 +405,7 @@ footer a{color:var(--mute)}
     var p=new URLSearchParams();p.set('form-name','diagnostico-quiz');Object.keys(d).forEach(function(k){p.set(k,d[k])});
     beacon('/',p.toString(),'application/x-www-form-urlencoded');
     if(once('zdiag_lead'))track('Lead',false);
+    document.body.classList.remove('is-fit');
     app.innerHTML='<section class="screen"><p class="loading">Analisando suas respostas<span class="dots"></span></p></section>';
     bar.style.width='97%';
     setTimeout(function(){hist.push('result');render()},1400);
