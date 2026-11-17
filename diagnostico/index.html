@@ -4,33 +4,61 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Diagnóstico da sua mentoria | Grupo Zentra</title>
-<meta name="description" content="Converse com a operação comercial da Zentra e descubra onde sua mentoria perde venda: tráfego, atendimento ou checkout.">
+<meta name="description" content="Responda 6 perguntas e descubra onde sua mentoria perde venda: tráfego, atendimento, estrutura ou dados.">
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preload" as="image" href="/diagnostico/time.webp" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#F2F0EB;--ink:#0A0A0A;--mute:#55534E;--line:#DAD7CF;--hi:#FFE100;--go:#0A0A0A}
+:root{--bg:#F2F0EB;--ink:#0A0A0A;--mute:#55534E;--line:#DAD7CF;--hi:#FFE100}
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:var(--bg);color:var(--ink);font-family:'Inter Tight',system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;display:flex;justify-content:center;min-height:100vh}
-.wrap{width:100%;max-width:500px;padding:24px 18px 32px;display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center}
-.top{width:100%;display:flex;align-items:center;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.wrap{width:100%;max-width:500px;padding:22px 18px 32px;display:flex;flex-direction:column;gap:16px}
+.top{display:flex;align-items:center;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
 .top svg{width:22px;height:22px;color:var(--ink)}
-.bar{width:100%;height:10px;background:#E4E1D9;border-radius:40px;overflow:hidden}
-.bar i{display:block;width:12%;height:100%;background:var(--ink);border-radius:40px}
-h1{font-weight:800;font-size:31px;line-height:1.05;letter-spacing:-.02em;text-transform:uppercase}
+.bar{height:10px;background:#E4E1D9;border-radius:40px;overflow:hidden}
+.bar i{display:block;width:6%;height:100%;background:var(--ink);border-radius:40px;transition:width .35s ease}
+.step{display:none;flex-direction:column;gap:14px;animation:in .25s ease}
+.step.on{display:flex}
+@keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+h1{font-weight:800;font-size:31px;line-height:1.05;letter-spacing:-.02em;text-transform:uppercase;text-align:center}
+h2.q{font-weight:800;font-size:23px;line-height:1.15;letter-spacing:-.01em}
 mark{background:var(--hi);color:var(--ink);padding:0 .12em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
-.hero{width:100%;aspect-ratio:960/600;height:auto;border-radius:14px;display:block;object-fit:cover;background:#ccc}
-h2{font-weight:500;font-size:18px;line-height:1.45;color:#1d1c1a}
-h2 b{font-weight:800}
-.proof{width:100%;border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:14px;line-height:1.45;text-align:left;background:#fff}
-.proof span{display:block;font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin-bottom:4px}
-.cta{display:block;width:100%;background:var(--go);color:#fff;text-decoration:none;font-weight:800;font-size:22px;letter-spacing:.01em;text-transform:uppercase;padding:18px 14px;border-radius:12px;box-shadow:0 6px 0 var(--hi);transition:transform .08s}
+.hero{width:100%;height:auto;aspect-ratio:960/600;border-radius:14px;display:block;object-fit:cover;background:#ccc}
+.lead{font-size:17px;line-height:1.45;text-align:center;color:#1d1c1a}
+.lead b{font-weight:800}
+.hint{font-size:13px;color:var(--mute);text-align:center}
+.cta{display:block;width:100%;border:0;cursor:pointer;background:var(--ink);color:#fff;text-decoration:none;text-align:center;font-family:inherit;font-weight:800;font-size:21px;text-transform:uppercase;padding:18px 14px;border-radius:12px;box-shadow:0 6px 0 var(--hi);transition:transform .08s}
 .cta:active{transform:translateY(3px);box-shadow:0 3px 0 var(--hi)}
-.sub{font-size:13px;color:var(--mute)}
-footer{margin-top:8px;font-size:11.5px;color:var(--mute);line-height:1.5}
+.cta[disabled]{opacity:.45;cursor:not-allowed}
+.opts{display:flex;flex-direction:column;gap:10px}
+.opt{width:100%;text-align:left;font-family:inherit;font-size:16.5px;font-weight:500;color:var(--ink);background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:15px 16px;cursor:pointer;display:flex;gap:12px;align-items:center;transition:border-color .12s,background .12s}
+.opt:hover{border-color:var(--ink)}
+.opt.sel{border-color:var(--ink);background:var(--hi)}
+.opt .k{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--mute);border:1px solid var(--line);border-radius:6px;padding:2px 7px;background:var(--bg)}
+.back{align-self:flex-start;background:none;border:0;font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);cursor:pointer;padding:4px 0}
+label{font-size:13px;font-weight:700;display:block;margin-bottom:6px}
+input.f{width:100%;font-family:inherit;font-size:17px;padding:14px 15px;border:1.5px solid var(--line);border-radius:12px;background:#fff;color:var(--ink)}
+input.f:focus{outline:none;border-color:var(--ink)}
+.err{color:#B3261E;font-size:13px;min-height:16px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px}
+.card .tag{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin-bottom:6px}
+.card h3{font-size:24px;font-weight:800;line-height:1.1;margin-bottom:8px}
+.card p{font-size:15.5px;line-height:1.5}
+.card ul{margin:10px 0 0 18px;font-size:15px;line-height:1.5}
+.card li{margin-bottom:6px}
+.meter{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:4px}
+.meter div{font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.04em;text-align:center}
+.meter span{display:block;height:8px;border-radius:8px;background:#E4E1D9;margin-bottom:5px}
+.meter .hot span{background:var(--ink)}
+.proof{border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:14px;line-height:1.45;background:#fff}
+.proof span{display:block;font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin-bottom:4px}
+.loading{text-align:center;padding:40px 0;font-size:17px;font-weight:700}
+.dots::after{content:'';animation:d 1.2s steps(4) infinite}
+@keyframes d{0%{content:''}25%{content:'.'}50%{content:'..'}75%{content:'...'}}
+footer{margin-top:6px;font-size:11.5px;color:var(--mute);line-height:1.5;text-align:center}
 footer a{color:var(--mute)}
 @media (min-width:480px){h1{font-size:36px}}
 </style>
@@ -40,82 +68,207 @@ footer a{color:var(--mute)}
 <main class="wrap">
   <div class="top">
     <svg viewBox="0 0 120 120" fill="none" aria-label="Grupo Zentra"><polygon points="60,4 116,60 60,116 4,60" stroke="currentColor" stroke-width="7"/><line x1="60" y1="4" x2="60" y2="60" stroke="currentColor" stroke-width="7"/></svg>
-    <span>Diagnóstico · etapa 1 de 2</span>
+    <span id="stepLabel">Diagnóstico · 6 perguntas</span>
   </div>
-  <div class="bar" aria-hidden="true"><i></i></div>
+  <div class="bar" aria-hidden="true"><i id="barFill"></i></div>
 
-  <h1>Descubra onde sua mentoria <mark>perde venda</mark></h1>
+  <!-- INTRO -->
+  <section class="step on" data-step="intro">
+    <h1>Descubra onde sua mentoria <mark>perde venda</mark></h1>
+    <img class="hero" src="/diagnostico/time.webp" alt="Time do Grupo Zentra" width="960" height="600" fetchpriority="high">
+    <p class="lead">Responda <b>6 perguntas rápidas</b> e veja qual é o gargalo da sua operação: <b>tráfego</b>, <b>atendimento</b>, <b>estrutura</b> ou <b>dados</b>.</p>
+    <button class="cta" id="start" type="button">Começar diagnóstico</button>
+    <p class="hint">Leva menos de 1 minuto.</p>
+  </section>
 
-  <img class="hero" src="/diagnostico/time.webp" alt="Time do Grupo Zentra" width="960" height="600" fetchpriority="high">
+  <!-- PERGUNTAS (render via JS) -->
+  <section class="step" data-step="q" id="qStep">
+    <button class="back" id="back" type="button">← voltar</button>
+    <h2 class="q" id="qTitle"></h2>
+    <div class="opts" id="qOpts"></div>
+  </section>
 
-  <h2>Uma conversa com a <b>operação comercial da Zentra</b> pra mapear o gargalo da sua mentoria: <b>tráfego</b>, <b>atendimento</b> ou <b>checkout</b>.</h2>
+  <!-- CAPTURA -->
+  <section class="step" data-step="gate">
+    <h2 class="q">Seu diagnóstico está pronto. <mark>Pra onde mandamos?</mark></h2>
+    <p class="hint" style="text-align:left">O time da Zentra usa esses dados só pra falar com você sobre o diagnóstico.</p>
+    <div><label for="nome">Seu nome</label><input class="f" id="nome" autocomplete="name" placeholder="Nome e sobrenome"></div>
+    <div><label for="whats">WhatsApp</label><input class="f" id="whats" type="tel" inputmode="tel" autocomplete="tel" placeholder="(43) 99999-9999"></div>
+    <div><label for="insta">@ do Instagram <span style="font-weight:500;color:var(--mute)">(opcional)</span></label><input class="f" id="insta" autocapitalize="off" placeholder="@seuperfil"></div>
+    <div class="err" id="err"></div>
+    <button class="cta" id="see" type="button">Ver meu diagnóstico</button>
+  </section>
 
-  <a id="cta" class="cta" href="https://wa.me/5543996850251">Começar meu diagnóstico</a>
-  <p class="sub">Abre o WhatsApp do time Zentra. Resposta em horário comercial.</p>
+  <!-- LOADING -->
+  <section class="step" data-step="loading"><p class="loading">Analisando suas respostas<span class="dots"></span></p></section>
 
-  <div class="proof">
-    <span>Operação real · mentoria de nicho · 7 semanas</span>
-    R$12 mil em mídia viraram <b>R$55 mil em vendas pagas</b>, com tempo do 1º contato caindo de 50h pra 11h.
-  </div>
+  <!-- RESULTADO -->
+  <section class="step" data-step="result">
+    <div class="card">
+      <div class="tag">Seu principal gargalo</div>
+      <h3 id="rTitle"></h3>
+      <div class="meter" id="rMeter"></div>
+      <p id="rText" style="margin-top:12px"></p>
+      <ul id="rList"></ul>
+    </div>
+    <a class="cta" id="wa" href="https://wa.me/5543996850251" target="_blank" rel="noopener">Falar com o time no WhatsApp</a>
+    <p class="hint">Mande a mensagem pronta: o time já recebe suas respostas e continua o diagnóstico com você.</p>
+    <div class="proof">
+      <span>Operação real · mentoria de nicho · 7 semanas</span>
+      R$12 mil em mídia viraram <b>R$55 mil em vendas pagas</b>, com tempo do 1º contato caindo de 50h pra 11h.
+    </div>
+  </section>
 
   <footer>Grupo Zentra · Londrina-PR<br><a href="/politica-de-privacidade/">Política de privacidade</a></footer>
 </main>
 
-<form name="diagnostico-clique" netlify netlify-honeypot="bot-field" hidden>
-  <input name="bot-field"><input name="codigo"><input name="evento"><input name="utm_source"><input name="utm_medium"><input name="utm_campaign"><input name="utm_content"><input name="utm_term"><input name="fbclid"><input name="fbc"><input name="fbp"><input name="referrer"><input name="pagina">
+<form name="diagnostico-quiz" netlify netlify-honeypot="bot-field" hidden>
+  <input name="bot-field"><input name="codigo"><input name="evento"><input name="nome"><input name="whatsapp"><input name="instagram">
+  <input name="vende"><input name="faturamento"><input name="origem"><input name="resposta_lead"><input name="trava"><input name="ticket">
+  <input name="gargalo"><input name="pontos">
+  <input name="utm_source"><input name="utm_medium"><input name="utm_campaign"><input name="utm_content"><input name="utm_term"><input name="fbclid"><input name="fbc"><input name="fbp"><input name="referrer"><input name="pagina">
 </form>
 
 <script>
 (function(){
   var WA='5543996850251';
+  // pontos: T=tráfego, A=atendimento/comercial, E=estrutura/oferta, D=dados
+  var Q=[
+    {id:'vende',t:'Você já vende sua mentoria?',o:[
+      ['Sim, já vendo todo mês',{}],
+      ['Vendo, mas sem constância',{T:1,E:1}],
+      ['Ainda não, quero lançar a primeira',{E:3}]]},
+    {id:'faturamento',t:'Quanto sua mentoria fatura por mês hoje?',o:[
+      ['Ainda não fatura',{E:2}],
+      ['Até R$10 mil',{T:1,E:1}],
+      ['R$10 mil a R$30 mil',{T:1}],
+      ['R$30 mil a R$100 mil',{A:1,D:1}],
+      ['Mais de R$100 mil',{D:2}]]},
+    {id:'origem',t:'De onde vem a maioria dos seus clientes?',o:[
+      ['Indicação',{T:2}],
+      ['Instagram orgânico',{T:2}],
+      ['Tráfego pago',{D:1}],
+      ['Lançamentos e eventos',{A:1,D:1}],
+      ['Ainda não tenho clientes',{E:2}]]},
+    {id:'resposta_lead',t:'Quanto tempo leva pra alguém do seu time responder um lead novo?',o:[
+      ['Minutos',{}],
+      ['No mesmo dia',{A:1}],
+      ['1 a 2 dias',{A:2}],
+      ['Depende, não tenho processo',{A:3}]]},
+    {id:'trava',t:'Qual é a sua maior trava hoje?',o:[
+      ['Chega pouco lead',{T:3}],
+      ['Lead chega mas não fecha',{A:3}],
+      ['Não sei de onde vêm minhas vendas',{D:3}],
+      ['Oferta e preço não estão claros',{E:3}],
+      ['Falta tempo e time pra fazer tudo',{A:1,E:1}]]},
+    {id:'ticket',t:'Qual é o ticket da sua mentoria?',o:[
+      ['Até R$2 mil',{E:1}],
+      ['R$2 mil a R$5 mil',{}],
+      ['R$5 mil a R$15 mil',{A:1}],
+      ['Acima de R$15 mil',{A:2}],
+      ['Ainda não defini',{E:2}]]}
+  ];
+  var R={
+    T:{n:'Tráfego',title:'Falta demanda previsível',text:'Suas vendas dependem de indicação ou do orgânico. Sem um canal de aquisição que você controla, o faturamento oscila junto com o seu tempo de postar.',list:['Campanha com objetivo certo pro seu ticket (lead qualificado, não clique barato)','Criativos que filtram o público antes do clique','Meta de custo por lead qualificado, não por lead']},
+    A:{n:'Atendimento',title:'Você perde venda depois que o lead chega',text:'O lead aparece, mas o tempo de resposta e o processo comercial deixam dinheiro na mesa. Em ticket alto, quem responde primeiro costuma fechar.',list:['Primeiro contato em minutos, com roteiro de qualificação','Funil comercial com etapas claras e follow-up','CRM mostrando quem está parado e há quanto tempo']},
+    E:{n:'Estrutura',title:'A oferta ainda não está pronta pra escalar',text:'Antes de colocar dinheiro em tráfego, a mentoria precisa de promessa, formato e preço que se sustentem. Escalar oferta indefinida só aumenta o custo.',list:['Promessa e público definidos','Formato, entregáveis e preço coerentes com o ticket','Checkout e página prontos pra receber tráfego']},
+    D:{n:'Dados',title:'Você não sabe o que realmente vende',text:'Sem rastrear a venda até o anúncio, cada real investido é decidido no escuro. Dá pra estar escalando o criativo errado.',list:['Pixel + API de conversões ponta a ponta','Venda paga ligada à campanha e ao criativo','Painel com ROAS e custo por venda reais']}
+  };
+
   var qs=new URLSearchParams(location.search);
   function ck(n){var m=document.cookie.match('(?:^|; )'+n+'=([^;]*)');return m?decodeURIComponent(m[1]):''}
-  function rid(){var a='ABCDEFGHJKLMNPQRSTUVWXYZ23456789',s='',r=new Uint8Array(6);(window.crypto||{}).getRandomValues?crypto.getRandomValues(r):r.forEach(function(_,i){r[i]=Math.random()*256});for(var i=0;i<6;i++)s+=a[r[i]%a.length];return 'Z'+s}
+  function rid(){var a='ABCDEFGHJKLMNPQRSTUVWXYZ23456789',s='',r=new Uint8Array(6);try{crypto.getRandomValues(r)}catch(e){for(var j=0;j<6;j++)r[j]=Math.random()*256}for(var i=0;i<6;i++)s+=a[r[i]%a.length];return 'Z'+s}
   var code;try{code=sessionStorage.getItem('zdiag_code')||rid();sessionStorage.setItem('zdiag_code',code)}catch(e){code=rid()}
-
-  // fbc: pixel cria _fbc quando há fbclid; fallback manual pro CAPI
   function fbc(){var c=ck('_fbc');if(c)return c;var f=qs.get('fbclid');return f?'fb.1.'+Date.now()+'.'+f:''}
-
-  function data(evento){
-    var d={codigo:code,evento:evento,fbclid:qs.get('fbclid')||'',fbc:fbc(),fbp:ck('_fbp'),referrer:document.referrer||'',pagina:location.origin+location.pathname};
-    ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){d[k]=qs.get(k)||''});
-    return d;
-  }
   function beacon(url,body,type){
     try{if(navigator.sendBeacon&&navigator.sendBeacon(url,new Blob([body],{type:type})))return}catch(e){}
     try{fetch(url,{method:'POST',headers:{'Content-Type':type},body:body,keepalive:true})}catch(e){}
   }
-  function capi(evento,eventId){
-    var d=data(evento);
-    beacon('/.netlify/functions/capi-zentra-event',JSON.stringify({event_name:evento,event_id:eventId,fbc:d.fbc,fbp:d.fbp,user_agent:navigator.userAgent,event_source_url:location.href,codigo:code,utm_campaign:d.utm_campaign,utm_content:d.utm_content}),'application/json');
+  var lead={};
+  function track(name,custom){
+    var id=code+'-'+name.toLowerCase();
+    if(custom)fbq('trackCustom',name,{},{eventID:id});else fbq('track',name,{},{eventID:id});
+    beacon('/.netlify/functions/capi-zentra-event',JSON.stringify({event_name:name,event_id:id,fbc:fbc(),fbp:ck('_fbp'),user_agent:navigator.userAgent,event_source_url:location.href,codigo:code,phone:lead.whatsapp||'',name:lead.nome||'',utm_campaign:qs.get('utm_campaign')||'',utm_content:qs.get('utm_content')||''}),'application/json');
   }
-  function logForm(evento){
-    var d=data(evento),p=new URLSearchParams();p.set('form-name','diagnostico-clique');
+  function once(k){try{if(sessionStorage.getItem(k))return false;sessionStorage.setItem(k,'1')}catch(e){}return true}
+
+  // UI
+  var steps=document.querySelectorAll('.step'),bar=document.getElementById('barFill'),lbl=document.getElementById('stepLabel');
+  function show(name){steps.forEach(function(s){s.classList.toggle('on',s.dataset.step===name)});window.scrollTo(0,0)}
+  function progress(p,text){bar.style.width=p+'%';lbl.textContent=text}
+
+  var ans={},score={T:0,A:0,E:0,D:0},cur=0,hist=[];
+  function renderQ(){
+    var q=Q[cur];
+    document.getElementById('qTitle').textContent=q.t;
+    var box=document.getElementById('qOpts');box.innerHTML='';
+    q.o.forEach(function(o,i){
+      var b=document.createElement('button');b.type='button';b.className='opt'+(ans[q.id]===o[0]?' sel':'');
+      b.innerHTML='<span class="k">'+String.fromCharCode(65+i)+'</span><span></span>';b.lastChild.textContent=o[0];
+      b.onclick=function(){pick(o,b)};box.appendChild(b);
+    });
+    progress(10+cur*13,'Pergunta '+(cur+1)+' de '+Q.length);
+    show('q');
+  }
+  function recompute(){score={T:0,A:0,E:0,D:0};Q.forEach(function(q){q.o.forEach(function(o){if(ans[q.id]===o[0])for(var k in o[1])score[k]+=o[1][k]})})}
+  function pick(o,btn){
+    btn.classList.add('sel');ans[Q[cur].id]=o[0];
+    if(cur===0&&once('zdiag_qs'))track('QuizInicio',true);
+    setTimeout(function(){
+      if(cur<Q.length-1){cur++;renderQ()}
+      else{recompute();progress(90,'Quase lá');show('gate');setTimeout(function(){document.getElementById('nome').focus()},250)}
+    },220);
+  }
+  document.getElementById('back').onclick=function(){if(cur>0){cur--;renderQ()}else{progress(6,'Diagnóstico · 6 perguntas');show('intro')}};
+  document.getElementById('start').onclick=function(){cur=0;renderQ()};
+
+  // máscara whats
+  var w=document.getElementById('whats');
+  w.addEventListener('input',function(){var d=w.value.replace(/\D/g,'').slice(0,11),o='';if(d.length>0)o='('+d.slice(0,2);if(d.length>=3)o+=') '+d.slice(2,d.length>10?7:6);if(d.length>=7)o+='-'+d.slice(d.length>10?7:6);w.value=o});
+
+  function gargalo(){var best='T',v=-1;['A','T','D','E'].forEach(function(k){if(score[k]>v){v=score[k];best=k}});return best}
+
+  document.getElementById('see').onclick=function(){
+    var nome=document.getElementById('nome').value.trim(),tel=w.value.replace(/\D/g,''),ig=document.getElementById('insta').value.trim(),err=document.getElementById('err');
+    if(nome.length<2){err.textContent='Coloque seu nome.';return}
+    if(tel.length<10){err.textContent='WhatsApp incompleto (com DDD).';return}
+    err.textContent='';
+    lead={nome:nome,whatsapp:tel,instagram:ig};
+    var g=gargalo();
+    // registro no Netlify Forms
+    var p=new URLSearchParams();p.set('form-name','diagnostico-quiz');
+    var d={codigo:code,evento:'Lead',nome:nome,whatsapp:tel,instagram:ig,gargalo:R[g].n,pontos:JSON.stringify(score),fbclid:qs.get('fbclid')||'',fbc:fbc(),fbp:ck('_fbp'),referrer:document.referrer||'',pagina:location.origin+location.pathname};
+    ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){d[k]=qs.get(k)||''});
+    Q.forEach(function(q){d[q.id]=ans[q.id]||''});
     Object.keys(d).forEach(function(k){p.set(k,d[k])});
     beacon('/',p.toString(),'application/x-www-form-urlencoded');
+    if(once('zdiag_lead'))track('Lead',false);
+
+    show('loading');progress(100,'Diagnóstico pronto');
+    setTimeout(function(){renderResult(g)},1400);
+  };
+
+  function renderResult(g){
+    var r=R[g];
+    document.getElementById('rTitle').textContent=r.title;
+    document.getElementById('rText').textContent=r.text;
+    var ul=document.getElementById('rList');ul.innerHTML='';r.list.forEach(function(x){var li=document.createElement('li');li.textContent=x;ul.appendChild(li)});
+    var m=document.getElementById('rMeter');m.innerHTML='';
+    ['T','A','E','D'].forEach(function(k){var div=document.createElement('div');if(k===g)div.className='hot';div.innerHTML='<span></span>'+R[k].n;m.appendChild(div)});
+    var first=lead.nome.split(' ')[0];
+    var msg='Olá! Sou '+first+', fiz o diagnóstico da minha mentoria.\n'+
+      'Gargalo: '+r.n+'\n'+
+      'Faturamento: '+(ans.faturamento||'-')+'\n'+
+      'Ticket: '+(ans.ticket||'-')+'\n'+
+      'Maior trava: '+(ans.trava||'-')+'\n'+
+      '(cód. '+code+')';
+    var a=document.getElementById('wa');a.href='https://wa.me/'+WA+'?text='+encodeURIComponent(msg);
+    a.onclick=function(){if(once('zdiag_ct'))track('Contact',false)};
+    show('result');
   }
 
-  // Evento de "visita qualificada" (pixel + CAPI com mesmo event_id = dedup)
-  var pvId=code+'-pv';
-  var once=false;try{once=sessionStorage.getItem('zdiag_pv')==='1'}catch(e){}
-  if(!once){
-    setTimeout(function(){
-      fbq('trackCustom','PreDiagnostico',{},{eventID:pvId});
-      capi('PreDiagnostico',pvId);
-      try{sessionStorage.setItem('zdiag_pv','1')}catch(e){}
-    },400);
-  }
-
-  // CTA: código vai na mensagem do WhatsApp -> comercial liga conversa ao anúncio
-  var msg='Olá! Quero fazer o diagnóstico da minha mentoria. (cód. '+code+')';
-  var href='https://wa.me/'+WA+'?text='+encodeURIComponent(msg);
-  var cta=document.getElementById('cta');cta.href=href;
-  cta.addEventListener('click',function(){
-    var ctId=code+'-ct';
-    fbq('track','Contact',{},{eventID:ctId});
-    capi('Contact',ctId);
-    logForm('Contact');
-  });
+  // visita qualificada
+  if(once('zdiag_pv'))setTimeout(function(){track('PreDiagnostico',true)},400);
 })();
 </script>
 </body>

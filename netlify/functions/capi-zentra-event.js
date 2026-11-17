@@ -1,7 +1,17 @@
-// CAPI server-side pros eventos da ponte /diagnostico (pixel Zentra).
+// CAPI server-side pro quiz /diagnostico (pixel Zentra).
 // Mesmo event_id do fbq no navegador -> Meta deduplica.
+const crypto = require('crypto');
+
 const PIXEL_ID = '4323927661251100';
-const ALLOWED_EVENTS = new Set(['PreDiagnostico', 'Contact']);
+const ALLOWED_EVENTS = new Set(['PreDiagnostico', 'QuizInicio', 'Lead', 'Contact']);
+
+const sha256 = (v) => crypto.createHash('sha256').update(String(v).trim().toLowerCase()).digest('hex');
+
+function normalizePhone(raw) {
+  const d = String(raw || '').replace(/\D/g, '');
+  if (d.length < 10) return null;
+  return d.startsWith('55') && d.length >= 12 ? d : `55${d}`;
+}
 
 exports.handler = async (event) => {
   if (event.httpMethod !== 'POST') {
@@ -23,12 +33,19 @@ exports.handler = async (event) => {
   }
 
   const ip = event.headers['x-nf-client-connection-ip'] || event.headers['client-ip'];
+  const phone = normalizePhone(p.phone);
+  const nameParts = String(p.name || '').trim().split(/\s+/).filter(Boolean);
+
   const userData = {
     client_ip_address: ip,
     client_user_agent: p.user_agent || event.headers['user-agent'],
     fbp: p.fbp || undefined,
     fbc: p.fbc || undefined,
-    external_id: p.codigo ? [p.codigo] : undefined,
+    external_id: p.codigo ? [sha256(p.codigo)] : undefined,
+    ph: phone ? [sha256(phone)] : undefined,
+    fn: nameParts[0] ? [sha256(nameParts[0])] : undefined,
+    ln: nameParts.length > 1 ? [sha256(nameParts[nameParts.length - 1])] : undefined,
+    country: [sha256('br')],
   };
 
   const body = {
