@@ -27,6 +27,10 @@ h2.q{font-weight:800;font-size:23px;line-height:1.18;letter-spacing:-.01em}
 .sub{font-size:14.5px;color:var(--mute);line-height:1.45;margin-top:-6px}
 mark{background:var(--hi);color:var(--ink);padding:0 .12em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
 .hero{width:100%;height:auto;aspect-ratio:960/600;border-radius:14px;display:block;object-fit:cover;background:#ccc}
+.phone{position:relative;width:76%;max-width:340px;margin:-64px auto 0;height:330px;background:#F7F6F2;padding-top:26px;border:9px solid #0A0A0A;border-bottom:0;border-radius:36px 36px 0 0;overflow:hidden;box-shadow:0 -10px 30px rgba(0,0,0,.18);-webkit-mask-image:linear-gradient(#000 78%,transparent);mask-image:linear-gradient(#000 78%,transparent)}
+.phone::before{content:'';position:absolute;top:6px;left:50%;transform:translateX(-50%);width:34%;height:18px;background:#0A0A0A;border-radius:12px;z-index:2}
+.phone img{display:block;width:100%;height:auto}
+.phone-cap{margin-top:-6px;text-align:center;font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
 .lead{font-size:17px;line-height:1.45;text-align:center;color:#1d1c1a}
 .lead b{font-weight:800}
 .hint{font-size:13px;color:var(--mute);text-align:center}
@@ -128,6 +132,8 @@ footer a{color:var(--mute)}
   }
 
   /* ---------- telas ---------- */
+  var PHONE='<div class="phone"><img src="/diagnostico/painel.webp" alt="Painel de resultados de uma mentoria atendida pela Zentra" width="596" height="789"></div>'+
+    '<p class="phone-cap">Painel real · mentoria atendida pela Zentra</p>';
   var FAT_TXT={ate10:'até R$10 mil',d10a30:'entre R$10 e R$30 mil',d30a100:'entre R$30 e R$100 mil',mais100:'mais de R$100 mil'};
   var STEPS={
     intro:{type:'intro',next:function(){return 'vende'}},
@@ -236,8 +242,8 @@ footer a{color:var(--mute)}
       q:'Oferta, página, checkout, tráfego e comercial montados pela Zentra. <b>Mais de R$500 mil faturados</b> e mais de R$100 mil geridos em mídia.'};
     return{
       t:'Já fizemos isso com quem já vendia, como você.',
-      big:'4,6x',cap:'retorno sobre mídia em 7 semanas · mentoria de nicho',
-      q:'R$12 mil em mídia viraram <b>R$55 mil em vendas pagas</b>. O primeiro contato com o lead caiu de 50h pra 11h e as vendas fechadas passaram de 6 pra 19.'};
+      big:'5,36x',cap:'ROAS · painel real de uma mentoria atendida pela Zentra',
+      q:'R$11,7 mil em mídia viraram <b>R$63 mil em receita</b>, com 510 leads e 76 compradores. E ainda <b>R$840 mil em pipe aberto</b>.',phone:true};
   }
   function agreeText(s){
     var fat=FAT_TXT[s.fat]||'';
@@ -276,13 +282,14 @@ footer a{color:var(--mute)}
     if(st.type==='intro'){
       h='<h1>Descubra onde sua mentoria <mark>perde venda</mark></h1>'+
         '<img class="hero" src="/diagnostico/time.webp" alt="Time do Grupo Zentra" width="960" height="600" fetchpriority="high">'+
+        PHONE+
         '<p class="lead">Responda algumas perguntas rápidas e veja qual é o gargalo da sua operação: <b>tráfego</b>, <b>atendimento</b>, <b>estrutura</b> ou <b>dados</b>.</p>'+
         '<button class="cta" type="button" data-next>Começar diagnóstico</button><p class="hint">Leva cerca de 1 minuto.</p>';
     }else if(st.type==='q'){
       h=backBtn()+'<h2 class="q">'+esc(st.q)+'</h2>'+(st.sub?'<p class="sub">'+esc(st.sub)+'</p>':'')+optsHTML(id,st.opts(s));
     }else if(st.type==='proof'){
       var p=proofHTML(s);
-      h=backBtn()+'<h2 class="q">'+esc(p.t)+'</h2><div class="big">'+p.big+'<small>'+p.cap+'</small></div><div class="quote">'+p.q+'</div>'+
+      h=backBtn()+'<h2 class="q">'+esc(p.t)+'</h2><div class="big">'+p.big+'<small>'+p.cap+'</small></div><div class="quote">'+p.q+'</div>'+(p.phone?'<div style="margin-top:72px">'+PHONE+'</div>':'')+
         '<button class="cta" type="button" data-next>Quero esse resultado</button><p class="hint">Resultados de operações reais da Zentra. Clientes não identificados.</p>';
     }else if(st.type==='mirror'){
       h=backBtn()+'<h2 class="q">E se eu te contar que, além de <mark>'+esc(s.objetivo||'vender mais')+'</mark>, a operação certa resolve tudo isso junto?</h2>'+
