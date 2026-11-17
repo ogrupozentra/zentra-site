@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Diagnóstico da sua mentoria | Grupo Zentra</title>
-<meta name="description" content="Responda 6 perguntas e descubra onde sua mentoria perde venda: tráfego, atendimento, estrutura ou dados.">
+<meta name="description" content="Responda algumas perguntas e descubra onde sua mentoria perde venda: tráfego, atendimento, estrutura ou dados.">
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preload" as="image" href="/diagnostico/time.webp" fetchpriority="high">
@@ -19,26 +19,32 @@ body{background:var(--bg);color:var(--ink);font-family:'Inter Tight',system-ui,-
 .top{display:flex;align-items:center;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
 .top svg{width:22px;height:22px;color:var(--ink)}
 .bar{height:10px;background:#E4E1D9;border-radius:40px;overflow:hidden}
-.bar i{display:block;width:6%;height:100%;background:var(--ink);border-radius:40px;transition:width .35s ease}
-.step{display:none;flex-direction:column;gap:14px;animation:in .25s ease}
-.step.on{display:flex}
+.bar i{display:block;width:4%;height:100%;background:var(--ink);border-radius:40px;transition:width .35s ease}
+.screen{display:flex;flex-direction:column;gap:14px;animation:in .25s ease}
 @keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 h1{font-weight:800;font-size:31px;line-height:1.05;letter-spacing:-.02em;text-transform:uppercase;text-align:center}
-h2.q{font-weight:800;font-size:23px;line-height:1.15;letter-spacing:-.01em}
+h2.q{font-weight:800;font-size:23px;line-height:1.18;letter-spacing:-.01em}
+.sub{font-size:14.5px;color:var(--mute);line-height:1.45;margin-top:-6px}
 mark{background:var(--hi);color:var(--ink);padding:0 .12em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
 .hero{width:100%;height:auto;aspect-ratio:960/600;border-radius:14px;display:block;object-fit:cover;background:#ccc}
 .lead{font-size:17px;line-height:1.45;text-align:center;color:#1d1c1a}
 .lead b{font-weight:800}
 .hint{font-size:13px;color:var(--mute);text-align:center}
-.cta{display:block;width:100%;border:0;cursor:pointer;background:var(--ink);color:#fff;text-decoration:none;text-align:center;font-family:inherit;font-weight:800;font-size:21px;text-transform:uppercase;padding:18px 14px;border-radius:12px;box-shadow:0 6px 0 var(--hi);transition:transform .08s}
+.cta{display:block;width:100%;border:0;cursor:pointer;background:var(--ink);color:#fff;text-decoration:none;text-align:center;font-family:inherit;font-weight:800;font-size:20px;text-transform:uppercase;padding:18px 14px;border-radius:12px;box-shadow:0 6px 0 var(--hi);transition:transform .08s}
 .cta:active{transform:translateY(3px);box-shadow:0 3px 0 var(--hi)}
-.cta[disabled]{opacity:.45;cursor:not-allowed}
 .opts{display:flex;flex-direction:column;gap:10px}
-.opt{width:100%;text-align:left;font-family:inherit;font-size:16.5px;font-weight:500;color:var(--ink);background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:15px 16px;cursor:pointer;display:flex;gap:12px;align-items:center;transition:border-color .12s,background .12s}
+.opt{width:100%;text-align:left;font-family:inherit;font-size:16.5px;font-weight:500;line-height:1.3;color:var(--ink);background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:15px 16px;cursor:pointer;display:flex;gap:12px;align-items:center;transition:border-color .12s,background .12s}
 .opt:hover{border-color:var(--ink)}
 .opt.sel{border-color:var(--ink);background:var(--hi)}
-.opt .k{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--mute);border:1px solid var(--line);border-radius:6px;padding:2px 7px;background:var(--bg)}
+.opt .k{flex:none;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--mute);border:1px solid var(--line);border-radius:6px;padding:2px 7px;background:var(--bg)}
 .back{align-self:flex-start;background:none;border:0;font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);cursor:pointer;padding:4px 0}
+.quote{background:#fff;border:1px solid var(--line);border-left:5px solid var(--hi);border-radius:12px;padding:16px;font-size:16px;line-height:1.5}
+.quote b{font-weight:800}
+.big{font-weight:800;font-size:40px;letter-spacing:-.02em;line-height:1}
+.big small{display:block;font-size:13px;font-weight:500;color:var(--mute);letter-spacing:0;margin-top:6px;font-family:'JetBrains Mono',monospace;text-transform:uppercase}
+.checks{display:flex;flex-direction:column;gap:10px}
+.checks div{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:15px;line-height:1.4}
+.checks b{display:block;font-size:16px}
 label{font-size:13px;font-weight:700;display:block;margin-bottom:6px}
 input.f{width:100%;font-family:inherit;font-size:17px;padding:14px 15px;border:1.5px solid var(--line);border-radius:12px;background:#fff;color:var(--ink)}
 input.f:focus{outline:none;border-color:var(--ink)}
@@ -53,8 +59,6 @@ input.f:focus{outline:none;border-color:var(--ink)}
 .meter div{font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.04em;text-align:center}
 .meter span{display:block;height:8px;border-radius:8px;background:#E4E1D9;margin-bottom:5px}
 .meter .hot span{background:var(--ink)}
-.proof{border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:14px;line-height:1.45;background:#fff}
-.proof span{display:block;font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin-bottom:4px}
 .loading{text-align:center;padding:40px 0;font-size:17px;font-weight:700}
 .dots::after{content:'';animation:d 1.2s steps(4) infinite}
 @keyframes d{0%{content:''}25%{content:'.'}50%{content:'..'}75%{content:'...'}}
@@ -68,63 +72,17 @@ footer a{color:var(--mute)}
 <main class="wrap">
   <div class="top">
     <svg viewBox="0 0 120 120" fill="none" aria-label="Grupo Zentra"><polygon points="60,4 116,60 60,116 4,60" stroke="currentColor" stroke-width="7"/><line x1="60" y1="4" x2="60" y2="60" stroke="currentColor" stroke-width="7"/></svg>
-    <span id="stepLabel">Diagnóstico · 6 perguntas</span>
+    <span id="stepLabel">Diagnóstico da mentoria</span>
   </div>
   <div class="bar" aria-hidden="true"><i id="barFill"></i></div>
-
-  <!-- INTRO -->
-  <section class="step on" data-step="intro">
-    <h1>Descubra onde sua mentoria <mark>perde venda</mark></h1>
-    <img class="hero" src="/diagnostico/time.webp" alt="Time do Grupo Zentra" width="960" height="600" fetchpriority="high">
-    <p class="lead">Responda <b>6 perguntas rápidas</b> e veja qual é o gargalo da sua operação: <b>tráfego</b>, <b>atendimento</b>, <b>estrutura</b> ou <b>dados</b>.</p>
-    <button class="cta" id="start" type="button">Começar diagnóstico</button>
-    <p class="hint">Leva menos de 1 minuto.</p>
-  </section>
-
-  <!-- PERGUNTAS (render via JS) -->
-  <section class="step" data-step="q" id="qStep">
-    <button class="back" id="back" type="button">← voltar</button>
-    <h2 class="q" id="qTitle"></h2>
-    <div class="opts" id="qOpts"></div>
-  </section>
-
-  <!-- CAPTURA -->
-  <section class="step" data-step="gate">
-    <h2 class="q">Seu diagnóstico está pronto. <mark>Pra onde mandamos?</mark></h2>
-    <p class="hint" style="text-align:left">O time da Zentra usa esses dados só pra falar com você sobre o diagnóstico.</p>
-    <div><label for="nome">Seu nome</label><input class="f" id="nome" autocomplete="name" placeholder="Nome e sobrenome"></div>
-    <div><label for="whats">WhatsApp</label><input class="f" id="whats" type="tel" inputmode="tel" autocomplete="tel" placeholder="(43) 99999-9999"></div>
-    <div><label for="insta">@ do Instagram <span style="font-weight:500;color:var(--mute)">(opcional)</span></label><input class="f" id="insta" autocapitalize="off" placeholder="@seuperfil"></div>
-    <div class="err" id="err"></div>
-    <button class="cta" id="see" type="button">Ver meu diagnóstico</button>
-  </section>
-
-  <!-- LOADING -->
-  <section class="step" data-step="loading"><p class="loading">Analisando suas respostas<span class="dots"></span></p></section>
-
-  <!-- RESULTADO -->
-  <section class="step" data-step="result">
-    <div class="card">
-      <div class="tag">Seu principal gargalo</div>
-      <h3 id="rTitle"></h3>
-      <div class="meter" id="rMeter"></div>
-      <p id="rText" style="margin-top:12px"></p>
-      <ul id="rList"></ul>
-    </div>
-    <a class="cta" id="wa" href="https://wa.me/5543996850251" target="_blank" rel="noopener">Falar com o time no WhatsApp</a>
-    <p class="hint">Mande a mensagem pronta: o time já recebe suas respostas e continua o diagnóstico com você.</p>
-    <div class="proof">
-      <span>Operação real · mentoria de nicho · 7 semanas</span>
-      R$12 mil em mídia viraram <b>R$55 mil em vendas pagas</b>, com tempo do 1º contato caindo de 50h pra 11h.
-    </div>
-  </section>
-
+  <div id="app"></div>
   <footer>Grupo Zentra · Londrina-PR<br><a href="/politica-de-privacidade/">Política de privacidade</a></footer>
 </main>
 
 <form name="diagnostico-quiz" netlify netlify-honeypot="bot-field" hidden>
-  <input name="bot-field"><input name="codigo"><input name="evento"><input name="nome"><input name="whatsapp"><input name="instagram">
+  <input name="bot-field"><input name="codigo"><input name="evento"><input name="nome"><input name="whatsapp"><input name="email"><input name="instagram">
   <input name="vende"><input name="faturamento"><input name="origem"><input name="resposta_lead"><input name="trava"><input name="ticket">
+  <input name="audiencia"><input name="objetivo"><input name="dor"><input name="concorda"><input name="estagio"><input name="canal">
   <input name="gargalo"><input name="pontos">
   <input name="utm_source"><input name="utm_medium"><input name="utm_campaign"><input name="utm_content"><input name="utm_term"><input name="fbclid"><input name="fbc"><input name="fbp"><input name="referrer"><input name="pagina">
 </form>
@@ -132,49 +90,9 @@ footer a{color:var(--mute)}
 <script>
 (function(){
   var WA='5543996850251';
-  // pontos: T=tráfego, A=atendimento/comercial, E=estrutura/oferta, D=dados
-  var Q=[
-    {id:'vende',t:'Você já vende sua mentoria?',o:[
-      ['Sim, já vendo todo mês',{}],
-      ['Vendo, mas sem constância',{T:1,E:1}],
-      ['Ainda não, quero lançar a primeira',{E:3}]]},
-    {id:'faturamento',t:'Quanto sua mentoria fatura por mês hoje?',o:[
-      ['Ainda não fatura',{E:2}],
-      ['Até R$10 mil',{T:1,E:1}],
-      ['R$10 mil a R$30 mil',{T:1}],
-      ['R$30 mil a R$100 mil',{A:1,D:1}],
-      ['Mais de R$100 mil',{D:2}]]},
-    {id:'origem',t:'De onde vem a maioria dos seus clientes?',o:[
-      ['Indicação',{T:2}],
-      ['Instagram orgânico',{T:2}],
-      ['Tráfego pago',{D:1}],
-      ['Lançamentos e eventos',{A:1,D:1}],
-      ['Ainda não tenho clientes',{E:2}]]},
-    {id:'resposta_lead',t:'Quanto tempo leva pra alguém do seu time responder um lead novo?',o:[
-      ['Minutos',{}],
-      ['No mesmo dia',{A:1}],
-      ['1 a 2 dias',{A:2}],
-      ['Depende, não tenho processo',{A:3}]]},
-    {id:'trava',t:'Qual é a sua maior trava hoje?',o:[
-      ['Chega pouco lead',{T:3}],
-      ['Lead chega mas não fecha',{A:3}],
-      ['Não sei de onde vêm minhas vendas',{D:3}],
-      ['Oferta e preço não estão claros',{E:3}],
-      ['Falta tempo e time pra fazer tudo',{A:1,E:1}]]},
-    {id:'ticket',t:'Qual é o ticket da sua mentoria?',o:[
-      ['Até R$2 mil',{E:1}],
-      ['R$2 mil a R$5 mil',{}],
-      ['R$5 mil a R$15 mil',{A:1}],
-      ['Acima de R$15 mil',{A:2}],
-      ['Ainda não defini',{E:2}]]}
-  ];
-  var R={
-    T:{n:'Tráfego',title:'Falta demanda previsível',text:'Suas vendas dependem de indicação ou do orgânico. Sem um canal de aquisição que você controla, o faturamento oscila junto com o seu tempo de postar.',list:['Campanha com objetivo certo pro seu ticket (lead qualificado, não clique barato)','Criativos que filtram o público antes do clique','Meta de custo por lead qualificado, não por lead']},
-    A:{n:'Atendimento',title:'Você perde venda depois que o lead chega',text:'O lead aparece, mas o tempo de resposta e o processo comercial deixam dinheiro na mesa. Em ticket alto, quem responde primeiro costuma fechar.',list:['Primeiro contato em minutos, com roteiro de qualificação','Funil comercial com etapas claras e follow-up','CRM mostrando quem está parado e há quanto tempo']},
-    E:{n:'Estrutura',title:'A oferta ainda não está pronta pra escalar',text:'Antes de colocar dinheiro em tráfego, a mentoria precisa de promessa, formato e preço que se sustentem. Escalar oferta indefinida só aumenta o custo.',list:['Promessa e público definidos','Formato, entregáveis e preço coerentes com o ticket','Checkout e página prontos pra receber tráfego']},
-    D:{n:'Dados',title:'Você não sabe o que realmente vende',text:'Sem rastrear a venda até o anúncio, cada real investido é decidido no escuro. Dá pra estar escalando o criativo errado.',list:['Pixel + API de conversões ponta a ponta','Venda paga ligada à campanha e ao criativo','Painel com ROAS e custo por venda reais']}
-  };
+  var app=document.getElementById('app'),bar=document.getElementById('barFill'),lbl=document.getElementById('stepLabel');
 
+  /* ---------- rastreio ---------- */
   var qs=new URLSearchParams(location.search);
   function ck(n){var m=document.cookie.match('(?:^|; )'+n+'=([^;]*)');return m?decodeURIComponent(m[1]):''}
   function rid(){var a='ABCDEFGHJKLMNPQRSTUVWXYZ23456789',s='',r=new Uint8Array(6);try{crypto.getRandomValues(r)}catch(e){for(var j=0;j<6;j++)r[j]=Math.random()*256}for(var i=0;i<6;i++)s+=a[r[i]%a.length];return 'Z'+s}
@@ -188,86 +106,263 @@ footer a{color:var(--mute)}
   function track(name,custom){
     var id=code+'-'+name.toLowerCase();
     if(custom)fbq('trackCustom',name,{},{eventID:id});else fbq('track',name,{},{eventID:id});
-    beacon('/.netlify/functions/capi-zentra-event',JSON.stringify({event_name:name,event_id:id,fbc:fbc(),fbp:ck('_fbp'),user_agent:navigator.userAgent,event_source_url:location.href,codigo:code,phone:lead.whatsapp||'',name:lead.nome||'',utm_campaign:qs.get('utm_campaign')||'',utm_content:qs.get('utm_content')||''}),'application/json');
+    beacon('/.netlify/functions/capi-zentra-event',JSON.stringify({event_name:name,event_id:id,fbc:fbc(),fbp:ck('_fbp'),user_agent:navigator.userAgent,event_source_url:location.href,codigo:code,phone:lead.whatsapp||'',email:lead.email||'',name:lead.nome||'',utm_campaign:qs.get('utm_campaign')||'',utm_content:qs.get('utm_content')||''}),'application/json');
   }
   function once(k){try{if(sessionStorage.getItem(k))return false;sessionStorage.setItem(k,'1')}catch(e){}return true}
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
 
-  // UI
-  var steps=document.querySelectorAll('.step'),bar=document.getElementById('barFill'),lbl=document.getElementById('stepLabel');
-  function show(name){steps.forEach(function(s){s.classList.toggle('on',s.dataset.step===name)});window.scrollTo(0,0)}
-  function progress(p,text){bar.style.width=p+'%';lbl.textContent=text}
-
-  var ans={},score={T:0,A:0,E:0,D:0},cur=0,hist=[];
-  function renderQ(){
-    var q=Q[cur];
-    document.getElementById('qTitle').textContent=q.t;
-    var box=document.getElementById('qOpts');box.innerHTML='';
-    q.o.forEach(function(o,i){
-      var b=document.createElement('button');b.type='button';b.className='opt'+(ans[q.id]===o[0]?' sel':'');
-      b.innerHTML='<span class="k">'+String.fromCharCode(65+i)+'</span><span></span>';b.lastChild.textContent=o[0];
-      b.onclick=function(){pick(o,b)};box.appendChild(b);
+  /* ---------- estado ---------- */
+  // pontos de gargalo: T tráfego, A atendimento, E estrutura, D dados
+  var ans={};          // stepId -> índice da opção
+  var hist=[];         // pilha de telas visitadas
+  function S(){        // estado derivado das respostas
+    var s={estagio:null,canal:null,fat:null,ticket:null,objetivo:null,pts:{T:0,A:0,E:0,D:0},txt:{}};
+    hist.concat([]).forEach(function(id){
+      var st=STEPS[id];if(!st||!st.opts||ans[id]==null)return;
+      var o=st.opts(s)[ans[id]];if(!o)return;
+      s.txt[id]=o.t;
+      if(o.set)for(var k in o.set)s[k]=o.set[k];
+      if(o.p)for(var p in o.p)s.pts[p]+=o.p[p];
     });
-    progress(10+cur*13,'Pergunta '+(cur+1)+' de '+Q.length);
-    show('q');
+    return s;
   }
-  function recompute(){score={T:0,A:0,E:0,D:0};Q.forEach(function(q){q.o.forEach(function(o){if(ans[q.id]===o[0])for(var k in o[1])score[k]+=o[1][k]})})}
-  function pick(o,btn){
-    btn.classList.add('sel');ans[Q[cur].id]=o[0];
-    if(cur===0&&once('zdiag_qs'))track('QuizInicio',true);
-    setTimeout(function(){
-      if(cur<Q.length-1){cur++;renderQ()}
-      else{recompute();progress(90,'Quase lá');show('gate');setTimeout(function(){document.getElementById('nome').focus()},250)}
-    },220);
-  }
-  document.getElementById('back').onclick=function(){if(cur>0){cur--;renderQ()}else{progress(6,'Diagnóstico · 6 perguntas');show('intro')}};
-  document.getElementById('start').onclick=function(){cur=0;renderQ()};
 
-  // máscara whats
-  var w=document.getElementById('whats');
-  w.addEventListener('input',function(){var d=w.value.replace(/\D/g,'').slice(0,11),o='';if(d.length>0)o='('+d.slice(0,2);if(d.length>=3)o+=') '+d.slice(2,d.length>10?7:6);if(d.length>=7)o+='-'+d.slice(d.length>10?7:6);w.value=o});
+  /* ---------- telas ---------- */
+  var FAT_TXT={ate10:'até R$10 mil',d10a30:'entre R$10 e R$30 mil',d30a100:'entre R$30 e R$100 mil',mais100:'mais de R$100 mil'};
+  var STEPS={
+    intro:{type:'intro',next:function(){return 'vende'}},
 
-  function gargalo(){var best='T',v=-1;['A','T','D','E'].forEach(function(k){if(score[k]>v){v=score[k];best=k}});return best}
+    vende:{type:'q',q:'Você já vende sua mentoria?',sub:'Comece pelo seu momento atual.',
+      opts:function(){return[
+        {t:'Ainda não, quero lançar a primeira',set:{estagio:'zero'},p:{E:3}},
+        {t:'Vendo, mas sem constância',set:{estagio:'instavel'},p:{T:1,E:1}},
+        {t:'Vendo todo mês',set:{estagio:'escala'}}]},
+      next:function(s){return s.estagio==='zero'?'audiencia':'faturamento'}},
 
-  document.getElementById('see').onclick=function(){
-    var nome=document.getElementById('nome').value.trim(),tel=w.value.replace(/\D/g,''),ig=document.getElementById('insta').value.trim(),err=document.getElementById('err');
-    if(nome.length<2){err.textContent='Coloque seu nome.';return}
-    if(tel.length<10){err.textContent='WhatsApp incompleto (com DDD).';return}
-    err.textContent='';
-    lead={nome:nome,whatsapp:tel,instagram:ig};
-    var g=gargalo();
-    // registro no Netlify Forms
-    var p=new URLSearchParams();p.set('form-name','diagnostico-quiz');
-    var d={codigo:code,evento:'Lead',nome:nome,whatsapp:tel,instagram:ig,gargalo:R[g].n,pontos:JSON.stringify(score),fbclid:qs.get('fbclid')||'',fbc:fbc(),fbp:ck('_fbp'),referrer:document.referrer||'',pagina:location.origin+location.pathname};
-    ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){d[k]=qs.get(k)||''});
-    Q.forEach(function(q){d[q.id]=ans[q.id]||''});
-    Object.keys(d).forEach(function(k){p.set(k,d[k])});
-    beacon('/',p.toString(),'application/x-www-form-urlencoded');
-    if(once('zdiag_lead'))track('Lead',false);
+    // ramo ZERO
+    audiencia:{type:'q',q:'Como está sua audiência hoje?',sub:'Seguidores, lista, rede de contatos: tudo conta.',
+      opts:function(){return[
+        {t:'Tenho audiência engajada que confia em mim',set:{canal:'organico'},p:{E:2}},
+        {t:'Tenho alguma audiência, mas pouco engajamento',set:{canal:'organico'},p:{T:1,E:1}},
+        {t:'Quase não tenho audiência',set:{canal:'sem'},p:{T:2}}]},
+      next:function(){return 'ticket'}},
 
-    show('loading');progress(100,'Diagnóstico pronto');
-    setTimeout(function(){renderResult(g)},1400);
+    // ramo INSTÁVEL/ESCALA
+    faturamento:{type:'q',q:'Quanto sua mentoria fatura por mês hoje?',
+      opts:function(){return[
+        {t:'Até R$10 mil',set:{fat:'ate10'},p:{T:1,E:1}},
+        {t:'R$10 mil a R$30 mil',set:{fat:'d10a30'},p:{T:1}},
+        {t:'R$30 mil a R$100 mil',set:{fat:'d30a100'},p:{A:1,D:1}},
+        {t:'Mais de R$100 mil',set:{fat:'mais100'},p:{D:2}}]},
+      next:function(){return 'origem'}},
+    origem:{type:'q',q:'De onde vem a maioria dos seus clientes?',
+      opts:function(){return[
+        {t:'Indicação',set:{canal:'organico'},p:{T:2}},
+        {t:'Instagram orgânico',set:{canal:'organico'},p:{T:2}},
+        {t:'Tráfego pago',set:{canal:'pago'},p:{D:1}},
+        {t:'Lançamentos e eventos',set:{canal:'pago'},p:{A:1,D:1}}]},
+      next:function(){return 'resposta_lead'}},
+    resposta_lead:{type:'q',q:'Quanto tempo seu time leva pra responder um lead novo?',
+      opts:function(){return[
+        {t:'Minutos'},
+        {t:'No mesmo dia',p:{A:1}},
+        {t:'1 a 2 dias',p:{A:2}},
+        {t:'Depende, não tenho processo',p:{A:3}}]},
+      next:function(){return 'prova'}},
+
+    // prova condicional (equivalente ao depoimento por tipo de corpo)
+    prova:{type:'proof',next:function(s){return s.estagio==='zero'?'objetivo':'ticket'}},
+
+    ticket:{type:'q',q:'Qual é (ou vai ser) o ticket da sua mentoria?',
+      opts:function(){return[
+        {t:'Até R$2 mil',set:{ticket:'ate2'},p:{E:1}},
+        {t:'R$2 mil a R$5 mil',set:{ticket:'2a5'}},
+        {t:'R$5 mil a R$15 mil',set:{ticket:'5a15'},p:{A:1}},
+        {t:'Acima de R$15 mil',set:{ticket:'15mais'},p:{A:2}},
+        {t:'Ainda não defini',set:{ticket:'indef'},p:{E:2}}]},
+      next:function(s){return s.estagio==='zero'?'prova':'objetivo'}},
+
+    objetivo:{type:'q',q:'Qual é seu principal objetivo pros próximos 90 dias?',
+      opts:function(s){var z=s.estagio==='zero';return(z?[
+        {t:'Lançar minha primeira turma',set:{objetivo:'lançar sua primeira turma'},p:{E:1}},
+        {t:'Definir oferta e preço com segurança',set:{objetivo:'definir sua oferta e seu preço'},p:{E:2}},
+        {t:'Fazer as primeiras vendas sem depender de seguidores',set:{objetivo:'fazer as primeiras vendas'},p:{T:2}}]:[
+        {t:'Ter vendas previsíveis todo mês',set:{objetivo:'ter vendas previsíveis'},p:{T:1,D:1}},
+        {t:'Aumentar o faturamento',set:{objetivo:'aumentar o faturamento'},p:{T:1}},
+        {t:'Fechar mais dos leads que já chegam',set:{objetivo:'fechar mais dos leads que já chegam'},p:{A:2}},
+        {t:'Parar de depender de mim pra vender',set:{objetivo:'parar de depender de você pra vender'},p:{A:1,E:1}}])},
+      next:function(){return 'espelho'}},
+
+    // espelho (equivalente ao "além de {objetivo}...")
+    espelho:{type:'mirror',
+      opts:function(){return[{t:'Sim, é isso que eu quero'},{t:'Ainda não sei'}]},
+      next:function(){return 'dor'}},
+
+    // dor condicional por estágio (equivalente ao B12)
+    dor:{type:'q',q:'Agora me diz: o que mais te trava hoje?',sub:'Escolha a que mais parece com você.',
+      opts:function(s){
+        if(s.estagio==='zero')return[
+          {t:'Não sei montar uma oferta que as pessoas comprem',set:{dor:'oferta'},p:{E:3}},
+          {t:'Não sei quanto cobrar',set:{dor:'preco'},p:{E:2}},
+          {t:'Tenho medo de lançar e ninguém comprar',set:{dor:'medo'},p:{T:2,E:1}},
+          {t:'Não tenho tempo nem time pra estruturar tudo',set:{dor:'tempo'},p:{A:1,E:2}}];
+        if(s.estagio==='instavel')return[
+          {t:'Vendo em ondas: um mês bom, outro ruim',set:{dor:'ondas'},p:{T:3}},
+          {t:'Dependo de indicação e do próximo post',set:{dor:'indicacao'},p:{T:3}},
+          {t:'Não consigo atender e vender ao mesmo tempo',set:{dor:'tempo'},p:{A:3}},
+          {t:'Não sei o que realmente traz venda',set:{dor:'dados'},p:{D:3}}];
+        return[
+          {t:'O custo por venda está subindo',set:{dor:'custo'},p:{D:2,T:1}},
+          {t:'Lead chega, mas não fecha',set:{dor:'fechamento'},p:{A:3}},
+          {t:'Não sei qual anúncio realmente vende',set:{dor:'dados'},p:{D:3}},
+          {t:'A venda ainda depende de mim',set:{dor:'dependencia'},p:{A:2,E:1}}];
+      },
+      next:function(){return 'concorda'}},
+
+    // "você concorda" condicional (equivalente ao B17)
+    concorda:{type:'agree',
+      opts:function(){return[{t:'Sim, é exatamente isso',set:{concorda:'sim'}},{t:'Ainda não tenho certeza',set:{concorda:'nao'}}]},
+      next:function(){return 'gate'}},
+
+    gate:{type:'gate'},
+    result:{type:'result'}
   };
 
-  function renderResult(g){
-    var r=R[g];
-    document.getElementById('rTitle').textContent=r.title;
-    document.getElementById('rText').textContent=r.text;
-    var ul=document.getElementById('rList');ul.innerHTML='';r.list.forEach(function(x){var li=document.createElement('li');li.textContent=x;ul.appendChild(li)});
-    var m=document.getElementById('rMeter');m.innerHTML='';
-    ['T','A','E','D'].forEach(function(k){var div=document.createElement('div');if(k===g)div.className='hot';div.innerHTML='<span></span>'+R[k].n;m.appendChild(div)});
-    var first=lead.nome.split(' ')[0];
-    var msg='Olá! Sou '+first+', fiz o diagnóstico da minha mentoria.\n'+
-      'Gargalo: '+r.n+'\n'+
-      'Faturamento: '+(ans.faturamento||'-')+'\n'+
-      'Ticket: '+(ans.ticket||'-')+'\n'+
-      'Maior trava: '+(ans.trava||'-')+'\n'+
-      '(cód. '+code+')';
-    var a=document.getElementById('wa');a.href='https://wa.me/'+WA+'?text='+encodeURIComponent(msg);
-    a.onclick=function(){if(once('zdiag_ct'))track('Contact',false)};
-    show('result');
+  /* textos condicionais */
+  function proofHTML(s){
+    if(s.estagio==='zero'||s.estagio==='instavel')return{
+      t:'Já fizemos isso com quem estava no mesmo ponto que você.',
+      big:'R$500 mil+',cap:'faturados por uma mentoria estruturada com a Zentra',
+      q:'Oferta, página, checkout, tráfego e comercial montados pela Zentra. <b>Mais de R$500 mil faturados</b> e mais de R$100 mil geridos em mídia.'};
+    return{
+      t:'Já fizemos isso com quem já vendia, como você.',
+      big:'4,6x',cap:'retorno sobre mídia em 7 semanas · mentoria de nicho',
+      q:'R$12 mil em mídia viraram <b>R$55 mil em vendas pagas</b>. O primeiro contato com o lead caiu de 50h pra 11h e as vendas fechadas passaram de 6 pra 19.'};
+  }
+  function agreeText(s){
+    var fat=FAT_TXT[s.fat]||'';
+    var k=s.estagio+'_'+(s.canal==='pago'?'pago':(s.canal==='sem'?'sem':'organico'));
+    var T={
+      zero_organico:'quem já tem <b>autoridade e audiência</b>, mas ainda não transformou isso numa mentoria que vende? Quer lançar sua primeira turma com <b>oferta, página e comercial prontos</b>?',
+      zero_sem:'quem quer lançar a <b>primeira mentoria</b>, mas ainda não tem audiência grande? Quer começar com <b>tráfego e um processo comercial</b> que não depende de seguidores?',
+      instavel_organico:'quem vende por <b>indicação e orgânico</b>, mas fatura em ondas? Quer <b>previsibilidade todo mês</b>, sem depender do próximo post dar certo?',
+      instavel_pago:'quem já anuncia, mas ainda <b>não tem constância</b>? Quer saber <b>qual anúncio realmente vende</b> e repetir isso todo mês?',
+      escala_organico:'quem já fatura <b>'+fat+'</b> por mês com orgânico e indicação, mas <b>bateu no teto do próprio alcance</b>? Quer abrir um canal pago com <b>custo por venda controlado</b>?',
+      escala_pago:'quem já investe em mídia e fatura <b>'+fat+'</b> por mês, mas sente que o <b>comercial e os dados não acompanham</b>? Quer cada real de anúncio <b>ligado a uma venda paga</b>?'
+    };
+    return 'Você concorda que uma operação de vendas estruturada é o caminho certo pra '+(T[k]||T.instavel_organico);
+  }
+  var R={
+    T:{n:'Tráfego',title:'Falta demanda previsível',text:'Suas vendas dependem de indicação ou do orgânico. Sem um canal de aquisição que você controla, o faturamento oscila junto com o seu tempo de postar.',list:['Campanha com objetivo certo pro seu ticket (lead qualificado, não clique barato)','Criativos que filtram o público antes do clique','Meta de custo por lead qualificado, não por lead']},
+    A:{n:'Atendimento',title:'Você perde venda depois que o lead chega',text:'O lead aparece, mas o tempo de resposta e o processo comercial deixam dinheiro na mesa. Em ticket alto, quem responde primeiro costuma fechar.',list:['Primeiro contato em minutos, com roteiro de qualificação','Funil comercial com etapas claras e follow-up','CRM mostrando quem está parado e há quanto tempo']},
+    E:{n:'Estrutura',title:'A oferta ainda não está pronta pra escalar',text:'Antes de colocar dinheiro em tráfego, a mentoria precisa de promessa, formato e preço que se sustentem. Escalar oferta indefinida só aumenta o custo.',list:['Promessa e público definidos','Formato, entregáveis e preço coerentes com o ticket','Checkout e página prontos pra receber tráfego']},
+    D:{n:'Dados',title:'Você não sabe o que realmente vende',text:'Sem rastrear a venda até o anúncio, cada real investido é decidido no escuro. Dá pra estar escalando o criativo errado.',list:['Pixel + API de conversões ponta a ponta','Venda paga ligada à campanha e ao criativo','Painel com ROAS e custo por venda reais']}
+  };
+  function gargalo(s){var best='T',v=-1;['A','T','D','E'].forEach(function(k){if(s.pts[k]>v){v=s.pts[k];best=k}});return best}
+
+  /* ---------- render ---------- */
+  function progress(id){
+    var order={intro:4,vende:12,audiencia:24,faturamento:22,origem:32,resposta_lead:42,prova:52,ticket:60,objetivo:68,espelho:74,dor:80,concorda:88,gate:94,result:100};
+    bar.style.width=(order[id]||10)+'%';
+    lbl.textContent=id==='result'?'Diagnóstico pronto':(id==='gate'?'Última etapa':'Diagnóstico da mentoria');
+  }
+  function backBtn(){return hist.length>1?'<button class="back" type="button" data-back>← voltar</button>':''}
+  function optsHTML(id,list){return '<div class="opts">'+list.map(function(o,i){return '<button class="opt'+(ans[id]===i?' sel':'')+'" type="button" data-i="'+i+'"><span class="k">'+String.fromCharCode(65+i)+'</span><span>'+esc(o.t)+'</span></button>'}).join('')+'</div>'}
+
+  function go(id,push){if(push!==false)hist.push(id);render()}
+  function render(){
+    var id=hist[hist.length-1],st=STEPS[id],s=S(),h='';
+    progress(id);window.scrollTo(0,0);
+    if(st.type==='intro'){
+      h='<h1>Descubra onde sua mentoria <mark>perde venda</mark></h1>'+
+        '<img class="hero" src="/diagnostico/time.webp" alt="Time do Grupo Zentra" width="960" height="600" fetchpriority="high">'+
+        '<p class="lead">Responda algumas perguntas rápidas e veja qual é o gargalo da sua operação: <b>tráfego</b>, <b>atendimento</b>, <b>estrutura</b> ou <b>dados</b>.</p>'+
+        '<button class="cta" type="button" data-next>Começar diagnóstico</button><p class="hint">Leva cerca de 1 minuto.</p>';
+    }else if(st.type==='q'){
+      h=backBtn()+'<h2 class="q">'+esc(st.q)+'</h2>'+(st.sub?'<p class="sub">'+esc(st.sub)+'</p>':'')+optsHTML(id,st.opts(s));
+    }else if(st.type==='proof'){
+      var p=proofHTML(s);
+      h=backBtn()+'<h2 class="q">'+esc(p.t)+'</h2><div class="big">'+p.big+'<small>'+p.cap+'</small></div><div class="quote">'+p.q+'</div>'+
+        '<button class="cta" type="button" data-next>Quero esse resultado</button><p class="hint">Resultados de operações reais da Zentra. Clientes não identificados.</p>';
+    }else if(st.type==='mirror'){
+      h=backBtn()+'<h2 class="q">E se eu te contar que, além de <mark>'+esc(s.objetivo||'vender mais')+'</mark>, a operação certa resolve tudo isso junto?</h2>'+
+        '<div class="checks"><div><b>Demanda previsível</b>Tráfego feito pro seu ticket, trazendo lead qualificado.</div><div><b>Atendimento que fecha</b>Primeiro contato em minutos, com processo comercial.</div><div><b>Checkout que converte</b>Página e pagamento prontos pra mentoria high ticket.</div><div><b>Dados de cada venda</b>Você sabe qual anúncio trouxe cada real.</div></div>'+
+        '<p class="sub" style="margin-top:4px">É isso que você busca?</p>'+optsHTML(id,st.opts(s));
+    }else if(st.type==='agree'){
+      h=backBtn()+'<h2 class="q" style="font-weight:700">'+agreeText(s)+'</h2>'+optsHTML(id,st.opts(s));
+    }else if(st.type==='gate'){
+      h=backBtn()+'<h2 class="q">Seu diagnóstico está pronto. <mark>Pra onde mandamos?</mark></h2>'+
+        '<p class="sub">O time da Zentra usa esses dados só pra falar com você sobre o diagnóstico.</p>'+
+        '<div><label for="nome">Seu nome</label><input class="f" id="nome" autocomplete="name" placeholder="Nome e sobrenome" value="'+esc(lead.nome||'')+'"></div>'+
+        '<div><label for="whats">WhatsApp</label><input class="f" id="whats" type="tel" inputmode="tel" autocomplete="tel" placeholder="(43) 99999-9999" value="'+esc(lead.whatsappFmt||'')+'"></div>'+
+        '<div><label for="email">E-mail</label><input class="f" id="email" type="email" inputmode="email" autocomplete="email" placeholder="voce@email.com" value="'+esc(lead.email||'')+'"></div>'+
+        '<div><label for="insta">@ do Instagram <span style="font-weight:500;color:var(--mute)">(opcional)</span></label><input class="f" id="insta" autocapitalize="off" placeholder="@seuperfil" value="'+esc(lead.instagram||'')+'"></div>'+
+        '<div class="err" id="err"></div><button class="cta" type="button" id="see">Ver meu diagnóstico</button>';
+    }else if(st.type==='loading'){
+      h='<p class="loading">Analisando suas respostas<span class="dots"></span></p>';
+    }else if(st.type==='result'){
+      var g=gargalo(s),r=R[g];
+      h='<div class="card"><div class="tag">Seu principal gargalo</div><h3>'+esc(r.title)+'</h3><div class="meter">'+
+        ['T','A','E','D'].map(function(k){return '<div'+(k===g?' class="hot"':'')+'><span></span>'+R[k].n+'</div>'}).join('')+
+        '</div><p style="margin-top:12px">'+esc(r.text)+'</p><ul>'+r.list.map(function(x){return '<li>'+esc(x)+'</li>'}).join('')+'</ul></div>'+
+        '<a class="cta" id="wa" target="_blank" rel="noopener" href="'+waLink(s,r)+'">Falar com o time no WhatsApp</a>'+
+        '<p class="hint">Mande a mensagem pronta: o time já recebe suas respostas e continua o diagnóstico com você.</p>';
+    }
+    app.innerHTML='<section class="screen">'+h+'</section>';
+    bind(id,st);
+  }
+  function waLink(s,r){
+    var first=(lead.nome||'').split(' ')[0];
+    var linhas=['Olá! Sou '+first+', fiz o diagnóstico da minha mentoria.','Gargalo: '+r.n];
+    if(s.txt.vende)linhas.push('Momento: '+s.txt.vende);
+    if(s.txt.faturamento)linhas.push('Faturamento: '+s.txt.faturamento);
+    if(s.txt.ticket)linhas.push('Ticket: '+s.txt.ticket);
+    if(s.txt.dor)linhas.push('Maior trava: '+s.txt.dor);
+    linhas.push('(cód. '+code+')');
+    return 'https://wa.me/'+WA+'?text='+encodeURIComponent(linhas.join('\n'));
+  }
+  function bind(id,st){
+    var b=app.querySelector('[data-back]');if(b)b.onclick=function(){hist.pop();render()};
+    var n=app.querySelector('[data-next]');if(n)n.onclick=function(){go(st.next(S()))};
+    app.querySelectorAll('.opt').forEach(function(el){el.onclick=function(){
+      el.classList.add('sel');ans[id]=+el.dataset.i;
+      if(id==='vende'&&once('zdiag_qs'))track('QuizInicio',true);
+      setTimeout(function(){go(st.next(S()))},200);
+    }});
+    if(st.type==='gate'){
+      var w=document.getElementById('whats');
+      w.addEventListener('input',function(){var d=w.value.replace(/\D/g,'').slice(0,11),o='';if(d.length>0)o='('+d.slice(0,2);if(d.length>=3)o+=') '+d.slice(2,d.length>10?7:6);if(d.length>=7)o+='-'+d.slice(d.length>10?7:6);w.value=o});
+      setTimeout(function(){document.getElementById('nome').focus()},250);
+      document.getElementById('see').onclick=submitGate;
+    }
+    if(st.type==='result'){
+      var a=document.getElementById('wa');a.onclick=function(){if(once('zdiag_ct'))track('Contact',false)};
+    }
+  }
+  function submitGate(){
+    var nome=document.getElementById('nome').value.trim(),w=document.getElementById('whats'),tel=w.value.replace(/\D/g,''),
+        em=document.getElementById('email').value.trim(),ig=document.getElementById('insta').value.trim(),err=document.getElementById('err');
+    if(nome.length<2){err.textContent='Coloque seu nome.';return}
+    if(tel.length<10){err.textContent='WhatsApp incompleto (com DDD).';return}
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em)){err.textContent='E-mail inválido.';return}
+    err.textContent='';
+    lead={nome:nome,whatsapp:tel,whatsappFmt:w.value,email:em,instagram:ig};
+    var s=S(),g=gargalo(s);
+    var d={codigo:code,evento:'Lead',nome:nome,whatsapp:tel,email:em,instagram:ig,
+      vende:s.txt.vende||'',faturamento:s.txt.faturamento||'',origem:s.txt.origem||'',resposta_lead:s.txt.resposta_lead||'',ticket:s.txt.ticket||'',
+      audiencia:s.txt.audiencia||'',objetivo:s.txt.objetivo||'',dor:s.txt.dor||'',trava:s.txt.dor||'',concorda:s.txt.concorda||'',
+      estagio:s.estagio||'',canal:s.canal||'',gargalo:R[g].n,pontos:JSON.stringify(s.pts),
+      fbclid:qs.get('fbclid')||'',fbc:fbc(),fbp:ck('_fbp'),referrer:document.referrer||'',pagina:location.origin+location.pathname};
+    ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){d[k]=qs.get(k)||''});
+    var p=new URLSearchParams();p.set('form-name','diagnostico-quiz');Object.keys(d).forEach(function(k){p.set(k,d[k])});
+    beacon('/',p.toString(),'application/x-www-form-urlencoded');
+    if(once('zdiag_lead'))track('Lead',false);
+    app.innerHTML='<section class="screen"><p class="loading">Analisando suas respostas<span class="dots"></span></p></section>';
+    bar.style.width='97%';
+    setTimeout(function(){hist.push('result');render()},1400);
   }
 
-  // visita qualificada
+  hist=['intro'];render();
   if(once('zdiag_pv'))setTimeout(function(){track('PreDiagnostico',true)},400);
 })();
 </script>

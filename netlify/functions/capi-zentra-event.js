@@ -43,6 +43,7 @@ exports.handler = async (event) => {
     fbc: p.fbc || undefined,
     external_id: p.codigo ? [sha256(p.codigo)] : undefined,
     ph: phone ? [sha256(phone)] : undefined,
+    em: p.email && /@/.test(p.email) ? [sha256(p.email)] : undefined,
     fn: nameParts[0] ? [sha256(nameParts[0])] : undefined,
     ln: nameParts.length > 1 ? [sha256(nameParts[nameParts.length - 1])] : undefined,
     country: [sha256('br')],
