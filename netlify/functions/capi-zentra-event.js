@@ -3,7 +3,7 @@
 const crypto = require('crypto');
 
 const PIXEL_ID = '4323927661251100';
-const ALLOWED_EVENTS = new Set(['PreDiagnostico', 'QuizInicio', 'Lead', 'Contact']);
+const ALLOWED_EVENTS = new Set(['PreDiagnostico', 'QuizInicio', 'Lead', 'LeadQualificado', 'Contact']);
 
 const sha256 = (v) => crypto.createHash('sha256').update(String(v).trim().toLowerCase()).digest('hex');
 

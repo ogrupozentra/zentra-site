@@ -405,6 +405,8 @@ footer a{color:var(--mute)}
     var p=new URLSearchParams();p.set('form-name','diagnostico-quiz');Object.keys(d).forEach(function(k){p.set(k,d[k])});
     beacon('/',p.toString(),'application/x-www-form-urlencoded');
     if(once('zdiag_lead'))track('Lead',false);
+    // qualificado = já vende (constante ou não) e fatura acima de R$10 mil/mês
+    if((s.estagio==='instavel'||s.estagio==='escala')&&s.fat&&s.fat!=='ate10'&&once('zdiag_leadq'))track('LeadQualificado',true);
     document.body.classList.remove('is-fit');
     app.innerHTML='<section class="screen"><p class="loading">Analisando suas respostas<span class="dots"></span></p></section>';
     bar.style.width='97%';
