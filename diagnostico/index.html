@@ -341,7 +341,7 @@ footer a{color:var(--mute)}
         '<div><label for="nome">Seu nome</label><input class="f" id="nome" autocomplete="name" placeholder="Nome e sobrenome" value="'+esc(lead.nome||'')+'"></div>'+
         '<div><label for="whats">WhatsApp</label><input class="f" id="whats" type="tel" inputmode="tel" autocomplete="tel" placeholder="(43) 99999-9999" value="'+esc(lead.whatsappFmt||'')+'"></div>'+
         '<div><label for="email">E-mail</label><input class="f" id="email" type="email" inputmode="email" autocomplete="email" placeholder="voce@email.com" value="'+esc(lead.email||'')+'"></div>'+
-        '<div><label for="insta">@ do Instagram <span style="font-weight:500;color:var(--mute)">(opcional)</span></label><input class="f" id="insta" autocapitalize="off" placeholder="@seuperfil" value="'+esc(lead.instagram||'')+'"></div>'+
+        '<div><label for="insta">@ do Instagram da sua mentoria</label><input class="f" id="insta" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="@seuperfil" value="'+esc(lead.instagram||'')+'"></div>'+
         '<div class="err" id="err"></div><button class="cta" type="button" id="see">Ver meu diagnóstico</button>';
     }else if(st.type==='loading'){
       h='<p class="loading">Analisando suas respostas<span class="dots"></span></p>';
@@ -393,6 +393,9 @@ footer a{color:var(--mute)}
     if(nome.length<2){err.textContent='Coloque seu nome.';return}
     if(tel.length<10){err.textContent='WhatsApp incompleto (com DDD).';return}
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em)){err.textContent='E-mail inválido.';return}
+    var h=ig.replace(/^https?:\/\/(www\.)?instagram\.com\//i,'').replace(/[\/?#].*$/,'').replace(/^@+/,'');
+    if(!/^(?!.*\.\.)(?!\.)[A-Za-z0-9._]{3,30}$/.test(h)||/^\d+$/.test(h)){err.textContent='Coloque o @ do seu Instagram (ex: @seuperfil).';return}
+    ig='@'+h.toLowerCase();
     err.textContent='';
     lead={nome:nome,whatsapp:tel,whatsappFmt:w.value,email:em,instagram:ig};
     var s=S(),g=gargalo(s);
