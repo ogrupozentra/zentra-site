@@ -49,7 +49,10 @@ fbq('init','4323927661251100');fbq('track','PageView');
 <section class="box result hidden" id="result" aria-live="polite"><div id="res-pix"><h2>Seu Pix está pronto</h2><p>Valor: <strong id="res-value"></strong></p><img class="qr" id="qr" alt="QR Code Pix"><label class="f" for="pix-code">Código Pix copia e cola</label><textarea id="pix-code" readonly></textarea><button type="button" class="go" id="copy">Copiar código Pix</button><p class="wait">Aguardando pagamento…</p></div><div id="res-ok" class="hidden"><h2>Pagamento confirmado!</h2><p>Preparando seu acesso…</p></div></section>
 <footer class="foot"><p>ZENTRA PRODUCOES E SOLUCOES DIGITAIS LTDA · CNPJ 61.768.633/0001-39</p><a href="https://vero.ogrupozentra.com/termos-de-uso" target="_blank" rel="noopener noreferrer">Termos de uso</a> · <a href="/politica-de-privacidade/" target="_blank" rel="noopener noreferrer">Política de privacidade</a><p>contato@ogrupozentra.com</p></footer></main>
 <script>(function(){'use strict';
-const BUMP = { ATIVO: false, ID: '', NOME: 'BUMP_NOME', TEXTO: 'BUMP_TEXTO (2 linhas)', PRECO: 27 };
+const BUMP = { ATIVO: true, ID: 'd94b02bd-85d9-4abe-8cc0-d4e3cfdce1eb',
+  NOME: 'Primeiras Conversas: mensagens prontas para validar sua mentoria',
+  TEXTO: 'Modelos prontos para convidar, confirmar, fazer follow-up, agradecer e pedir indicação nas suas primeiras conversas de validação. Inclui respostas para "quanto custa?" e "isso é venda?", ficha de registro e quadro de objeções.',
+  LABEL: 'Sim, quero as mensagens prontas para minhas primeiras conversas (+ R$ 27)', PRECO: 27 };
 const PRODUCT = '918c4a25-9e50-4fed-aa03-51c3e6599bfb';
 const PAYMENT_LINK = '243cbe26-aeaf-4fb1-a34b-557c545d0089';
 const SB='https://jlvipchxqzbwclethenn.supabase.co', KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpsdmlwY2h4cXpid2NsZXRoZW5uIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI0NDk3MzAsImV4cCI6MjA4ODAyNTczMH0.vQWsBNlHaS_2uliSM8QstJaEM7boTM_VMspOu36ZSoY';
@@ -89,9 +92,10 @@ $('installments').addEventListener('change',render);
 if(bumpEnabled){
  const label=document.createElement('label');label.className='bump';
  const checkbox=document.createElement('input');checkbox.type='checkbox';checkbox.id='bump';
- const title=document.createElement('span');title.textContent='Sim, quero adicionar '+BUMP.NOME+' por '+money(BUMP.PRECO*100);
+ const title=document.createElement('span');title.textContent=BUMP.LABEL||('Sim, quero adicionar '+BUMP.NOME+' por '+money(BUMP.PRECO*100));
+ const name=document.createElement('strong');name.className='bump-name';name.textContent=BUMP.NOME;name.style.cssText='display:block;margin-top:10px';
  const description=document.createElement('p');description.textContent=BUMP.TEXTO;
- label.append(checkbox,title,description);$('bump-slot').append(label);
+ label.append(checkbox,title,name,description);$('bump-slot').append(label);
  checkbox.addEventListener('change',function(){selected=this.checked;render()});
 }
 function paymentInfo(){
