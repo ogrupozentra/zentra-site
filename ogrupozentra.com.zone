@@ -12,6 +12,9 @@ $TTL 3600
 ; === WWW — Netlify ===
 www                            3600 IN CNAME ogrupozentra.netlify.app.
 
+; === MENTORES (forms aplicação) — Netlify ===
+mentores                       3600 IN CNAME zentra-mentores.netlify.app.
+
 ; === NAMESERVERS ===
 @                              86400 IN NS   ns1.dns-parking.com.
 @                              86400 IN NS   ns2.dns-parking.com.
