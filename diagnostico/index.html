@@ -84,6 +84,8 @@ input.f:focus{outline:none;border-color:var(--ink)}
 .meter div{font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.04em;text-align:center}
 .meter span{display:block;height:8px;border-radius:8px;background:#E4E1D9;margin-bottom:5px}
 .meter .hot span{background:var(--ink)}
+.vsl{position:relative;width:100%;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:#000}
+.vsl iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .loading{text-align:center;padding:40px 0;font-size:17px;font-weight:700}
 .dots::after{content:'';animation:d 1.2s steps(4) infinite}
 @keyframes d{0%{content:''}25%{content:'.'}50%{content:'..'}75%{content:'...'}}
@@ -171,6 +173,7 @@ footer a{color:var(--mute)}
   /* ---------- telas ---------- */
   var PHONE='<div class="phone"><img src="/diagnostico/painel.webp" alt="Painel de resultados de uma mentoria atendida pela Zentra" width="596" height="789"></div>'+
     '<p class="phone-cap">Painel real · mentoria atendida pela Zentra</p>';
+  var VSLHTML='<div class="vsl"><iframe src="https://player-vz-eeaa7761-a9d.tv.pandavideo.com.br/embed/?v=ac011af3-1f83-4035-80c4-49d9adfdf3d8" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture" allowfullscreen fetchpriority="high" title="VSL Grupo Zentra"></iframe></div>';
   var FAT_TXT={ate10:'até R$10 mil',d10a30:'entre R$10 e R$30 mil',d30a100:'entre R$30 e R$100 mil',mais100:'mais de R$100 mil'};
   var STEPS={
     intro:{type:'intro',next:function(){return 'vende'}},
@@ -271,6 +274,7 @@ footer a{color:var(--mute)}
       next:function(){return 'gate'}},
 
     gate:{type:'gate'},
+    vsl:{type:'vsl'},
     result:{type:'result'}
   };
 
@@ -308,9 +312,9 @@ footer a{color:var(--mute)}
 
   /* ---------- render ---------- */
   function progress(id){
-    var order={intro:4,fora:100,vende:8,audiencia:24,faturamento:22,origem:32,resposta_lead:42,prova:52,ticket:60,objetivo:68,espelho:74,dor:80,concorda:88,gate:94,result:100};
+    var order={intro:4,fora:100,vsl:100,vende:8,audiencia:24,faturamento:22,origem:32,resposta_lead:42,prova:52,ticket:60,objetivo:68,espelho:74,dor:80,concorda:88,gate:94,result:100};
     bar.style.width=(order[id]||10)+'%';
-    lbl.textContent=id==='result'?'Diagnóstico pronto':(id==='gate'?'Última etapa':'Diagnóstico da mentoria');
+    lbl.textContent=(id==='result'||id==='vsl')?'Diagnóstico pronto':(id==='gate'?'Última etapa':'Diagnóstico da mentoria');
   }
   function backBtn(){return hist.length>1?'<button class="back" type="button" data-back>← voltar</button>':''}
   function optsHTML(id,list){return '<div class="opts">'+list.map(function(o,i){return '<button class="opt'+(ans[id]===i?' sel':'')+'" type="button" data-i="'+i+'"><span class="k">'+String.fromCharCode(65+i)+'</span><span>'+esc(o.t)+'</span></button>'}).join('')+'</div>'}
@@ -327,10 +331,12 @@ footer a{color:var(--mute)}
         '<p class="lead">Responda perguntas rápidas e veja o gargalo da sua operação: <b>tráfego</b>, <b>atendimento</b>, <b>estrutura</b> ou <b>dados</b>. Leva 1 minuto.</p>'+
         '<button class="cta" type="button" data-next>Começar diagnóstico</button>';
     }else if(st.type==='out'){
-      h=backBtn()+'<h2 class="q">Este diagnóstico é para quem <mark>já vende</mark>.</h2>'+
-        '<p class="lead" style="text-align:left">A Zentra estrutura tráfego, atendimento e dados de mentorias que <b>já têm vendas</b> e querem previsibilidade.</p>'+
-        '<p class="lead" style="text-align:left">Se você está montando a primeira, acompanhe o <b>@grupozentra</b>: lá tem conteúdo sobre oferta, preço e primeiro lançamento.</p>'+
-        '<a class="cta" href="https://www.instagram.com/grupozentra/" target="_blank" rel="noopener">Ver o @grupozentra</a>';
+      h=backBtn()+'<h2 class="q">Antes de vender a primeira, <mark>assista isto</mark>.</h2>'+VSLHTML+
+        '<p class="hint">Pedro, Grupo Zentra · 4 minutos</p>';
+    }else if(st.type==='vsl'){
+      var gv=R[gargalo(s)];
+      h='<h2 class="q">Seu diagnóstico está pronto. <mark>Assista antes do próximo passo.</mark></h2>'+VSLHTML+
+        '<div class="card"><div class="tag">Seu principal gargalo</div><h3>'+esc(gv.title)+'</h3><p>'+esc(gv.text)+'</p></div>';
     }else if(st.type==='q'){
       h=backBtn()+(id==='vende'&&hist.length===1?'<h1 style="font-size:clamp(24px,4.2svh,32px)">Diagnóstico para quem <mark>já vende</mark> mentoria</h1>'+
         '<p class="lead">Em 1 minuto você vê onde sua operação perde venda: <b>tráfego</b>, <b>atendimento</b>, <b>estrutura</b> ou <b>dados</b>.</p>':'')+'<h2 class="q">'+esc(st.q)+'</h2>'+(st.sub?'<p class="sub">'+esc(st.sub)+'</p>':'')+optsHTML(id,st.opts(s));
@@ -424,7 +430,7 @@ footer a{color:var(--mute)}
     document.body.classList.remove('is-fit');
     app.innerHTML='<section class="screen"><p class="loading">Analisando suas respostas<span class="dots"></span></p></section>';
     bar.style.width='97%';
-    setTimeout(function(){hist.push('result');render()},1400);
+    setTimeout(function(){hist.push(qual?'result':'vsl');render()},1400);
   }
 
   hist=['vende'];render();
