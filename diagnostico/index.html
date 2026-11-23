@@ -174,6 +174,9 @@ footer a{color:var(--mute)}
   var PHONE='<div class="phone"><img src="/diagnostico/painel.webp" alt="Painel de resultados de uma mentoria atendida pela Zentra" width="596" height="789"></div>'+
     '<p class="phone-cap">Painel real · mentoria atendida pela Zentra</p>';
   var VSLHTML='<div class="vsl"><iframe src="https://player-vz-eeaa7761-a9d.tv.pandavideo.com.br/embed/?v=ac011af3-1f83-4035-80c4-49d9adfdf3d8" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture" allowfullscreen fetchpriority="high" title="VSL Grupo Zentra"></iframe></div>';
+  var KIT='https://vero.ogrupozentra.com/checkout/link/243cbe26-aeaf-4fb1-a34b-557c545d0089';
+  function emLink(){var u=new URLSearchParams();['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){var v=qs.get(k);if(v)u.set(k,v)});u.set('src','diagnostico');return KIT+'?'+u.toString()}
+  function emCTA(){return '<a class="cta" id="em" href="'+emLink()+'">Quero o Kit Sua Primeira Mentoria</a><p class="hint">Kit Sua Primeira Mentoria · R$47 · pagamento seguro</p>'}
   var FAT_TXT={ate10:'até R$10 mil',d10a30:'entre R$10 e R$30 mil',d30a100:'entre R$30 e R$100 mil',mais100:'mais de R$100 mil'};
   var STEPS={
     intro:{type:'intro',next:function(){return 'vende'}},
@@ -332,10 +335,10 @@ footer a{color:var(--mute)}
         '<button class="cta" type="button" data-next>Começar diagnóstico</button>';
     }else if(st.type==='out'){
       h=backBtn()+'<h2 class="q">Antes de vender a primeira, <mark>assista isto</mark>.</h2>'+VSLHTML+
-        '<p class="hint">Pedro, Grupo Zentra · 4 minutos</p>';
+        '<p class="hint">Pedro, Grupo Zentra · 4 minutos</p>'+emCTA();
     }else if(st.type==='vsl'){
       var gv=R[gargalo(s)];
-      h='<h2 class="q">Seu diagnóstico está pronto. <mark>Assista antes do próximo passo.</mark></h2>'+VSLHTML+
+      h='<h2 class="q">Seu diagnóstico está pronto. <mark>Assista antes do próximo passo.</mark></h2>'+VSLHTML+emCTA()+
         '<div class="card"><div class="tag">Seu principal gargalo</div><h3>'+esc(gv.title)+'</h3><p>'+esc(gv.text)+'</p></div>';
     }else if(st.type==='q'){
       h=backBtn()+(id==='vende'&&hist.length===1?'<h1 style="font-size:clamp(24px,4.2svh,32px)">Diagnóstico para quem <mark>já vende</mark> mentoria</h1>'+
@@ -399,6 +402,7 @@ footer a{color:var(--mute)}
       setTimeout(function(){document.getElementById('nome').focus()},250);
       document.getElementById('see').onclick=submitGate;
     }
+    var em=document.getElementById('em');if(em)em.onclick=function(){if(once('zdiag_em'))fbq('trackCustom','CliqueKit',{value:47,currency:'BRL'})};
     if(st.type==='result'){
       var a=document.getElementById('wa');a.onclick=function(){if(once('zdiag_ct'))track('Contact',false)};
     }
