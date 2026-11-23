@@ -175,12 +175,15 @@ footer a{color:var(--mute)}
   var STEPS={
     intro:{type:'intro',next:function(){return 'vende'}},
 
-    vende:{type:'q',q:'Você já vende sua mentoria?',sub:'Comece pelo seu momento atual.',
+    vende:{type:'q',q:'Você já vende sua mentoria, curso ou consultoria?',
       opts:function(){return[
-        {t:'Ainda não, quero lançar a primeira',set:{estagio:'zero'},p:{E:3}},
+        {t:'Ainda não vendo',set:{estagio:'zero'},p:{E:3}},
         {t:'Vendo, mas sem constância',set:{estagio:'instavel'},p:{T:1,E:1}},
         {t:'Vendo todo mês',set:{estagio:'escala'}}]},
-      next:function(s){return s.estagio==='zero'?'audiencia':'faturamento'}},
+      next:function(s){return s.estagio==='zero'?'fora':'faturamento'}},
+
+    // fora do perfil: não vende ainda -> sai sem formulário e sem Lead
+    fora:{type:'out'},
 
     // ramo ZERO
     audiencia:{type:'q',q:'Como está sua audiência hoje?',sub:'Seguidores, lista, rede de contatos: tudo conta.',
@@ -305,7 +308,7 @@ footer a{color:var(--mute)}
 
   /* ---------- render ---------- */
   function progress(id){
-    var order={intro:4,vende:12,audiencia:24,faturamento:22,origem:32,resposta_lead:42,prova:52,ticket:60,objetivo:68,espelho:74,dor:80,concorda:88,gate:94,result:100};
+    var order={intro:4,fora:100,vende:8,audiencia:24,faturamento:22,origem:32,resposta_lead:42,prova:52,ticket:60,objetivo:68,espelho:74,dor:80,concorda:88,gate:94,result:100};
     bar.style.width=(order[id]||10)+'%';
     lbl.textContent=id==='result'?'Diagnóstico pronto':(id==='gate'?'Última etapa':'Diagnóstico da mentoria');
   }
@@ -323,8 +326,14 @@ footer a{color:var(--mute)}
         '<span class="media-cap">Painel real · mentoria atendida pela Zentra</span></div>'+
         '<p class="lead">Responda perguntas rápidas e veja o gargalo da sua operação: <b>tráfego</b>, <b>atendimento</b>, <b>estrutura</b> ou <b>dados</b>. Leva 1 minuto.</p>'+
         '<button class="cta" type="button" data-next>Começar diagnóstico</button>';
+    }else if(st.type==='out'){
+      h=backBtn()+'<h2 class="q">Este diagnóstico é para quem <mark>já vende</mark>.</h2>'+
+        '<p class="lead" style="text-align:left">A Zentra estrutura tráfego, atendimento e dados de mentorias que <b>já têm vendas</b> e querem previsibilidade.</p>'+
+        '<p class="lead" style="text-align:left">Se você está montando a primeira, acompanhe o <b>@grupozentra</b>: lá tem conteúdo sobre oferta, preço e primeiro lançamento.</p>'+
+        '<a class="cta" href="https://www.instagram.com/grupozentra/" target="_blank" rel="noopener">Ver o @grupozentra</a>';
     }else if(st.type==='q'){
-      h=backBtn()+'<h2 class="q">'+esc(st.q)+'</h2>'+(st.sub?'<p class="sub">'+esc(st.sub)+'</p>':'')+optsHTML(id,st.opts(s));
+      h=backBtn()+(id==='vende'&&hist.length===1?'<h1 style="font-size:clamp(24px,4.2svh,32px)">Diagnóstico para quem <mark>já vende</mark> mentoria</h1>'+
+        '<p class="lead">Em 1 minuto você vê onde sua operação perde venda: <b>tráfego</b>, <b>atendimento</b>, <b>estrutura</b> ou <b>dados</b>.</p>':'')+'<h2 class="q">'+esc(st.q)+'</h2>'+(st.sub?'<p class="sub">'+esc(st.sub)+'</p>':'')+optsHTML(id,st.opts(s));
     }else if(st.type==='proof'){
       var p=proofHTML(s);
       h=backBtn()+'<h2 class="q">'+esc(p.t)+'</h2><div class="big">'+p.big+'<small>'+p.cap+'</small></div><div class="quote">'+p.q+'</div>'+(p.phone?'<div class="proof-phone">'+PHONE+'</div>':'')+
@@ -375,6 +384,7 @@ footer a{color:var(--mute)}
     app.querySelectorAll('.opt').forEach(function(el){el.onclick=function(){
       el.classList.add('sel');ans[id]=+el.dataset.i;
       if(id==='vende'&&once('zdiag_qs'))track('QuizInicio',true);
+      if(id==='vende'&&ans[id]===0&&once('zdiag_fora'))track('QuizForaPerfil',true);
       setTimeout(function(){go(st.next(S()))},200);
     }});
     if(st.type==='gate'){
@@ -398,8 +408,8 @@ footer a{color:var(--mute)}
     ig='@'+h.toLowerCase();
     err.textContent='';
     lead={nome:nome,whatsapp:tel,whatsappFmt:w.value,email:em,instagram:ig};
-    var s=S(),g=gargalo(s);
-    var d={codigo:code,evento:'Lead',nome:nome,whatsapp:tel,email:em,instagram:ig,
+    var s=S(),g=gargalo(s),qual=(s.estagio==='instavel'||s.estagio==='escala')&&!!s.fat&&s.fat!=='ate10';
+    var d={codigo:code,evento:qual?'Lead':'LeadNaoQualificado',nome:nome,whatsapp:tel,email:em,instagram:ig,
       vende:s.txt.vende||'',faturamento:s.txt.faturamento||'',origem:s.txt.origem||'',resposta_lead:s.txt.resposta_lead||'',ticket:s.txt.ticket||'',
       audiencia:s.txt.audiencia||'',objetivo:s.txt.objetivo||'',dor:s.txt.dor||'',trava:s.txt.dor||'',concorda:s.txt.concorda||'',
       estagio:s.estagio||'',canal:s.canal||'',gargalo:R[g].n,pontos:JSON.stringify(s.pts),
@@ -407,16 +417,17 @@ footer a{color:var(--mute)}
     ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){d[k]=qs.get(k)||''});
     var p=new URLSearchParams();p.set('form-name','diagnostico-quiz');Object.keys(d).forEach(function(k){p.set(k,d[k])});
     beacon('/',p.toString(),'application/x-www-form-urlencoded');
-    if(once('zdiag_lead'))track('Lead',false);
-    // qualificado = já vende (constante ou não) e fatura acima de R$10 mil/mês
-    if((s.estagio==='instavel'||s.estagio==='escala')&&s.fat&&s.fat!=='ate10'&&once('zdiag_leadq'))track('LeadQualificado',true);
+    // qualificado = já vende (constante ou não) e fatura acima de R$10 mil/mês.
+    // Lead (evento que a campanha otimiza) só p/ qualificado; resto vira LeadNaoQualificado.
+    if(qual){if(once('zdiag_lead'))track('Lead',false);if(once('zdiag_leadq'))track('LeadQualificado',true)}
+    else if(once('zdiag_leadnq'))track('LeadNaoQualificado',true);
     document.body.classList.remove('is-fit');
     app.innerHTML='<section class="screen"><p class="loading">Analisando suas respostas<span class="dots"></span></p></section>';
     bar.style.width='97%';
     setTimeout(function(){hist.push('result');render()},1400);
   }
 
-  hist=['intro'];render();
+  hist=['vende'];render();
   if(once('zdiag_pv'))setTimeout(function(){track('PreDiagnostico',true)},400);
 })();
 </script>
