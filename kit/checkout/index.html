@@ -105,16 +105,19 @@ if(bumpEnabled){
  checkbox.addEventListener('change',function(){selected=this.checked;render()});
 }
 function paymentInfo(){
- const type=method==='PIX'?'pix':'cartao',id='api-'+sid()+'-'+type;
- try{if(sessionStorage.getItem(id))return}catch(e){}
- if(paymentEvents.has(id))return;
+ const type=method==='PIX'?'pix':'cartao',id='api-'+sid()+'-'+type,once='api-'+sid();
+ try{if(sessionStorage.getItem(once)||sessionStorage.getItem(once+'-pix')||sessionStorage.getItem(once+'-cartao'))return}catch(e){}
+ if(paymentEvents.has(once)||paymentEvents.has(id))return;
  fbq('track','AddPaymentInfo',{value:quote(cur().total,installmentCount()).total/100,currency:'BRL',payment_type:type},{eventID:id});
- paymentEvents.add(id);try{sessionStorage.setItem(id,'1')}catch(e){}
+ paymentEvents.add(once);paymentEvents.add(id);try{sessionStorage.setItem(once,'1');sessionStorage.setItem(id,'1')}catch(e){}
 }
 document.querySelectorAll('.methods button').forEach(function(b){b.onclick=function(){method=b.dataset.m;document.querySelectorAll('.methods button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));$('pix-steps').classList.toggle('hidden',method!=='PIX');$('card-fields').classList.toggle('hidden',method!=='CREDIT_CARD');render();paymentInfo()}});
 render();
-fbq('track','InitiateCheckout',{value:cur().total/100,currency:'BRL'},{eventID:'ic-'+sid()});
-paymentInfo();
+function fromKitLp(){
+ if(params.get('src')==='kit-lp')return true;
+ try{var r=document.referrer;if(!r)return false;var p=new URL(r).pathname.replace(/\/+$/,'')||'/';return p==='/kit'}catch(e){return false}
+}
+if(!fromKitLp())fbq('track','InitiateCheckout',{value:cur().total/100,currency:'BRL'},{eventID:'ic-'+sid()});
 // Utilidades e contrato do checkout Vero
 function headers(x){return Object.assign({apikey:KEY,Authorization:'Bearer '+KEY,'Content-Type':'application/json'},x||{})}
 function uid(){return crypto.randomUUID?crypto.randomUUID():Date.now().toString(36)+Math.random().toString(36).slice(2)}
@@ -186,7 +189,7 @@ function showPix(d){$('qr').src='data:image/png;base64,'+d.pix_qr_code_image;$('
 function showResult(d){$('form').classList.add('hidden');$('result').classList.remove('hidden');window.scrollTo(0,0);$('res-value').textContent=money(+d.final_amount_cents||cur().total);
  if(d.billing_method==='CREDIT_CARD'||method==='CREDIT_CARD'){$('res-pix').querySelector('h2').textContent='Pagamento em análise';document.querySelector('label[for="pix-code"]').classList.add('hidden');['qr','pix-code','copy'].forEach(function(x){$(x).classList.add('hidden')})}else if(d.pix_qr_code_image)showPix(d)}
 $('copy').onclick=function(){navigator.clipboard.writeText($('pix-code').value).then(()=>{this.textContent='Código copiado ✓'}).catch(()=>{this.textContent='Selecione e copie o código acima';$('pix-code').select()})};
-$('form').addEventListener('submit',function(e){e.preventDefault();if(submitting)return;if(activePid)return;var v=validate();if(v)return showBad(v[0],v[1]);clearBad();$('err').classList.add('hidden');
+$('form').addEventListener('submit',function(e){e.preventDefault();paymentInfo();if(submitting)return;if(activePid)return;var v=validate();if(v)return showBad(v[0],v[1]);clearBad();$('err').classList.add('hidden');
  var c=cur(),ci=fbIds();submitting=true;$('go').disabled=true;$('go').textContent='Processando…';funnel('payment_attempted',{method:method});
  var body={product_id:PRODUCT,payment_link_id:c.k.link,bump_ids:c.bumpIds,customer_name:$('name').value.trim(),customer_email:$('email').value.trim(),customer_phone:$('phone').value.replace(/\D/g,''),customer_cpf_cnpj:$('cpf').value.replace(/\D/g,''),billing_method:method,source_url:safeUrl()};
  if(method==='CREDIT_CARD'&&installmentCount()>1)body.installment_count=installmentCount();
