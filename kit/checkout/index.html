@@ -14,21 +14,14 @@
 fbq('init','4323927661251100');fbq('track','PageView');
 </script><style>.hero-ck{background:#0A0A0A;color:#fff;margin:-28px -20px 0;padding:24px 20px}.hero-ck h1{font-size:26px;margin:8px 0 10px;color:#fff}.hero-ck p{font-size:14px;color:#d6d4cd;margin:0}.hero-ck img{width:100%;border-radius:6px;margin:16px 0 0;display:block}
 .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}.chips span{font-size:12px;border:1px solid #444;padding:5px 8px}.proof{background:#fff;border:1px solid #ccc9c1;padding:14px;margin:18px 0 0;font-size:13px}.proof b{display:block;font-size:15px}
-.opt{font-weight:400;color:#77746c}</style></head>
-<body><main class="wrap"><div class="hero-ck"><div class="eyebrow" style="color:#FFE100">KIT SUA PRIMEIRA MENTORIA</div>
-<h1>Seu conhecimento vira uma oferta de mentoria em 7 dias.</h1>
-<p>Público, preço, roteiro de venda e contrato. O mesmo passo a passo que usamos com os mentores que atendemos.</p>
-<img src="/kit/img/kit-builder.webp" alt="Tela do Mentor Builder">
-<div class="chips"><span>Acesso imediato no e-mail</span><span>Pagamento único</span><span>7 dias de garantia</span></div></div>
+.opt{font-weight:400;color:#77746c}
+.hero-ck{padding:16px 20px 14px}.hero-ck .prod{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;margin:6px 0 6px}.hero-ck h1{font-size:22px;line-height:1.15;margin:0}.hero-ck .price{text-align:right;white-space:nowrap}.hero-ck .price strong{display:block;font-size:26px;letter-spacing:-.04em;color:#FFE100;line-height:1}.hero-ck .price span{font-size:11px;color:#d6d4cd}.hero-ck p{font-size:13px}.hero-ck .chips{margin-top:10px}.hero-ck .chips span{font-size:11px;padding:3px 7px}.contact{padding-top:16px}.contact h2{margin-bottom:4px}.contact .f{margin-top:12px}.hint{font-size:12px;color:#5d5b54;margin:6px 0 0}.cpfbox{margin-top:18px}.trust{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin:16px 0 8px}.trust span{font-size:12px;font-weight:700;border:1px solid #0A0A0A;padding:5px 9px;background:#fff}.support{text-align:center;font-size:14px;margin:10px 0 0}.support a{color:#0A0A0A;font-weight:700}</style></head>
+<body><main class="wrap"><div class="hero-ck"><div class="eyebrow" style="color:#FFE100">FINALIZAR COMPRA</div><div class="prod"><h1>Kit Sua Primeira Mentoria</h1><div class="price"><strong id="sum-total">R$ 47</strong><span id="sum-label">Total à vista</span></div></div><p>Mentor Builder com IA, Canvas, calculadora de preço, contrato-base e plano de 7 dias.</p><div class="chips"><span>Acesso imediato no e-mail</span><span>Pagamento único</span><span>7 dias de garantia</span></div></div>
 <form id="form" novalidate>
-<section class="box summary"><div class="eyebrow">RESUMO DO PEDIDO</div><h2 style="margin-top:8px">Kit Sua Primeira Mentoria</h2>
-<ul><li>Mentor Builder com IA para montar sua oferta</li><li>Modelos e ferramentas editáveis (Canvas, calculadora de preço, contrato)</li><li>Plano objetivo de 7 dias para começar a validar</li></ul>
-<div class="total" aria-live="polite"><span id="sum-label">Total à vista</span><strong id="sum-total">R$ 47</strong></div><div class="proof"><b>Feito por quem opera mentores</b>Mentora em gestão e liderança: R$ 500 mil+ faturados com a operação da Zentra.</div></section>
-<section class="box"><h2>Seus dados</h2>
+<section class="box contact"><h2>Seus dados</h2>
 <label class="f" for="name">Nome completo</label><div class="inp"><input id="name" autocomplete="name"></div>
 <label class="f" for="email">E-mail</label><div class="inp"><input id="email" type="email" autocomplete="email"></div>
 <label class="f" for="phone">WhatsApp</label><div class="inp"><input id="phone" type="tel" autocomplete="tel" placeholder="(11) 99999-9999"></div>
-<label class="f" for="cpf">CPF</label><div class="inp"><input id="cpf" inputmode="numeric" placeholder="000.000.000-00"></div>
 </section><div class="box"><h2>Pagamento</h2><div class="methods"><button type="button" data-m="PIX" aria-pressed="true">Pix</button><button type="button" data-m="CREDIT_CARD" aria-pressed="false">Cartão</button></div>
 <p id="pix-steps" class="steps">Finalize a compra para gerar o QR Code e o código Pix. Pague no app do seu banco e aguarde a confirmação nesta tela.</p>
 <div id="card-fields" class="hidden">
@@ -49,9 +42,10 @@ fbq('init','4323927661251100');fbq('track','PageView');
     <p id="installment-note" class="steps" aria-live="polite"></p>
    </div>
   </div>
+<div class="cpfbox"><label class="f" for="cpf">CPF</label><div class="inp"><input id="cpf" inputmode="numeric" autocomplete="off" placeholder="000.000.000-00" aria-describedby="cpf-note"></div><p id="cpf-note" class="hint">Exigido pelo banco para emitir o Pix ou a cobrança no cartão.</p></div>
 <div class="paybox"><div id="ptotal" class="ptotal" aria-live="polite"></div><div id="bump-slot"></div>
 <button type="submit" class="go" id="go">Finalizar compra</button><div id="err" class="err hidden" role="alert"></div>
-<p class="secure">Pagamento seguro processado pelo Asaas</p><p class="guarantee">Garantia incondicional de 7 dias: se não fizer sentido pra você, devolvemos 100% do valor, sem perguntas.</p></div></form>
+<div class="trust"><span>Garantia de 7 dias</span><span>Pagamento seguro via Pix/Asaas</span></div><p class="guarantee">Se não fizer sentido pra você em 7 dias, devolvemos 100% do valor, sem perguntas.</p><p class="support">Dúvida antes de comprar? <a href="https://wa.me/5543996850251?text=Ol%C3%A1%2C%20tenho%20uma%20d%C3%BAvida%20sobre%20o%20Kit%20Sua%20Primeira%20Mentoria" target="_blank" rel="noopener noreferrer">Fale com a gente no WhatsApp</a></p><div class="proof"><b>Feito por quem opera mentores</b>Mentora em gestão e liderança: R$ 500 mil+ faturados com a operação da Zentra.</div></div></form>
 <section class="box result hidden" id="result" aria-live="polite"><div id="res-pix"><h2>Seu Pix está pronto</h2><p>Valor: <strong id="res-value"></strong></p><img class="qr" id="qr" alt="QR Code Pix"><label class="f" for="pix-code">Código Pix copia e cola</label><textarea id="pix-code" readonly></textarea><button type="button" class="go" id="copy">Copiar código Pix</button><p class="wait">Aguardando pagamento…</p></div><div id="res-ok" class="hidden"><h2>Pagamento confirmado!</h2><p>Preparando seu acesso…</p></div></section>
 <footer class="foot"><p>ZENTRA PRODUCOES E SOLUCOES DIGITAIS LTDA · CNPJ 61.768.633/0001-39</p><a href="https://vero.ogrupozentra.com/termos-de-uso" target="_blank" rel="noopener noreferrer">Termos de uso</a> · <a href="/politica-de-privacidade/" target="_blank" rel="noopener noreferrer">Política de privacidade</a><p>contato@ogrupozentra.com</p></footer></main>
 <script>(function(){'use strict';
@@ -153,8 +147,8 @@ function expOk(v){var m=/^(0[1-9]|1[0-2])\/(\d{2})$/.exec(v),d=new Date();return
 function validate(){var e=$('email').value.trim();
  if($('name').value.trim().length<2)return['name','Informe seu nome.'];
  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e))return['email','Informe um e-mail válido.'];
- if($('cpf').value.replace(/\D/g,'').length!==11||!validDoc($('cpf').value))return['cpf','Informe um CPF válido.'];
  if($('phone').value.replace(/\D/g,'').length<10)return['phone','Informe um WhatsApp com DDD.'];
+ if($('cpf').value.replace(/\D/g,'').length!==11||!validDoc($('cpf').value))return['cpf','Informe um CPF válido.'];
  if(method==='CREDIT_CARD'){
   if(!Number.isInteger(installmentCount())||installmentCount()<1||installmentCount()>12)return['installments','Selecione de 1 a 12 parcelas.'];
   if(!luhn($('card-number').value))return['card-number','Informe um número de cartão válido.'];
